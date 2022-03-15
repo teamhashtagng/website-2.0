@@ -98,13 +98,11 @@ const MintNFT = () => {
                     noValidate
                     autoComplete="off"
                     >
-                        <Typography variant="h6"><b>Upload image asset:</b></Typography>
+                        <Typography variant="h6"><b>Paste image link:</b></Typography>
                         <TextField 
                             id="standard-basic" 
                             size='small' 
-                            type="text"
-                            name="url"
-                            error={errMsg}
+                            error={!!errMsg}
                             helperText={errMsg}
                             value={url}
                             placeholder='eg https://' 
@@ -115,9 +113,8 @@ const MintNFT = () => {
                         <Typography variant="h6"><b>Name:</b></Typography>
                         <TextField 
                             id="standard-basic" 
-                            type="text"
                             size='small'
-                            error={errMsg}
+                            error={!!errMsg}
                             helperText={errMsg}
                             value={name} 
                             placeholder='The Dome' 
@@ -128,8 +125,7 @@ const MintNFT = () => {
                         <Typography variant="h6"><b>Description:</b></Typography>
                         <TextField 
                             id="standard-basic" 
-                            type="text"
-                            error={errMsg}
+                            error={!!errMsg}
                             helperText={errMsg}
                             value={description}
                             size='small' 

@@ -81,6 +81,7 @@ const NFTs = ({
       console.log('totalSupply', totalSupply)
       
       let tokenMetadata = []
+      // started from 3 cos the tokenurls link of the preceedence is broken
       for (let i = 3; i <= totalSupply; i++) {
         let url = await contract.methods.tokenURI(i).call()
 
