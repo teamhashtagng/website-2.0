@@ -9,11 +9,13 @@
     "@ethersproject/contracts": "^5.6.0",
     "@googlemaps/react-wrapper": "^1.1.26",
     "@mui/material": "^5.4.4",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.4",
     "axios": "^0.26.1",
     "classnames": "^2.2.6",
     "dotenv": "^16.0.0",
     "eslint-visitor-keys": "^3.3.0",
     "ethers": "^5.6.0",
+    "fs.promises": "^0.1.2",
     "ipfs-http-client": "^56.0.1",
     "lodash": "^4.17.15",
     "react": "^17.0.2",
@@ -38,7 +40,14 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "rules": {
+      "react/jsx-uses-react": "off",
+      "react/react-in-jsx-scope": "off"
+    }
   },
   "browserslist": {
     "production": [

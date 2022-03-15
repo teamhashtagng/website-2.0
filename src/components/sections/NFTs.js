@@ -1,15 +1,11 @@
 
-import React, { useEffect } from 'react';
-import axios from 'axios'
-import { getDefaultProvider } from 'ethers'
-import { NftProvider, useNft } from 'use-nft'
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
 import { Grid, Box } from '@mui/material';
-import NftImage from '../../assets/images/nft_item.jpg';
 import { contractAddress } from '../../config/constants'
 
 
@@ -65,31 +61,44 @@ const NFTs = ({
   //   provider: getDefaultProvider("homestead"),
   // }
 
+  const [tokenMetadata, setTokenMetadata] = useState([])
+
   useEffect(() => {
-
-    const getNfts = async () => {
-      window.contract = await new web3.eth.Contract(contractABI, contractAddress)
-      const urls = await window.contract.methods.totalSupply().call()
-
-      
-      const tokenMetadata = []
-      for (let i = 0; i < urls; i++) {
-        let url = await window.contract.methods.tokenURIs(i).call()
-        const data = await axios.get(`https://cors-anywhere.herokuapp.com/${url}`)
-        console.log(data)
-        if (data.hasOwnProperty('image')) {
-          tokenMetadata.push(data)
-        }
-      }
-      console.log(tokenMetadata)
-      return tokenMetadata
+    try {
+      getNfts()
+    } catch (err) {
+      console.error(err)
     }
-
-    getNfts()
   }, [])
 
   
-  
+
+    const getNfts = async () => {
+      const contract = await new web3.eth.Contract(contractABI, contractAddress)
+      const totalSupply = await contract.methods.totalSupply().call()
+
+      console.log('totalSupply', totalSupply)
+      
+      let tokenMetadata = []
+      for (let i = 3; i <= totalSupply; i++) {
+        let url = await contract.methods.tokenURI(i).call()
+
+        const data = await fetch(url, {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+        const res = await data.json()
+        tokenMetadata.push(res)
+        console.log(res)
+        // console.log(data)
+        // if (data.hasOwnProperty('image')) {
+        //   tokenMetadata.push(data)
+        // }
+      }
+      setTokenMetadata(tokenMetadata)
+      // return tokenMetadata
+    }
 
   const nfts = [
     {
@@ -117,12 +126,12 @@ const NFTs = ({
           <Link to="/mint" className="button button-primary button-wide-mobile button-sm">Mint NFT</Link>
 
           <Grid container spacing={3} sx={{mt: 4}}>
-            { nfts.map((nft) => (
+            { tokenMetadata.map((nft) => (
               <Grid item xs={12} md={4} sm={3} key={nft.name}>
                 <Box className="nft__item" style={{padding: '20px'}}>
                   <Box>
                     <Image
-                      src={NftImage}
+                      src={nft.image}
                       alt="Hero" 
                       style={{borderRadius: 15}}
                     />

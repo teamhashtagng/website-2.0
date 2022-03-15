@@ -4,11 +4,12 @@ import classNames from 'classnames';
 // import sections
 import Hero from '../components/sections/Hero';
 import { Box, TextField, Typography, CircularProgress } from '@mui/material';
+import { ToastContainer, toast } from 'react-toastify';
 import SectionHeader from '../components/sections/partials/SectionHeader';
 import LayoutDefault from '../layouts/LayoutDefault'
 import Button from '../components/elements/Button'
 
-import { ToastContainer, toast } from 'react-toastify';
+
 
 import { createNFT } from '../utils/interact';
 
@@ -25,6 +26,7 @@ const MintNFT = () => {
     const [disableBtn, setDisableBtn] = useState(false)
     const [mintText, setMintText] = useState("Mint")
     const [mintLoading, setMintLoading] = useState(false)
+
     const [errMsg, setErrMsg] = useState("")
 
     const [status, setStatus] = useState("")
@@ -33,10 +35,10 @@ const MintNFT = () => {
         e.preventDefault()
 
         try {
-            // if (url === "" || name === "" || description === "") {
-            //     setErrMsg("Input fields cannot be empty!")
-            //     return
-            // } else {
+            if (url === "" || name === "" || description === "") {
+                setErrMsg("Input fields cannot be empty!")
+                return
+            } else {
                 setMintLoading(true)
                 setDisableBtn(true)
                 setMintText("Minting")
@@ -44,9 +46,11 @@ const MintNFT = () => {
                 setUrl("")
                 setDescription("")
                 
-                
                 const { status } = await createNFT(url, name, description)
                 if (status) {
+                    setMintLoading(false)
+                    setDisableBtn(false)
+                    setMintText("Mint")
                     toast.success(`Minted ${name} NFT successfully`, {
                         position: "bottom-right",
                         autoClose: 5000,
@@ -57,7 +61,7 @@ const MintNFT = () => {
                 }
                 setStatus(status)
                 
-            // }
+            }
         } catch (err) {
             console.error(err)
             toast.error(`Error minting ${name} NFT`, {
@@ -134,11 +138,11 @@ const MintNFT = () => {
                             onChange={e => setDescription(e.target.value)}
                         />
                         <Box sx={{width: "30%"}}>
-                            { url && name && description ? 
-                                <Button className="button button-primary button-wide-mobile button-sm" disabled={disableBtn} onClick={onMintClicked}>{mintLoading && <CircularProgress sx={{ color: '#fff' }} />}
-                                &nbsp;{mintText}</Button> :
-                                <Button disabled={true} style={{color: "#fff"}} className="button button-wide-mobile button-sm">Mint</Button>  
-                            }
+                           
+                                <Button disabled={disableBtn} onClick={onMintClicked}>{mintLoading && <CircularProgress sx={{ color: '#fff', padding: '5px' }} />}
+                                &nbsp;{mintText}</Button>
+                                {/* <Button disabled={true} style={{color: "#fff"}} className="button button-wide-mobile button-sm">Mint</Button>   */}
+                            
                         </Box>
 
                         <p>{status}</p>
