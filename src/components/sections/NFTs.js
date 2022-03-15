@@ -131,8 +131,8 @@ const NFTs = ({
           </Box>
           <Grid container spacing={3} sx={{mt: 4}}>
             { tokenMetadata.map((nft) => (
-              <Grid item xs={12} md={4} sm={3} key={nft.name}>
-                <Box className="nft__item" style={{padding: '20px'}}>
+              <Grid item xs={12} md={4} sm={3} key={nft.name} style={{}}>
+                <Box className="nft__item" style={{padding: '20px', height: '200px'}}>
                   <Box>
                     <Image
                       src={nft.image}
@@ -141,7 +141,7 @@ const NFTs = ({
                     />
                   </Box>
                   <h6>{nft.name}</h6>
-                  <p>{nft.description}</p>
+                  <p>{nft.description.length > 57 ? nft.description.slice(0,57).concat("...") : nft.description}</p>
                 </Box>
               </Grid>
             ))

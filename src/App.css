@@ -3471,6 +3471,7 @@ img.has-shadow {
 
 .nft__item {
     display: flex;
+    height: 420px!important;
     flex-direction: column;
     position: relative;
     padding: 20px;
@@ -3481,6 +3482,10 @@ img.has-shadow {
     margin: 10px 10px 25px;
     background: #fff;
     transition: .7s;
+}
+
+.nft__item:hover {
+
 }
 
 /*# sourceMappingURL=style.css.map */
