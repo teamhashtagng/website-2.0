@@ -62,11 +62,10 @@ const NFTs = ({
   // }
 
   const [tokenMetadata, setTokenMetadata] = useState([])
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     try {
-      setLoading(true)
       getNfts()
     } catch (err) {
       console.error(err)
@@ -92,13 +91,17 @@ const NFTs = ({
         })
         const res = await data.json()
         tokenMetadata.push(res)
+
         console.log(res)
         // console.log(data)
         // if (data.hasOwnProperty('image')) {
         //   tokenMetadata.push(data)
         // }
       }
+      setLoading(false)
+
       setTokenMetadata(tokenMetadata)
+
       // return tokenMetadata
     }
 
@@ -126,8 +129,8 @@ const NFTs = ({
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />
           <Link to="/mint" className="button button-primary button-wide-mobile button-sm">Mint NFT</Link>
-          <Box>
-            {loading && <><p>Loading NFTs </p><CircularProgress /></>}
+          <Box sx={{mt: 3}}>
+            {loading && <CircularProgress />}
           </Box>
           <Grid container spacing={3} sx={{mt: 4}}>
             { tokenMetadata.map((nft) => (
