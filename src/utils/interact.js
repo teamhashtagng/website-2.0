@@ -31,20 +31,23 @@ export const createNFT = async (url, name, description) => {
     console.log(metadata)
     // make ipfs call
 
-    const tokenURI = await pinJSONToIPFS(metadata)
+    // let tokenURI = ""
+    const pinataResponse = await pinJSONToIPFS(metadata)
+
+    // console.log(tokenURI)
+
+    if (!pinataResponse.success) {
+      return
+    }
 
     window.contract = await new web3.eth.Contract(contractABI, contractAddress)
 
-    // await window.contract.methods.safeMint(tokenURI).send({
-    //     from: window.ethereum.selectedAddress, //must match user's active address
-    // })
-
     //set up your Ethereum transaction
     const transactionParameters = {
-        gas: '0xC350',
+        gas: '500000',
         to: contractAddress, // required during contract publications
         from: window.ethereum.selectedAddress, //must match user's active address
-        'data': window.contract.methods.safeMint(tokenURI).encodeABI()
+        'data': window.contract.methods.safeMint(pinataResponse.pinataUrl).encodeABI()
     }
 
     // sign the transaction via Metamask
@@ -56,7 +59,7 @@ export const createNFT = async (url, name, description) => {
             })
         return {
             success: true,
-            status: "Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" + txHash
+            status: "Check out your transaction on Etherscan: https://rinkeby.etherscan.io/tx/" + txHash
         }
     } catch (error) {
         return {

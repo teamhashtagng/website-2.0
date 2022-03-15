@@ -1,5 +1,6 @@
 
 import React, { useEffect } from 'react';
+import axios from 'axios'
 import { getDefaultProvider } from 'ethers'
 import { NftProvider, useNft } from 'use-nft'
 import { Link } from 'react-router-dom';
@@ -60,18 +61,30 @@ const NFTs = ({
   const contractABI = require('../../config/abi')
 
   // We are using the "ethers" fetcher here.
-  const ethersConfig = {
-    provider: getDefaultProvider("homestead"),
-  }
+  // const ethersConfig = {
+  //   provider: getDefaultProvider("homestead"),
+  // }
 
-  useEffect(async () => {
+  useEffect(() => {
 
     const getNfts = async () => {
       window.contract = await new web3.eth.Contract(contractABI, contractAddress)
-      const urls = await window.contract.methods.tokenURIs(1).call()
-      console.log(urls)
-      return urls
+      const urls = await window.contract.methods.totalSupply().call()
+
+      
+      const tokenMetadata = []
+      for (let i = 0; i < urls; i++) {
+        let url = await window.contract.methods.tokenURIs(i).call()
+        const data = await axios.get(`https://cors-anywhere.herokuapp.com/${url}`)
+        console.log(data)
+        if (data.hasOwnProperty('image')) {
+          tokenMetadata.push(data)
+        }
+      }
+      console.log(tokenMetadata)
+      return tokenMetadata
     }
+
     getNfts()
   }, [])
 
@@ -93,61 +106,39 @@ const NFTs = ({
     },
   ];
 
-  const Nft = () => {
-    const { loading, error, nft } = useNft(
-      contractAddress,
-      "90473"
-    )
-
-    // nft.loading is true during load.
-    if (loading) return <p>Loading…</p>
-
-    // nft.error is an Error instance in case of error.
-    if (error || !nft) return <p>Error loading NFTs.</p>
-
-    return (
-      <Grid container spacing={3} sx={{mt: 4}}>
-        { nfts.map((nft) => (
-          <Grid item xs={12} md={4} sm={3} key={nft.name}>
-            <Box className="nft__item" style={{padding: '20px'}}>
-              <Box>
-                <Image
-                  src={NftImage}
-                  alt="Hero" 
-                  style={{borderRadius: 15}}
-                />
-              </Box>
-              <h6>{nft.name}</h6>
-              <p>{nft.description}</p>
-            </Box>
-          </Grid>
-        ))
-
-        }
-      </Grid>
-    )
-  }
-
   return (
-    <section
-        {...props}
-        className={outerClasses}
+      <section
+      {...props}
+      className={outerClasses}
     >
-        <div className="container">
+      <div className="container">
         <div className={innerClasses}>
-
-          <NftProvider fetcher={["ethers", ethersConfig]}>
-            
-                  <SectionHeader data={sectionHeader} className="center-content" />
-                  <Nft/>
-
-          </NftProvider>
+          <SectionHeader data={sectionHeader} className="center-content" />
           <Link to="/mint" className="button button-primary button-wide-mobile button-sm">Mint NFT</Link>
-          </div>
 
+          <Grid container spacing={3} sx={{mt: 4}}>
+            { nfts.map((nft) => (
+              <Grid item xs={12} md={4} sm={3} key={nft.name}>
+                <Box className="nft__item" style={{padding: '20px'}}>
+                  <Box>
+                    <Image
+                      src={NftImage}
+                      alt="Hero" 
+                      style={{borderRadius: 15}}
+                    />
+                  </Box>
+                  <h6>{nft.name}</h6>
+                  <p>{nft.description}</p>
+                </Box>
+              </Grid>
+            ))
+
+            }
+          </Grid>
         </div>
+      </div>
     </section>
-
+    
   );
 }
 
