@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
-import { Grid, Box } from '@mui/material';
+import { Grid, Box, CircularProgress } from '@mui/material';
 import { contractAddress } from '../../config/constants'
 
 
@@ -62,9 +62,11 @@ const NFTs = ({
   // }
 
   const [tokenMetadata, setTokenMetadata] = useState([])
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     try {
+      setLoading(true)
       getNfts()
     } catch (err) {
       console.error(err)
@@ -124,7 +126,9 @@ const NFTs = ({
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />
           <Link to="/mint" className="button button-primary button-wide-mobile button-sm">Mint NFT</Link>
-
+          <Box>
+            {loading && <><p>Loading NFTs </p><CircularProgress /></>}
+          </Box>
           <Grid container spacing={3} sx={{mt: 4}}>
             { tokenMetadata.map((nft) => (
               <Grid item xs={12} md={4} sm={3} key={nft.name}>
