@@ -88,7 +88,7 @@ const Header = ({
             bottomDivider && 'has-bottom-divider'
           )}>
           {/* <Logo /> */}
-          <img src={ Logo } width="60" alt="" className="float-righ"/>
+          <Link to="/"><img src={ Logo } width="60" alt="" className="float-righ"/></Link>
           {/* <h3>Numeri</h3> */}
           {!hideNav &&
             <>

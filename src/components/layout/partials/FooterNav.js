@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
+import { Link } from 'react-router-dom';
 
 const FooterNav = ({
   className,
@@ -18,7 +19,7 @@ const FooterNav = ({
     >
       <ul className="list-reset">
         <li>
-          <a target="_blank" rel="noreferrer" href="#">Collections</a>
+          <Link to="/collections">Collections</Link>
         </li>
         {/* <li>
           <Link to="#0">About us</Link>
