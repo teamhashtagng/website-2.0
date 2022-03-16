@@ -92,12 +92,7 @@ const NFTs = ({
         })
         const res = await data.json()
         tokenMetadata.push(res)
-
         console.log(res)
-        // console.log(data)
-        // if (data.hasOwnProperty('image')) {
-        //   tokenMetadata.push(data)
-        // }
       }
       setLoading(false)
 
@@ -106,20 +101,7 @@ const NFTs = ({
       // return tokenMetadata
     }
 
-  const nfts = [
-    {
-        name: "Blue Ocean", 
-        description: 'Contrary to popular belief, Lorem Ipsum is not simply random text.'
-    },
-    {
-        name: "Red Tree",
-        description: 'Contrary to popular belief, Lorem Ipsum is not simply random text.'
-    },
-    {
-      name: "Green Snake",
-      description: 'Contrary to popular belief, Lorem Ipsum is not simply random text.'
-    },
-  ];
+
 
   return (
       <section
