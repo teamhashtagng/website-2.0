@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Button from '../elements/Button'
 
-import {  connectWallet, getCurrentWalletConnected } from '../../utils/interact'
+import { connectWallet, getCurrentWalletConnected } from '../../utils/interact'
 
 
 const ConnectButton = () => {
@@ -41,7 +41,7 @@ const ConnectButton = () => {
             </p>
           );
         }
-    }
+      }
 
     const connectWalletPressed = async () => {
         const walletResponse = await connectWallet();

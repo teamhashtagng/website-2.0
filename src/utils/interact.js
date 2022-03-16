@@ -69,7 +69,7 @@ export const createNFT = async (url, name, description) => {
     }
 }
 
-export const connectWallet = async () => {
+  export const connectWallet = async () => {
     if (window.ethereum) {
       try {
         const addressArray = await window.ethereum.request({
@@ -99,7 +99,7 @@ export const connectWallet = async () => {
         if (addressArray.length > 0) {
           return {
             address: addressArray[0],
-            status: "👆🏽 Write a message in the text-field above.",
+            status: "",
           };
         } else {
           return {

@@ -9,7 +9,6 @@ import { Grid, Box, CircularProgress } from '@mui/material';
 import { contractAddress } from '../../config/constants'
 
 
-
 const propTypes = {
   ...SectionTilesProps.types
 }
@@ -30,6 +29,54 @@ const NFTs = ({
   ...props
 }) => {
 
+  require('dotenv').config()
+  const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY
+  const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
+  const web3 = createAlchemyWeb3(alchemyKey)
+
+  const contractABI = require('../../config/abi')
+
+  const [tokenMetadata, setTokenMetadata] = useState([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    try {
+      getNfts()
+    } catch (err) {
+      console.error(err)
+    }
+  }, [])
+
+  
+  
+  const getNfts = async () => {
+    const contract = await new web3.eth.Contract(contractABI, contractAddress)
+    const totalSupply = await contract.methods.totalSupply().call()
+
+    console.log('totalSupply', totalSupply)
+    
+    let tokenMetadata = []
+    // started from 3 cos the tokenurls link of the preceedence is broken
+    for (let i = 3; i <= totalSupply; i++) {
+      let url = await contract.methods.tokenURI(i).call()
+
+      const data = await fetch(url, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      const res = await data.json()
+      tokenMetadata.push(res)
+      console.log(res)
+    }
+    setLoading(false)
+
+    setTokenMetadata(tokenMetadata)
+
+    // return tokenMetadata
+  }
+
+  
   const outerClasses = classNames(
     'testimonial section',
     topOuterDivider && 'has-top-divider',
@@ -49,57 +96,6 @@ const NFTs = ({
     title: 'My NFTs',
   };
 
-  require('dotenv').config()
-  const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY
-  const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
-  const web3 = createAlchemyWeb3(alchemyKey)
-
-  const contractABI = require('../../config/abi')
-
-  // We are using the "ethers" fetcher here.
-  // const ethersConfig = {
-  //   provider: getDefaultProvider("homestead"),
-  // }
-
-  const [tokenMetadata, setTokenMetadata] = useState([])
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    try {
-      getNfts()
-    } catch (err) {
-      console.error(err)
-    }
-  }, [])
-
-  
-
-    const getNfts = async () => {
-      const contract = await new web3.eth.Contract(contractABI, contractAddress)
-      const totalSupply = await contract.methods.totalSupply().call()
-
-      console.log('totalSupply', totalSupply)
-      
-      let tokenMetadata = []
-      // started from 3 cos the tokenurls link of the preceedence is broken
-      for (let i = 3; i <= totalSupply; i++) {
-        let url = await contract.methods.tokenURI(i).call()
-
-        const data = await fetch(url, {
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        })
-        const res = await data.json()
-        tokenMetadata.push(res)
-        console.log(res)
-      }
-      setLoading(false)
-
-      setTokenMetadata(tokenMetadata)
-
-      // return tokenMetadata
-    }
 
 
 

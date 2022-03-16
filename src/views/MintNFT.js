@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 // import sections
@@ -9,6 +9,7 @@ import SectionHeader from '../components/sections/partials/SectionHeader';
 import LayoutDefault from '../layouts/LayoutDefault'
 import Button from '../components/elements/Button'
 
+import { connectWallet, getCurrentWalletConnected } from '../utils/interact'
 
 
 import { createNFT } from '../utils/interact';
@@ -18,6 +19,8 @@ const innerClasses = classNames(
   );
 
 const MintNFT = () => {
+    const [walletAddress, setWallet] = useState('')
+    const [status, setStatus] = useState('')
 
     const [name, setName] = useState('')
     const [description, setDescription] = useState('')
@@ -29,43 +32,121 @@ const MintNFT = () => {
 
     const [errMsg, setErrMsg] = useState("")
 
-    const [status, setStatus] = useState("")
+    useEffect(() => {
+        fetchWallet()
+    }, [])
+
+    async function fetchWallet() {
+        const {address, status} = await getCurrentWalletConnected();
+        setWallet(address);
+        setStatus(status); 
+        addWalletListener();
+      }
+    
+      function addWalletListener() {
+        if (window.ethereum) {
+          window.ethereum.on("accountsChanged", (accounts) => {
+            if (accounts.length > 0) {
+              setWallet(accounts[0]);
+              setStatus("👆🏽 Write a message in the text-field above.");
+            } else {
+              setWallet("");
+              setStatus("🦊 Connect to Metamask using the top right button.");
+            }
+          });
+        } else {
+          setStatus(
+            <p>
+              {" "}
+              🦊{" "}
+              <a target="_blank" rel="noreferrer" href={`https://metamask.io/download.html`}>
+                You must install Metamask, a virtual Ethereum wallet, in your
+                browser.
+              </a>
+            </p>
+          );
+        }
+      }
+
 
     const onMintClicked = async (e) => {
         e.preventDefault()
+        // if (walletAddress > 0) {
+                    
+        // } else {
+        //     setMintLoading(false)
+        //     setDisableBtn(false)
+        //     setMintText("Mint")
+        //     toast.warning("Connect wallet first", {
+        //         position: "top-right",
+        //         autoClose: 5000,
+        //         hideProgressBar: false,
+        //         closeOnClick: true,
+        //         pauseOnHover: true,
+        //     }) 
+        // }
+
 
         try {
             if (url === "" || name === "" || description === "") {
                 setErrMsg("Input fields cannot be empty!")
                 return
-            } else {
+            } 
+
+            if (walletAddress > 0) {
                 setMintLoading(true)
                 setDisableBtn(true)
                 setMintText("Minting")
                 setName("")
                 setUrl("")
                 setDescription("")
+                const { success, status } = await createNFT(url, name, description)
                 
-                const { status } = await createNFT(url, name, description)
-                if (status) {
+                if (success) {
                     setMintLoading(false)
                     setDisableBtn(false)
                     setMintText("Mint")
                     toast.success(`Minted ${name} NFT successfully`, {
-                        position: "bottom-right",
+                        position: "top-right",
                         autoClose: 5000,
                         hideProgressBar: false,
                         closeOnClick: true,
                         pauseOnHover: true,
                     })
-                }
+                } 
                 setStatus(status)
                 
-            }
+                setMintLoading(false)
+                setDisableBtn(false)
+                setMintText("Mint")
+                toast.error(`Unable to mint!`, {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                })
+
+            } else {
+                    setMintLoading(false)
+                    setDisableBtn(false)
+                    setMintText("Mint")
+                    toast.warning("Connect wallet first", {
+                        position: "top-right",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                    }) 
+                }
+                
         } catch (err) {
             console.error(err)
-            toast.error(`Error minting ${name} NFT`, {
-                position: "bottom-right",
+            setMintLoading(false)
+            setDisableBtn(false)
+            setMintText("Mint")
+            toast.error(`Unable to mint`, {
+                position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: false,
                 closeOnClick: true,
@@ -135,8 +216,8 @@ const MintNFT = () => {
                         />
                         <Box sx={{width: "30%"}}>
                            
-                                <Button disabled={disableBtn} onClick={onMintClicked}>{mintLoading && <CircularProgress sx={{ color: '#fff', padding: '5px' }} />}
-                                &nbsp;{mintText}</Button>
+                            <Button disabled={disableBtn} onClick={onMintClicked}>{mintLoading && <CircularProgress sx={{ color: '#fff', padding: '5px' }} />}
+                            &nbsp;{mintText}</Button>
                                 {/* <Button disabled={true} style={{color: "#fff"}} className="button button-wide-mobile button-sm">Mint</Button>   */}
                             
                         </Box>
