@@ -41,7 +41,7 @@ const MintNFT = () => {
         setWallet(address);
         setStatus(status); 
         addWalletListener();
-      }
+    }
     
       function addWalletListener() {
         if (window.ethereum) {
