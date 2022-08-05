@@ -5,7 +5,8 @@ const Team = () => {
   return (
     <LayoutDefault>
         <div style={{marginTop: "100px"}}>
-            <h1>Team</h1>
+            <h1> Our Team</h1>
+
         </div>
         
     </LayoutDefault>
