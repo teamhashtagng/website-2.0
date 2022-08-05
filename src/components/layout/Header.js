@@ -2,8 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
-import Logo from '../../assets/images/logo.png';
-import ConnectButton from '../elements/ConnectButton';
+import Logo from '../../assets/images/logo-png.png';
+import PrimaryButton from '../elements/PrimaryButton';
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -88,7 +88,7 @@ const Header = ({
             bottomDivider && 'has-bottom-divider'
           )}>
           {/* <Logo /> */}
-          <Link to="/"><img src={ Logo } width="60" alt="" className="float-righ"/></Link>
+          <Link to="/"><img src={ Logo } width="150" alt="" className="float-righ"/></Link>
           {/* <h3>Numeri</h3> */}
           {!hideNav &&
             <>
@@ -116,17 +116,23 @@ const Header = ({
                       navPosition && `header-nav-${navPosition}`
                     )}>
                       <li>
-                      <Link to="/collections" onClick={closeMenu}>My Collections</Link>
-                    </li>
-                  </ul>
-                  {!hideSignin &&
-                    <ul
-                      className="list-reset header-nav-right"
-                    >
-                      <li>
-                        <ConnectButton />
+                        <Link to="/">Home</Link>
                       </li>
-                    </ul>}
+                      <li>
+                        <Link to="/about-us">About Us</Link>
+                      </li>
+                      <li>
+                        <Link to="/team">Team</Link>
+                      </li>
+                      <li>
+                        <Link to="/careers">Careers</Link>
+                      </li>
+                      <li>
+                        <Link to="/contact-us">
+                          <PrimaryButton text={'Contact Us'} bgColor={'#00B9BC'} />
+                        </Link>
+                      </li>
+                  </ul>
                 </div>
               </nav>
             </>}

@@ -12,7 +12,6 @@ const Home = () => {
     <LayoutDefault>
       <Hero className="illustration-section-01" />
       <Divider variant="middle"/>
-      <NFTs />
     </LayoutDefault>
   );
 }

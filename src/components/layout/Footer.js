@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Logo from '../../assets/images/logo.png';
+import Logo from '../../assets/images/logo-png.png';
 import FooterNav from './partials/FooterNav';
 import FooterSocial from './partials/FooterSocial';
 
@@ -40,12 +40,12 @@ const Footer = ({
             topDivider && 'has-top-divider'
           )}>
           <div className="footer-top space-between text-xxs">
-            <img src={ Logo } width="60" alt="" className="float-righ"/>
+            <img src={ Logo } width="150" alt="" className="float-righ"/>
             <FooterSocial />
           </div>
           <div className="footer-bottom space-between text-xxs invert-order-desktop">
             <FooterNav />
-            <div className="footer-copyright" style={{color: "#9CA9B3"}}>&copy; 2022 OONFTs. All right reserved</div>
+            <div className="footer-copyright" style={{color: "#9CA9B3"}}>&copy; 2022 Hashtag Digital Services Ltd. All right reserved</div>
           </div>
         </div>
       </div>

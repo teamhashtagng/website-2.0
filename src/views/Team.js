@@ -1,15 +1,15 @@
 import React from 'react'
-import NFTs from '../components/sections/NFTs';
-
 import LayoutDefault from '../layouts/LayoutDefault'
 
-const Collections = () => {
-
+const Team = () => {
   return (
     <LayoutDefault>
-      <NFTs />
+        <div style={{marginTop: "100px"}}>
+            <h1>Team</h1>
+        </div>
+        
     </LayoutDefault>
-  );
+  )
 }
 
-export default Collections;
+export default Team
