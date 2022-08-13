@@ -3462,6 +3462,11 @@ img.has-shadow {
   color: #2E2F6E;
 }
 
+.border-white {
+  border: 1px solid #00B9BC !important;
+  border-radius: 10px!important;
+}
+
 @media(max-width: 768px) {
     .btns {
         align-items: center!important;

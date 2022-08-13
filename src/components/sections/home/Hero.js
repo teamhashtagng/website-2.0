@@ -2,11 +2,11 @@ import React from 'react';
 import { Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
-import { SectionProps } from '../../utils/SectionProps';
-import Image from '../elements/Image';
-import PrimaryButton from '../elements/PrimaryButton';
+import { SectionProps } from '../../../utils/SectionProps';
+import Image from '../../elements/Image';
+import PrimaryButton from '../../elements/PrimaryButton';
 
-import SpaceGuy1 from '../../assets/images/space-guy-1.png'
+import SpaceGuy1 from '../../../assets/images/space-guy-1.png'
 
 const propTypes = {
   ...SectionProps.types
