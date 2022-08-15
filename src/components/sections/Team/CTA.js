@@ -11,7 +11,7 @@ export default function CTA() {
             <Container maxWidth="sm" style={{padding: '40px 0px 50px', textAlign: 'center'}}>
                     <Grid container spacing={1} justifyContent='center'>
                         <Grid item xs={12} md={8}>
-                            <Typography variant='p' className='Cta-text' component='div' sx={{}}>Love to be part of our team?</Typography>
+                            <Typography variant='h5' className='Cta-text' component='div' sx={{}}>Love to be part of our team?</Typography>
                         </Grid>
                         <Grid item xs={12} md={4}>
                             <PrimaryButton bgColor={'#00B9BC'} text={'  Join Us  '} />

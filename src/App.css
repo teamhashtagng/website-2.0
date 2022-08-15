@@ -3634,11 +3634,11 @@ img.has-shadow {
 
 .hero-dotted {
   position: relative;
-  left: 78%;
+  left: 65%;
   bottom: 20%;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1600px) {
   .hero-dotted {
     position: relative;
     left: 18%;
@@ -3665,14 +3665,16 @@ img.has-shadow {
 
 .middle-dotted {
   position: absolute;
-  width: 55%;
-  top: 5%;
-  left: 56%;
+  width: 60%;
+  left: 72%;
+  top: -8%;
+  bottom: 20%;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1600px) {
   .middle-dotted {
     position: absolute;
+    width: 70%;
     left: 60%;
     width: 48%;
   }
@@ -3735,6 +3737,14 @@ img.has-shadow {
   margin-top: 40px;
 }
 
+#profile-img-click {
+  width: 100%;
+  max-width: 90px;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+
 .Team-card {
   background-color: #e5e7ec;
   text-align: center;
@@ -3743,6 +3753,10 @@ img.has-shadow {
 
 #Team-card-name {
   font-weight: 700;
+}
+
+#team-click {
+  box-shadow: 12px 10px 9px rgba(0, 0, 0, 0.25);
 }
 
 /*# sourceMappingURL=style.css.map */
