@@ -1,19 +1,9 @@
 import React from 'react';
-import { Grid } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import classNames from 'classnames';
 import Image from '../../elements/Image';
-import TeamCard from './TeamCard';
-import TeamProfile from '../../../assets/images/section/TeamsPage/Felix.png'
-
 import DottedImage from '../../../assets/images/section/TeamsPage/Hero-dotted-design.svg'
-
-
-const team = [
-    {
-        profileImage: TeamProfile,
-
-    }
-]
+import TeamGrid from './TeamGrid';
 
 const TeamMember = ({
   className,
@@ -61,6 +51,9 @@ const TeamMember = ({
             src={DottedImage}
             alt="Hero" 
           />
+
+          <TeamGrid/>
+
         </div>
       </div>
     </section>

@@ -3728,4 +3728,21 @@ img.has-shadow {
   text-align: center;
 }
 
+#profile-img {
+  width: 100%;
+  max-width: 200px;
+  margin: 15px auto;
+  margin-top: 40px;
+}
+
+.Team-card {
+  background-color: #e5e7ec;
+  text-align: center;
+  margin: 16px auto;
+}
+
+#Team-card-name {
+  font-weight: 700;
+}
+
 /*# sourceMappingURL=style.css.map */
