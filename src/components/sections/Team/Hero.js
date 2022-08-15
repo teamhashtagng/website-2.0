@@ -68,7 +68,7 @@ const Hero = ({
           </Grid>
         </div>
       </div>
-          <div className='under-curve'></div>☻
+          <div className='under-curve'></div>
     </section>
   );
 }

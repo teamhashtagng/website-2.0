@@ -3646,15 +3646,7 @@ img.has-shadow {
   }
 }
 
-@media (max-width: 1300px) {
-  .hero-dotted {
-    position: relative;
-    left: 5.2%;
-    bottom: 20%;
-  }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .hero-dotted {
     position: relative;
     left: 5%;
@@ -3671,6 +3663,34 @@ img.has-shadow {
   }
 }
 
+.middle-dotted {
+  position: absolute;
+  width: 55%;
+  top: 5%;
+  left: 56%;
+}
+
+@media (max-width: 1300px) {
+  .middle-dotted {
+    position: absolute;
+    left: 60%;
+    width: 48%;
+  }
+}
+@media (max-width: 1024px) {
+  .middle-dotted {
+    position: absolute;
+    left: 54%;
+    width: 48%;
+  }
+}
+
+@media (max-width: 450px) {
+  .middle-dotted {
+    display: none;
+  }
+}
+
 .under-curve {
   background-image: url("./assets/images/section/TeamsPage/hero-bottom-curve.svg");
   background-repeat: no-repeat;
@@ -3684,9 +3704,28 @@ img.has-shadow {
 
 @media (max-width: 1080px) {
   .under-curve {
-    bottom: 28%;
+    bottom: 30%;
     margin: 0;
   }
+}
+@media (max-width: 768px) {
+  .under-curve {
+    bottom: 10%;
+    margin: 0;
+  }
+}
+@media (max-width: 450px) {
+  .under-curve {
+    bottom: 15%;
+    margin: 0;
+  }
+}
+
+.Cta-text {
+  margin: 0;
+  color: #fff;
+  width: auto;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
