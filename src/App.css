@@ -3777,13 +3777,13 @@ img.has-shadow {
 }
 
 .hero-dotted-contact {
-  width: 60%;
+  width: 70%;
   position: absolute;
-  top: -55%;
-  right: 65%;
+  top: -60%;
+  right: 70%;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1300px) {
   .hero-dotted-contact {
     width: 70%;
     position: absolute;
@@ -3799,8 +3799,17 @@ img.has-shadow {
 }
 
 @media (max-width: 1000px) {
-  #hero-text-bottom {
-    margin-top: -10%;
+  .section-innerr {
+    position: relative;
+    padding-top: 0px;
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .section-innerr {
+    position: relative;
+    padding-top: 0px;
+    padding-bottom: 50px;
   }
 }
 
@@ -3808,6 +3817,162 @@ img.has-shadow {
   #hero-text-bottom {
     margin-top: 0%;
   }
+}
+
+.overlay-section {
+  position: relative;
+  bottom: 5.5rem;
+}
+
+@media (max-width: 1000px) {
+  .overlay-section {
+    position: relative;
+    bottom: 14rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .overlay-section {
+    position: relative;
+    bottom: 18rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .overlay-section {
+    position: relative;
+    bottom: 1.5rem;
+  }
+}
+
+#middle-section {
+  color: #000 !important;
+  background-color: #fff;
+  height: auto;
+  padding: 20px 30px;
+}
+
+@media (max-width: 1000px) {
+  #middle-section {
+    height: 100%;
+    padding: 20px 30px;
+  }
+}
+@media (max-width: 768px) {
+  #middle-section {
+    height: auto;
+    padding: 20px 30px;
+  }
+}
+@media (max-width: 450px) {
+  #middle-section {
+    color: #000 !important;
+    height: 100%;
+    padding: 20px 10px;
+  }
+}
+
+#contact-info-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+}
+
+.contact-h3 {
+  margin-top: 40px;
+}
+
+.form-subtitle {
+  width: 100%;
+  max-width: 200px;
+}
+
+.Contact-form-box {
+  background: #ffffff;
+  padding: 0 20px;
+  max-width: 550px;
+  height: 620px;
+  box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 1000px) {
+  .Contact-form-box {
+    background: #ffffff;
+    padding: 0 20px;
+    max-width: 550px;
+    height: 620px;
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.12);
+  }
+}
+
+@media (max-width: 450px) {
+  .Contact-form-box {
+    background: #ffffff;
+    padding: 10px 14px;
+    max-width: 550px;
+    height: 630px;
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.contact-illus {
+  background-image: url("./assets/images/section/ContactPage/Curve-line-bottom.svg");
+  height: 800px;
+  background-size: 170rem auto;
+  background-position: 20% 0;
+  background-repeat: no-repeat;
+  margin-top: 6%;
+}
+
+@media (max-width: 1000px) {
+  .contact-illus {
+    margin-top: -25%;
+  }
+}
+@media (max-width: 450px) {
+  .contact-illus {
+    margin-top: 3%;
+  }
+}
+
+.bottom-dotted-contact {
+  position: relative;
+  width: 50%;
+  left: 88%;
+}
+
+@media (max-width: 1400px) {
+  .bottom-dotted-contact {
+    position: relative;
+    width: 50%;
+    left: 58%;
+  }
+}
+@media (max-width: 1200px) {
+  .bottom-dotted-contact {
+    position: relative;
+    width: 50%;
+    left: 55%;
+  }
+}
+@media (max-width: 1000px) {
+  .bottom-dotted-contact {
+    width: 50%;
+    position: relative;
+    left: 56%;
+  }
+}
+@media (max-width: 450px) {
+  .bottom-dotted-contact {
+    display: none;
+  }
+}
+
+.contact-space-guy {
+  width: 70%;
+  position: relative;
+  top: 400%;
+  right: 20%;
 }
 
 /*# sourceMappingURL=style.css.map */
