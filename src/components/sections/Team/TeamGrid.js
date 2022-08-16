@@ -10,8 +10,7 @@ import TeamData from './TeamData';
     function addDesc (id) {
         setDesc(prev => {
             return prev.map(square => {
-                console.log(square)
-                return square.id === id ? {...square, on: !square.on} : square
+                return square.id === id ? {...square, on: !square.on} : {...square, on: true}
             }) 
         })
     }

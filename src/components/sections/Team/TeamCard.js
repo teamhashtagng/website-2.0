@@ -71,13 +71,13 @@ export default function TeamCard({profile, name, role, social, description, stat
           </CardContent>
         </CardActionArea>
         <CardActions sx={{justifyContent: 'left', mb: '5px'}} id='Team-card-social-hover'>
-          <a href={social.Instagram} target='_blank'>
+          <a href={social.Instagram} target='_blank' rel="noopener noreferrer">
               <IconButton size="small" sx={{ color: '#2E2F6E'}}><InstagramIcon/></IconButton>
           </a>
-          <a href={social.Twitter} target='_blank'>
+          <a href={social.Twitter} target='_blank' rel="noopener noreferrer">
               <IconButton size="small" sx={{ color: '#2E2F6E'}}><TwitterIcon/></IconButton>
           </a>
-          <a href={social.LinkedIn} target='_blank'>
+          <a href={social.LinkedIn} target='_blank' rel="noopener noreferrer">
               <IconButton size="small" sx={{ color: '#2E2F6E'}}><LinkedInIcon/></IconButton>
           </a>
         </CardActions>
