@@ -3975,4 +3975,13 @@ img.has-shadow {
   right: 20%;
 }
 
+@media (max-width: 450px) {
+  .contact-space-guy {
+    width: 150%;
+    position: relative;
+    top: 400%;
+    right: 0%;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
