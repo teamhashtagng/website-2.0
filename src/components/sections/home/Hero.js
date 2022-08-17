@@ -7,6 +7,7 @@ import Image from '../../elements/Image';
 import PrimaryButton from '../../elements/PrimaryButton';
 
 import SpaceGuy1 from '../../../assets/images/space-guy-1.png'
+import Lines from '../../../assets/images/lines/hero-section-line.png'
 
 const propTypes = {
   ...SectionProps.types
@@ -43,17 +44,20 @@ const Hero = ({
   );
 
   return (
+    <div>
+
+    
     <section
       {...props}
       className={outerClasses}
     >
-      <div className="container-sm">
+      <div className="container">
         <div className={innerClasses}>
           <Grid container spacing={5}>
             <Grid item xs={12} sm={6} md={6} style={{display: "flex", flexDirection: "column", justifyContent: "center"}} className="btns">
               {/* <p className="m-0 reveal-from-bottom primary-color" data-reveal-delay="400"><b>OONFTs</b></p> */}
               <h1 className="hero-h1 mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
-              Welcome to<span style={{color: '#00B9BC'}}> Hashtag Digital</span>
+              Welcome to<br/><span style={{color: '#00B9BC'}}> Hashtag Digital</span>
               </h1>
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
               In this hub we create digital solutions, to solve real world problems.
@@ -70,12 +74,21 @@ const Hero = ({
                   src={SpaceGuy1}
                   alt="Hero" 
                   />
-            </div>
+              </div>
             </Grid>
           </Grid>
+          
         </div>
       </div>
+      
     </section>
+    <div style={{position: 'absolute', top: '0', marginTop: '80px', zIndex: '-1'}}>
+        <Image
+          src={Lines}
+          style={{zIndex: '-1'}}
+        />
+      </div>
+    </div>
   );
 }
 

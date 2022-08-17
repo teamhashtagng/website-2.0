@@ -4,6 +4,8 @@ import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/images/logo-png.png';
 import PrimaryButton from '../elements/PrimaryButton';
+import Image from '../elements/Image';
+import Lines from '../../assets/images/lines/navigation-curves.png'
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -79,17 +81,18 @@ const Header = ({
     <header
       {...props}
       className={classes}
-      style={{position: "fixed"}}
+      style={{position: "fixed", backgroundImage: `url(${Lines})`, backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}
     >
       <div className="container">
+        {/* <div style={{position: 'relative', zIndex: '-1'}}>
+          <Image src={Lines}/>
+        </div> */}
         <div className={
           classNames(
             'site-header-inner',
             bottomDivider && 'has-bottom-divider'
           )}>
-          {/* <Logo /> */}
           <Link to="/"><img src={ Logo } width="150" alt="" className="float-righ"/></Link>
-          {/* <h3>Numeri</h3> */}
           {!hideNav &&
             <>
               <button

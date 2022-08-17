@@ -838,7 +838,7 @@ strong {
 }
 
 .container {
-  max-width: 1128px;
+  width: 1350px;
 }
 
 .container-sm {
@@ -2648,7 +2648,7 @@ textarea.form-input {
   width: 100%;
   max-width: 100%;
   height: 286px;
-  background-image: url(./assets/images/illustration-section-01.svg);
+  /* background-image: url(./assets/images/illustration-section-01.svg); */
   background-repeat: no-repeat;
   background-size: auto;
   left: 50%;
@@ -2664,7 +2664,7 @@ textarea.form-input {
   width: 100%;
   max-width: 100%;
   height: 253px;
-  background-image: url(./assets/images/illustration-section-02.svg);
+  /* background-image: url(./assets/images/illustration-section-02.svg); */
   background-repeat: no-repeat;
   background-size: auto;
   left: 50%;
@@ -2812,7 +2812,7 @@ h3, h4, h5, h6,
   padding-left: 16px;
   padding-right: 16px;
   /* background-color: #00B9BC; */
-  background-image: url(./assets/images/cta-illustration.svg);
+  /* background-image: url(./assets/images/cta-illustration.svg); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right bottom;
