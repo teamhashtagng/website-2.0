@@ -6,7 +6,7 @@ import positions from '../../../assets/images/section/CareersFAQsPage/Open-posit
 export default function Open (){
     return(
         <React.Fragment>
-            <Container maxWidth='false' sx={{backgroundImage: `url(${positions})`, height: '350px'}}></Container>
+            <Container maxWidth='false' className='open-position' sx={{backgroundImage: `url(${positions})`}}></Container>
         </React.Fragment>
     )
 }

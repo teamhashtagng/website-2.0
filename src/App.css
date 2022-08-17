@@ -3649,11 +3649,11 @@ img.has-shadow {
 
 .hero-dotted {
   position: relative;
-  left: 65%;
+  left: 77%;
   bottom: 20%;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1300px) {
   .hero-dotted {
     position: relative;
     left: 18%;
@@ -3733,9 +3733,15 @@ img.has-shadow {
     margin: 0;
   }
 }
+@media (max-width: 600px) {
+  .under-curve {
+    bottom: 66%;
+    margin: 0;
+  }
+}
 @media (max-width: 450px) {
   .under-curve {
-    bottom: 18%;
+    bottom: 8%;
     margin: 0;
   }
 }
@@ -4021,7 +4027,7 @@ img.has-shadow {
     top: 95%;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1000px) {
   .middle-dotted-Career {
     position: absolute;
     left: 0%;
@@ -4035,15 +4041,32 @@ img.has-shadow {
   }
 }
 
-.offer-card {
+.offer-card-icon {
   width: 100%;
   max-width: 80%;
 }
 
-@media (max-width: 450px) {
-  .offer-card {
+@media (max-width: 600px) {
+  .offer-card-icon {
     width: 100%;
-    max-width: 30%;
+    max-width: 20%;
+    margin: 0 auto;
+  }
+  .offer-card-text {
+    text-align: center;
+  }
+}
+
+.open-position {
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 8%;
+}
+
+@media (max-width: 600px) {
+  .open-position {
+    margin-top: 30%;
   }
 }
 
