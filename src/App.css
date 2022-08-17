@@ -891,7 +891,7 @@ strong {
 }
 
 .container {
-  width: 1350px;
+  max-width: 1350px;
 }
 
 .container-sm {
@@ -2224,7 +2224,7 @@ textarea.form-input {
   display: none;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 950px) {
   .header-nav-toggle {
     display: block;
   }
@@ -3601,7 +3601,7 @@ img.has-shadow {
   background-image: url("./assets/images/section/TeamsPage/Hero-image-gradient.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 800px;
+  height: 870px;
   margin-top: 90px;
 }
 
@@ -3616,6 +3616,27 @@ img.has-shadow {
     background-image: url("./assets/images/section/TeamsPage/Hero-image-gradient.png");
     background-repeat: no-repeat;
     background-size: cover;
+    height: 500px;
+    margin-top: 90px;
+  }
+}
+
+.Hero-Banner-Career {
+  background-image: url("./assets/images/section/CareersFAQsPage/Hero-imahe=gradiants.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 870px;
+  margin-top: 90px;
+}
+
+@media (max-width: 1080px) {
+  .Hero-Banner-Career {
+    height: 600px;
+  }
+}
+
+@media (max-width: 450px) {
+  .Hero-Banner-Career {
     height: 500px;
     margin-top: 90px;
   }
@@ -3663,6 +3684,7 @@ img.has-shadow {
   left: 72%;
   top: -8%;
   bottom: 20%;
+  background-image: url("./assets/images/section/CareersFAQsPage/Pie-Chart.svg");
 }
 
 @media (max-width: 1600px) {
@@ -3695,7 +3717,7 @@ img.has-shadow {
   width: 100%;
   background-size: cover;
   position: relative;
-  bottom: 10%;
+  bottom: 1%;
   margin: 0;
 }
 
@@ -3981,6 +4003,47 @@ img.has-shadow {
     position: relative;
     top: 400%;
     right: 0%;
+  }
+}
+
+.middle-dotted-Career {
+  position: absolute;
+  width: 23%;
+  left: 0%;
+  top: 80%;
+}
+
+@media (max-width: 1600px) {
+  .middle-dotted-Career {
+    position: absolute;
+    width: 30%;
+    left: 0%;
+    top: 95%;
+  }
+}
+@media (max-width: 1024px) {
+  .middle-dotted-Career {
+    position: absolute;
+    left: 0%;
+    top: 50%;
+  }
+}
+
+@media (max-width: 450px) {
+  .middle-dotted-Career {
+    display: none;
+  }
+}
+
+.offer-card {
+  width: 100%;
+  max-width: 80%;
+}
+
+@media (max-width: 450px) {
+  .offer-card {
+    width: 100%;
+    max-width: 30%;
   }
 }
 

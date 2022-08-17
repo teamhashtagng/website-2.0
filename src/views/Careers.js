@@ -1,13 +1,17 @@
 import React from 'react'
+import Hero from '../components/sections/career/Hero'
+import Open from '../components/sections/career/Open'
+import WorkingHere from '../components/sections/career/WorkingHere'
 import LayoutDefault from '../layouts/LayoutDefault'
 
 const Careers = () => {
   return (
     <LayoutDefault>
-        <div style={{marginTop: "100px"}}>
-            <h1>Careers</h1>
+        <div>
+          <Hero/>
+          <WorkingHere/>
+          <Open/>
         </div>
-        
     </LayoutDefault>
   )
 }
