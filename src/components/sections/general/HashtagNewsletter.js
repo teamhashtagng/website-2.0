@@ -19,6 +19,7 @@ const HashtagNewsletter = () => {
                 <TextField size='small' className='border-white' id="outlined-basic" placeholder='Email Address' variant="outlined" />
             </Box>
             <div style={{position: 'relative', marginTop: '-50px', marginRight: '-600px'}}>
+
                 <PrimaryButton bgColor={'#00B9BC'} text={'Subscribe'} />
             </div>
         </Box>

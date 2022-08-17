@@ -1,13 +1,17 @@
 import React from 'react'
 import LayoutDefault from '../layouts/LayoutDefault'
+import Hero from '../components/sections/Team/Hero'
+import TeamMember from '../components/sections/Team/TeamMember'
+import CTA from '../components/sections/Team/CTA'
 
 const Team = () => {
   return (
     <LayoutDefault>
-        <div style={{marginTop: "100px"}}>
-            <h1>Team</h1>
+        <div>
+          <Hero/>
+          <TeamMember/>
+          <CTA/>
         </div>
-        
     </LayoutDefault>
   )
 }
