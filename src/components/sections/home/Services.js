@@ -3,7 +3,9 @@ import {  Box  } from '@mui/material'
 
 const Services = () => {
   return (
-    <div>Services</div>
+    <Box>
+      
+    </Box>
   )
 }
 

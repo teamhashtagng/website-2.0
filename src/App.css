@@ -58,7 +58,7 @@
 /*--------------------------------------------------------------
 # Call to action
 --------------------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css?family=Inter:400,500,600,700,800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @use "sass:math";
 /*--------------------------------------------------------------
 # Normalize
@@ -528,7 +528,7 @@ button,
 input,
 select,
 textarea {
-  font-family: "Inter", sans-serif;
+  font-family: "Red Hat Display", sans-serif;
   font-weight: 400;
 }
 
@@ -544,7 +544,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Inter", sans-serif;
+  font-family: "Red Hat Display", sans-serif;
   font-weight: 800;
   clear: both;
   color: #151719;
@@ -2550,6 +2550,11 @@ textarea.form-input {
 .hero-inner > .hero-content + .hero-figure,
 .hero-inner > .hero-figure + .hero-content {
   margin-top: 48px;
+}
+
+.hero-h1 {
+  font-weight: 900;
+  color: #2E2F6E;
 }
 
 .hero-inner > .hero-figure > a {

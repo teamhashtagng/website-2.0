@@ -1,8 +1,8 @@
 import React from 'react'
-import Hero from '../components/sections/Contact/Hero'
+import Hero from '../components/sections/contact/Hero'
 import LayoutDefault from '../layouts/LayoutDefault'
-import ContactDetail from '../components/sections/Contact/ContactDetail'
-import ContactIllustration from '../components/sections/Contact/ContactIllustration'
+import ContactDetail from '../components/sections/contact/ContactDetail'
+import ContactIllustration from '../components/sections/contact/ContactIllustration'
 
 const ContactUs = () => {
   return (
