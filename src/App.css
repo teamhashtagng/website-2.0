@@ -2552,6 +2552,11 @@ textarea.form-input {
   margin-top: 48px;
 }
 
+.hero-h1 {
+  font-weight: 900;
+  color: #2e2f6e;
+}
+
 .hero-inner > .hero-figure > a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;

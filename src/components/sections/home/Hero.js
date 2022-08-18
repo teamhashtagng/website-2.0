@@ -55,7 +55,6 @@ const Hero = ({
         <div className={innerClasses}>
           <Grid container spacing={5}>
             <Grid item xs={12} sm={6} md={6} style={{display: "flex", flexDirection: "column", justifyContent: "center"}} className="btns">
-              {/* <p className="m-0 reveal-from-bottom primary-color" data-reveal-delay="400"><b>OONFTs</b></p> */}
               <h1 className="hero-h1 mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
               Welcome to<br/><span style={{color: '#00B9BC'}}> Hashtag Digital</span>
               </h1>
@@ -64,7 +63,6 @@ const Hero = ({
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <PrimaryButton bgColor={'#2E2F6E'} text={'Let us discuss'}/>
-                {/* <Link className=''></Link> */}
               </div>
             </Grid>
             <Grid item xs={12} sm={6} md={6}>

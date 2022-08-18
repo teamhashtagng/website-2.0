@@ -4,7 +4,6 @@ import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/images/logo-png.png';
 import PrimaryButton from '../elements/PrimaryButton';
-import Image from '../elements/Image';
 import Lines from '../../assets/images/lines/navigation-curves.png'
 
 const propTypes = {
