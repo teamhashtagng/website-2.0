@@ -4126,24 +4126,59 @@ img.has-shadow {
     background-position: 0 -310px;
   }
 }
+@media (max-width: 1000px) {
+  .career-illus {
+    background-image: url("./assets/images/section/CareersFAQsPage/Curved-line-middle.svg");
+    background-repeat: no-repeat;
+    height: 300px;
+    background-size: cover;
+    background-position: 0 -310px;
+  }
+}
+@media (max-width: 450px) {
+  .career-illus {
+    background-position: 0 -90px;
+  }
+}
 
 .FAQ-header {
   width: 100%;
   max-width: 50%;
-  padding-top: 50px;
+  padding-top: 30px;
 }
 
 @media (max-width: 1050px) {
   .FAQ-header {
     width: 100%;
     max-width: 80%;
-    margin-top: 50px;
+  }
+}
+@media (max-width: 1000px) {
+  .FAQ-header {
+    width: 100%;
+    max-width: 100%;
+    padding-top: 0px;
   }
 }
 
 .FAQ-question-bg {
   background-image: url("./assets/images/section/CareersFAQsPage/FAQ-questions-bg.svg");
   background-repeat: no-repeat;
+  background-position: 0 -20px;
+  background-size: cover;
+}
+
+@media (max-width: 1300px) {
+  .FAQ-question-bg {
+    background-position: 0 10px;
+    background-size: cover;
+  }
+}
+@media (max-width: 1050px) {
+  .FAQ-question-bg {
+    background-position: 0 50px;
+    background-size: cover;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
