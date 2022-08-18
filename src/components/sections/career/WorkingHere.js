@@ -2,10 +2,7 @@ import React from 'react';
 import { Button, Grid } from '@mui/material';
 import Image from '../../elements/Image';
 import DottedImage from '../../../assets/images/section/CareersFAQsPage/Dotted-about-here.svg';
-import OfferCard from './OffersCard';
-import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import Offers from './Offers';
-import zIndex from '@mui/material/styles/zIndex';
 
 
 export default function WorkingHere () {
