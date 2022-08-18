@@ -549,11 +549,7 @@ h6,
 .h5,
 .h6 {
   font-family: "Red Hat Display", sans-serif;
-<<<<<<< HEAD
   font-weight: 900;
-=======
-  font-weight: 800;
->>>>>>> de535ee06dd066b1a5ef139f4e2efded77e4c51d
   clear: both;
   color: #2E2F6E;
   word-wrap: break-word;
