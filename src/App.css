@@ -3684,7 +3684,6 @@ img.has-shadow {
   left: 72%;
   top: -8%;
   bottom: 20%;
-  background-image: url("./assets/images/section/CareersFAQsPage/Pie-Chart.svg");
 }
 
 @media (max-width: 1600px) {
@@ -4166,6 +4165,8 @@ img.has-shadow {
   background-repeat: no-repeat;
   background-position: 0 -20px;
   background-size: cover;
+  position: relative;
+  height: auto;
 }
 
 @media (max-width: 1300px) {
@@ -4178,6 +4179,19 @@ img.has-shadow {
   .FAQ-question-bg {
     background-position: 0 50px;
     background-size: cover;
+  }
+}
+
+.Answer-dotted {
+  position: absolute;
+  left: 0%;
+  width: 33%;
+  bottom: -12%;
+}
+
+@media (max-width: 450px) {
+  .Answer-dotted {
+    display: none;
   }
 }
 

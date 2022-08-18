@@ -1,7 +1,10 @@
 import { Grid } from "@mui/material";
 import React from "react";
+import Image from "../../elements/Image";
 import PrimaryButton from "../../elements/PrimaryButton";
 import AccordionQuestion from "./Accordion";
+import dotted from '../../../assets/images/section/CareersFAQsPage/FAQs-dotted.svg'
+
 
 export default function FAQquestions (){
     return(
@@ -57,7 +60,7 @@ export default function FAQquestions (){
                     </Grid>
                 </Grid>
 
-                <Grid container spacing={2} sx={{marginTop: '1%', marginBottom: '10%'}}>
+                <Grid container spacing={2} sx={{marginTop: '1%', marginBottom: '0%'}}>
                     <Grid item xs={12} sm={12} md={12} sx={{paddingTop: '5%'}}>
                         <h4 className=" mt-0 mb-16 reveal-from-bottom " data-reveal-delay="200" style={{color: '#ffffff', marginTop: '5%', textAlign: 'center'}}>
                             Didn’t find an answer?
@@ -66,12 +69,17 @@ export default function FAQquestions (){
                             Our team is just an email away and ready to answer your questions
                         </p>
                     </Grid>
-                    <Grid item xs={12} sm={12} md={12} sx={{paddingTop: '1%'}}>
+                    <Grid item xs={12} sm={12} md={12} sx={{paddingTop: '1%', paddingBottom: '3%'}}>
                         <center>
                         <PrimaryButton bgColor={'#00B9BC'} text={'  Contact Us  '}/>
                         </center>
                     </Grid>
                 </Grid>
+                <Image
+                    className='Answer-dotted'
+                    src={dotted}
+                    alt="dotted" 
+                />
         </React.Fragment>
     )
 }
