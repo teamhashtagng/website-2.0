@@ -5,6 +5,8 @@ import OpenPositions from '../components/sections/career/OpenPositions'
 import WorkingHere from '../components/sections/career/WorkingHere'
 import LayoutDefault from '../layouts/LayoutDefault'
 import JobPostingNewsletter from '../components/sections/general/JobPostingNewsletter'
+import FAQs from '../components/sections/career/FAQs'
+import BgImage from '../components/sections/career/BgImage'
 
 const Careers = () => {
   return (
@@ -15,6 +17,8 @@ const Careers = () => {
           <Open/>
           <OpenPositions/>
           <JobPostingNewsletter/>
+          <BgImage/>
+          <FAQs/>
         </div>
     </LayoutDefault>
   )
