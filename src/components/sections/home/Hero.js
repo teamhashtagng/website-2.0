@@ -82,7 +82,7 @@ const Hero = ({
       </div>
       
     </section>
-    <div style={{position: 'absolute', top: '0', marginTop: '80px', zIndex: '-1'}}>
+    <div className='hero-lines'>
         <Image
           src={Lines}
           style={{zIndex: '-1'}}

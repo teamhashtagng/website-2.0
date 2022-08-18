@@ -58,7 +58,7 @@
 /*--------------------------------------------------------------
 # Call to action
 --------------------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css?family=Inter:400,500,600,700,800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @use "sass:math";
 /*--------------------------------------------------------------
 # Normalize
@@ -73,7 +73,11 @@ html {
 
 body {
   margin: 0;
-  overflow-x: hidden;
+  overflow-x: hidden!important;
+}
+
+.white-color {
+  color: white
 }
 
 article,
@@ -528,7 +532,7 @@ button,
 input,
 select,
 textarea {
-  font-family: "Inter", sans-serif;
+  font-family: "Red Hat Display", sans-serif;
   font-weight: 400;
 }
 
@@ -544,12 +548,29 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Inter", sans-serif;
-  font-weight: 800;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 900;
   clear: both;
-  color: #151719;
+  color: #2E2F6E;
   word-wrap: break-word;
   overflow-wrap: break-word;
+}
+
+.products-h1 {
+  margin-top: -200px!important
+}
+
+.subform-width {
+  width: 50%!important;
+}
+
+@media(max-width: 768px) {
+  .products-h1 {
+    margin-top: 0px!important
+  }
+  .subform-width {
+    width: 100%!important;
+  }
 }
 
 .primary-color {
@@ -891,7 +912,7 @@ strong {
 }
 
 .container {
-  width: 1350px;
+  max-width: 1350px;
 }
 
 .container-sm {
@@ -2547,6 +2568,25 @@ textarea.form-input {
 /*--------------------------------------------------------------
 # Hero
 --------------------------------------------------------------*/
+.hero-h1 {
+  font-weight: 900;
+  color: "#2E2F6E"
+}
+
+.hero-lines {
+  position: absolute; 
+  top: 0; 
+  margin-top: 80px;
+  z-index: -1;
+}
+
+@media(max-width: 768px) {
+  .hero-lines {
+    position: relative;
+    margin-top: -280px;
+  }
+}
+
 .hero-inner > .hero-content + .hero-figure,
 .hero-inner > .hero-figure + .hero-content {
   margin-top: 48px;
@@ -3595,6 +3635,27 @@ img.has-shadow {
 .nft__item:hover {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
     rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.services_ > h3 {
+  color: white
+}
+
+.space-guy {
+  margin-top: -35rem;
+}
+
+.extra-space {
+  display: block;
+}
+
+@media(max-width: 768px) {
+  .space-guy {
+    margin-top: -20rem;
+  }
+  .extra-space {
+    display: none!important;
+  }
 }
 
 .Hero-Banner {

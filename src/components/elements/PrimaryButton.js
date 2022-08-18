@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react'
 import Button from './Button'
 
 const PrimaryButton = (props) => {
-    const { text, bgColor } = props
+    const { text, bgColor, width } = props
     return <>
-        <Button style={{backgroundColor: `${bgColor}`}} className="button button-primary button-wide-mobile button-sm">
+        <Button style={{backgroundColor: `${bgColor}`, width: `${width}`}} className="button button-primary button-wide-mobile button-sm">
             {text}
         </Button>
     </>
