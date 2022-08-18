@@ -58,7 +58,7 @@
 /*--------------------------------------------------------------
 # Call to action
 --------------------------------------------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @use "sass:math";
 /*--------------------------------------------------------------
 # Normalize
@@ -73,11 +73,11 @@ html {
 
 body {
   margin: 0;
-  overflow-x: hidden!important;
+  overflow-x: hidden !important;
 }
 
 .white-color {
-  color: white
+  color: white;
 }
 
 article,
@@ -551,25 +551,25 @@ h6,
   font-family: "Red Hat Display", sans-serif;
   font-weight: 900;
   clear: both;
-  color: #2E2F6E;
+  color: #2e2f6e;
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
 
 .products-h1 {
-  margin-top: -200px!important
+  margin-top: -200px !important;
 }
 
 .subform-width {
-  width: 50%!important;
+  width: 50% !important;
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .products-h1 {
-    margin-top: 0px!important
+    margin-top: 0px !important;
   }
   .subform-width {
-    width: 100%!important;
+    width: 100% !important;
   }
 }
 
@@ -2570,17 +2570,17 @@ textarea.form-input {
 --------------------------------------------------------------*/
 .hero-h1 {
   font-weight: 900;
-  color: "#2E2F6E"
+  color: "#2E2F6E";
 }
 
 .hero-lines {
-  position: absolute; 
-  top: 0; 
+  position: absolute;
+  top: 0;
   margin-top: 80px;
   z-index: -1;
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .hero-lines {
     position: relative;
     margin-top: -280px;
@@ -3643,7 +3643,7 @@ img.has-shadow {
 }
 
 .services_ > h3 {
-  color: white
+  color: white;
 }
 
 .space-guy {
@@ -3654,12 +3654,12 @@ img.has-shadow {
   display: block;
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .space-guy {
     margin-top: -20rem;
   }
   .extra-space {
-    display: none!important;
+    display: none !important;
   }
 }
 
@@ -4259,6 +4259,12 @@ img.has-shadow {
   .Answer-dotted {
     display: none;
   }
+}
+
+.Hero-Banner-Job {
+  background-image: url("./assets//images//section/FrontendDescPage/Hero-image-gradient.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*# sourceMappingURL=style.css.map */
