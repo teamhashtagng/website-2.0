@@ -549,7 +549,11 @@ h6,
 .h5,
 .h6 {
   font-family: "Red Hat Display", sans-serif;
+<<<<<<< HEAD
   font-weight: 900;
+=======
+  font-weight: 800;
+>>>>>>> de535ee06dd066b1a5ef139f4e2efded77e4c51d
   clear: both;
   color: #2E2F6E;
   word-wrap: break-word;
@@ -2245,7 +2249,7 @@ textarea.form-input {
   display: none;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 950px) {
   .header-nav-toggle {
     display: block;
   }
@@ -2590,6 +2594,11 @@ textarea.form-input {
 .hero-inner > .hero-content + .hero-figure,
 .hero-inner > .hero-figure + .hero-content {
   margin-top: 48px;
+}
+
+.hero-h1 {
+  font-weight: 900;
+  color: #2e2f6e;
 }
 
 .hero-inner > .hero-figure > a {
@@ -3662,7 +3671,7 @@ img.has-shadow {
   background-image: url("./assets/images/section/TeamsPage/Hero-image-gradient.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 800px;
+  height: 870px;
   margin-top: 90px;
 }
 
@@ -3682,6 +3691,27 @@ img.has-shadow {
   }
 }
 
+.Hero-Banner-Career {
+  background-image: url("./assets/images/section/CareersFAQsPage/Hero-imahe=gradiants.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 870px;
+  margin-top: 90px;
+}
+
+@media (max-width: 1080px) {
+  .Hero-Banner-Career {
+    height: 600px;
+  }
+}
+
+@media (max-width: 450px) {
+  .Hero-Banner-Career {
+    height: 500px;
+    margin-top: 90px;
+  }
+}
+
 .hero-subtitle {
   color: #fff;
   font-size: 20px;
@@ -3689,11 +3719,11 @@ img.has-shadow {
 
 .hero-dotted {
   position: relative;
-  left: 65%;
+  left: 77%;
   bottom: 20%;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1300px) {
   .hero-dotted {
     position: relative;
     left: 18%;
@@ -3756,7 +3786,7 @@ img.has-shadow {
   width: 100%;
   background-size: cover;
   position: relative;
-  bottom: 10%;
+  bottom: 1%;
   margin: 0;
 }
 
@@ -3772,9 +3802,15 @@ img.has-shadow {
     margin: 0;
   }
 }
+@media (max-width: 600px) {
+  .under-curve {
+    bottom: 66%;
+    margin: 0;
+  }
+}
 @media (max-width: 450px) {
   .under-curve {
-    bottom: 18%;
+    bottom: 8%;
     margin: 0;
   }
 }
@@ -4042,6 +4078,190 @@ img.has-shadow {
     position: relative;
     top: 400%;
     right: 0%;
+  }
+}
+
+.middle-dotted-Career {
+  position: absolute;
+  width: 23%;
+  left: 0%;
+  top: 80%;
+}
+
+@media (max-width: 1600px) {
+  .middle-dotted-Career {
+    position: absolute;
+    width: 30%;
+    left: 0%;
+    top: 95%;
+  }
+}
+@media (max-width: 1000px) {
+  .middle-dotted-Career {
+    position: absolute;
+    left: 0%;
+    top: 50%;
+  }
+}
+
+@media (max-width: 450px) {
+  .middle-dotted-Career {
+    display: none;
+  }
+}
+
+.offer-card-icon {
+  width: 100%;
+  max-width: 80%;
+}
+
+@media (max-width: 600px) {
+  .offer-card-icon {
+    width: 100%;
+    max-width: 20%;
+    margin: 0 auto;
+  }
+  .offer-card-text {
+    text-align: center;
+  }
+}
+
+.open-position {
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 8%;
+  margin-bottom: 4%;
+}
+
+@media (max-width: 600px) {
+  .open-position {
+    margin-top: 30%;
+  }
+}
+
+.tab {
+  text-transform: capitalize !important;
+  color: #2e2f6e !important;
+  font-weight: 600 !important;
+  font-size: 22px !important;
+  line-height: 134.3% !important;
+  /* or 32px */
+
+  text-align: center !important;
+}
+
+.tab:hover,
+.tab:focus {
+  color: #00b9bc !important;
+}
+
+.tab:active {
+  color: #00b9bc !important;
+}
+
+#apply-button {
+  color: #fff;
+  background-color: #2e2f6e;
+  border: "none";
+  padding: 8px 30px;
+  font-size: 16px;
+  text-transform: capitalize;
+  border-radius: 10px;
+  margin-top: 23px;
+}
+
+.job-line {
+  width: 100%;
+  border: 1px solid #dfdfdf;
+  margin-top: 12px;
+  background-color: #dfdfdf;
+}
+
+.career-illus {
+  background-image: url("./assets/images/section/CareersFAQsPage/Curved-line-middle.svg");
+  background-repeat: no-repeat;
+  height: 500px;
+  background-size: cover;
+  background-position: 0 -500px;
+}
+
+@media (max-width: 1300px) {
+  .career-illus {
+    background-image: url("./assets/images/section/CareersFAQsPage/Curved-line-middle.svg");
+    background-repeat: no-repeat;
+    height: 500px;
+    background-size: cover;
+    background-position: 0 -310px;
+  }
+}
+@media (max-width: 1000px) {
+  .career-illus {
+    background-image: url("./assets/images/section/CareersFAQsPage/Curved-line-middle.svg");
+    background-repeat: no-repeat;
+    height: 300px;
+    background-size: cover;
+    background-position: 0 -310px;
+  }
+}
+@media (max-width: 450px) {
+  .career-illus {
+    background-position: 0 -90px;
+  }
+}
+
+.FAQ-header {
+  width: 100%;
+  max-width: 50%;
+  padding-top: 30px;
+}
+
+@media (max-width: 1050px) {
+  .FAQ-header {
+    width: 100%;
+    max-width: 80%;
+  }
+}
+@media (max-width: 1000px) {
+  .FAQ-header {
+    width: 100%;
+    max-width: 100%;
+    padding-top: 0px;
+  }
+}
+
+.FAQ-question-bg {
+  background-image: url("./assets/images/section/CareersFAQsPage/FAQ-questions-bg.svg");
+  background-repeat: no-repeat;
+  background-position: 0 -20px;
+  background-size: cover;
+  position: relative;
+  height: auto;
+}
+
+@media (max-width: 1300px) {
+  .FAQ-question-bg {
+    background-position: 0 10px;
+    background-size: cover;
+  }
+}
+@media (max-width: 1050px) {
+  .FAQ-question-bg {
+    background-position: 0 50px;
+    background-size: cover;
+  }
+}
+
+.Answer-dotted {
+  position: absolute;
+  left: 0%;
+  width: 33%;
+  bottom: -12%;
+}
+
+@media (max-width: 450px) {
+  .Answer-dotted {
+    display: none;
   }
 }
 

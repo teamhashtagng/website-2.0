@@ -72,7 +72,6 @@ const Services = () => {
             style={{position: 'relative', zIndex: '999'}}
           />
       </div>
-      
     </Box>
   )
 }
