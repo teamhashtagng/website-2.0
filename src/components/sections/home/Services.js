@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from '../../elements/Image'
-import ServiceCurve from '../../../assets/images/shapes/curved-services.png'
+import ServiceCurve from '../../../assets/images/section/HomePage/curved-services-top.png'
 import ServiceDots from '../../../assets/images/section/HomePage/Features-dotted-design.svg'
 import SoftwareDev from '../../../assets/images/section/HomePage/Software-dev.svg'
 import ProductMngt from '../../../assets/images/section/HomePage/Product-mangement.svg'
@@ -54,7 +54,7 @@ const Services = () => {
         <div className='extra-space' style={{height: '500px'}}>
           <Image
               src={LeftDots}
-              style={{position: 'absolute', left: '0', marginTop: '100px'}}
+              style={{position: 'absolute', left: '0', marginTop: '200px'}}
             />
             <Image
               src={CurvedLinesDown}
