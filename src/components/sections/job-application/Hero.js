@@ -53,9 +53,9 @@ export default function Hero({
                 <h1 className="hero-h1 mt-0 mb-16 reveal-from-bottom hero-h1-banner" data-reveal-delay="200" style={{color: '#FFFFFF'}}>
                     Frontend Engineer
                 </h1>
-                <Link to="/job-application">
-                    <PrimaryButton text={'Apply Now'} bgColor={'#00B9BC'} />
-                </Link>
+                <p className=" reveal-from-bottom hero-subtitle" data-reveal-delay="400">
+                    Application Form
+                </p>
                 </Grid>
                 <Grid item xs={12} sm={6} md={6} style={{ paddingTop: '5%'}} className="btns view-opens">
                     <p className=" reveal-from-bottom hero-subtitle" data-reveal-delay="400">

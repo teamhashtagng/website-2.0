@@ -1,5 +1,5 @@
 import React from 'react'
-import Hero from '../components/sections/job-description/Hero'
+import Hero from '../components/sections/job-application/Hero'
 import LayoutDefault from '../layouts/LayoutDefault'
 
 const JobApplication = () => {
