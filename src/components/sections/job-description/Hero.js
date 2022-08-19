@@ -50,7 +50,7 @@ export default function Hero({
                 <Grid container spacing={5}>
                 <Grid item xs={12} sm={6} md={6} style={{}} className="btns">
                 {/* <p className="m-0 reveal-from-bottom primary-color" data-reveal-delay="400"><b>OONFTs</b></p> */}
-                <h1 className="hero-h1 mt-0 mb-16 reveal-from-bottom hero-h1-banner" data-reveal-delay="200" style={{color: '#00B9BC'}}>
+                <h1 className="hero-h1 mt-0 mb-16 reveal-from-bottom hero-h1-banner" data-reveal-delay="200" style={{color: '#FFFFFF'}}>
                     Work With Us
                 </h1>
                 <Link to="/job-application">
