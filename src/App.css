@@ -4267,4 +4267,69 @@ img.has-shadow {
   background-size: cover;
 }
 
+.view-opens {
+  text-align: right;
+}
+
+.job-bottom-line {
+  background-image: url("./assets/images/section/FrontendDescPage/Curved-line-bottom.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  background-position: 0 -600px;
+  position: relative;
+}
+
+.job-dotted {
+  position: absolute;
+  right: 0;
+  bottom: 240%;
+}
+
+@media (max-width: 1300px) {
+  .job-bottom-line {
+    background-position: 0 -420px;
+    position: relative;
+  }
+}
+@media (max-width: 1000px) {
+  .job-bottom-line {
+    height: 300px;
+    background-position: 0 -300px;
+    position: relative;
+  }
+
+  .job-dotted {
+    position: absolute;
+    right: 0;
+    bottom: 270%;
+    width: 60%;
+  }
+}
+
+@media (max-width: 900px) {
+  .job-dotted {
+    position: absolute;
+    right: 0;
+    bottom: 330%;
+    width: 60%;
+  }
+}
+
+@media (max-width: 600px) {
+  .job-bottom-line {
+    height: 300px;
+    background-position: 0 -100px;
+    position: relative;
+  }
+
+  .view-opens {
+    text-align: center;
+  }
+
+  .job-dotted {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

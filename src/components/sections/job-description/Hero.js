@@ -57,7 +57,7 @@ export default function Hero({
                     <PrimaryButton text={'Apply Now'} bgColor={'#00B9BC'} />
                 </Link>
                 </Grid>
-                <Grid item xs={12} sm={6} md={6} style={{ textAlign: 'right', paddingTop: '5%'}} className="btns">
+                <Grid item xs={12} sm={6} md={6} style={{ paddingTop: '5%'}} className="btns view-opens">
                     <p className=" reveal-from-bottom hero-subtitle" data-reveal-delay="400">
                     View Other Openings
                     </p>
