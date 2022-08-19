@@ -8,6 +8,7 @@ import PrimaryButton from '../../elements/PrimaryButton';
 
 import SpaceGuy1 from '../../../assets/images/space-guy-1.png'
 import Lines from '../../../assets/images/lines/hero-section-line.png'
+import HeroLines from '../../../assets/images/section/HomePage/hero-line.png'
 
 const propTypes = {
   ...SectionProps.types
@@ -82,7 +83,7 @@ const Hero = ({
     </section>
     <div className='hero-lines'>
         <Image
-          src={Lines}
+          src={HeroLines}
           style={{zIndex: '-1'}}
         />
       </div>
