@@ -4286,6 +4286,12 @@ img.has-shadow {
   bottom: 240%;
 }
 
+.job-dotted-apply {
+  position: absolute;
+  right: 0;
+  bottom: 10%;
+}
+
 @media (max-width: 1300px) {
   .job-bottom-line {
     background-position: 0 -420px;
@@ -4327,7 +4333,8 @@ img.has-shadow {
     text-align: center;
   }
 
-  .job-dotted {
+  .job-dotted,
+  .job-dotted-apply {
     display: none;
   }
 }
