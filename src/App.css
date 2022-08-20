@@ -3725,6 +3725,7 @@ img.has-shadow {
     background-size: cover;
     height: 500px;
     margin-top: 90px;
+    position: relative;
   }
 }
 
@@ -3755,16 +3756,15 @@ img.has-shadow {
 }
 
 .hero-dotted {
-  position: relative;
-  left: 77%;
-  bottom: 20%;
+  position: absolute;
+  width: 50%;
+  right: 0px;
+  top: 20%;
 }
 
 @media (max-width: 1300px) {
   .hero-dotted {
-    position: relative;
-    left: 18%;
-    bottom: 20%;
+    top: 20%;
   }
 }
 
@@ -3796,8 +3796,8 @@ img.has-shadow {
 @media (max-width: 1600px) {
   .middle-dotted {
     position: absolute;
-    width: 70%;
-    left: 60%;
+    right: 0%;
+    top: 60%;
     width: 48%;
   }
 }

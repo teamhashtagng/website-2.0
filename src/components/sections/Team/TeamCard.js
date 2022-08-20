@@ -58,7 +58,7 @@ export default function TeamCard({profile, name, role, social, description, stat
             alt="Team member"
             id='profile-img-click'
           />
-          <CardContent>
+          <CardContent sx={{maxHeight: '400px', overflowY: 'auto'}}>
             <Typography gutterBottom variant="h5" id='Team-card-name-hover' component="div" color='#2E2F6E'>
               {name}
             </Typography>

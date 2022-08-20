@@ -5,60 +5,33 @@ import PrimaryButton from "../../elements/PrimaryButton";
 import AccordionQuestion from "./Accordion";
 import dotted from '../../../assets/images/section/CareersFAQsPage/FAQs-dotted.svg'
 import { Link } from "react-router-dom";
+import QuestionData from "./QuestionData";
 
 
 export default function FAQquestions (){
+
+    const [expanded, setExpanded] = React.useState(false);
+    console.log(expanded)
+    const handleChange = (isExpanded, panel) => {
+        setExpanded(isExpanded ? panel : false);
+        console.log(panel)
+    };
+
     return(
         <React.Fragment>
                 <Grid container spacing={4} sx={{marginTop: '8%'}}>
-                    <Grid item xs={12} sm={12} md={12} sx={{paddingTop: '5%'}}>
-                        <AccordionQuestion
-                            title={'Do you provide customer support?'}
-                            description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim 
-                            id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor `}
-                        />
+                {QuestionData.map((_, index) => (
+                    <Grid item xs={12} sm={12} md={12} key={index}>
+                    <AccordionQuestion 
+                        key={_.id}
+                        panelNo={_.panelNo}
+                        title={_.title}
+                        description={_.description}
+                        state={expanded}
+                        handleChange={(event, isExpanded) => handleChange(isExpanded, _.panelNo)}
+                    />
                     </Grid>
-                    <Grid item xs={12} sm={12} md={12} sx={{paddingTop: '5%'}}>
-                        <AccordionQuestion
-                            title={'Do you provide customer support?'}
-                            description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim 
-                            id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor `}
-                        />
-                    </Grid>
-                    <Grid item xs={12} sm={12} md={12} >
-                        <AccordionQuestion sx={{paddingTop: '10%'}}
-                            title={'Do you provide customer support?'}
-                            description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim 
-                            id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor `}
-                        />
-                    </Grid>
-                    <Grid item xs={12} sm={12} md={12} sx={{paddingTop: '3%'}}>
-                        <AccordionQuestion
-                            title={'Do you provide customer support?'}
-                            description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim 
-                            id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum`}
-                        />
-                    </Grid>
+                ))}
                 </Grid>
 
                 <Grid container spacing={2} sx={{marginTop: '1%', marginBottom: '0%'}}>

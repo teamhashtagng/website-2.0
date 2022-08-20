@@ -59,7 +59,7 @@ const Footer = ({
                     </Grid>
                     <Grid item md={4} sm={4} xs={12}>
                       <h5 style={{color: "#2E2F6E"}}>Team</h5>
-                      <p>Corw Team</p>
+                      <p>Core Team</p>
                       <p>Advistory Team</p>
                     </Grid>
                     <Grid item md={4} sm={4} xs={12}>
@@ -95,7 +95,7 @@ const Footer = ({
               </Grid>
             </Box>
             <br/><br/>
-              <div className="footer-copyright" style={{color: "#9CA9B3", textAlign: 'center'}}>&copy; 2022 Kiwii Labs. All right reserved</div>
+              <div className="footer-copyright" style={{color: "#9CA9B3", textAlign: 'center'}}>&copy; Copyright © 2022 Hashtag Digital Services Ltd. All right reserved</div>
           </div>
         </div>
       </div>
