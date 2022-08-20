@@ -8,7 +8,7 @@ import { Box, Grid } from '@mui/material'
 const MissionVisionValues = () => {
   return (
     <Box>
-      <div className='container'>
+      <div className='container' style={{zIndex: '999'}}>
         <Grid container spacing={3}>
           <Grid item xs={12} md={3.5} sm={3.5} className='border-right'>
             <Image 
