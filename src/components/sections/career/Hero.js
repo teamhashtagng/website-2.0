@@ -48,7 +48,7 @@ const Hero = ({
       className={outerClasses}
     >
       <div className="container-sm">
-        <div className={innerClasses} style={{position: 'relative'}}>
+        <div className={innerClasses}>
           <Grid container spacing={5}>
             <Grid item xs={12} sm={6} md={6} style={{display: "flex", flexDirection: "column", justifyContent: "center"}} className="btns">
               {/* <p className="m-0 reveal-from-bottom primary-color" data-reveal-delay="400"><b>OONFTs</b></p> */}
@@ -65,13 +65,14 @@ const Hero = ({
             <Grid item xs={12} sm={6} md={6}>
             </Grid>
           </Grid>
-          <Image
-            className='hero-dotted'
-            src={DottedImage}
-            alt="Hero" 
-            />
         </div>
       </div>
+        <Image
+          className='hero-dotted'
+          src={DottedImage}
+          alt="Hero" 
+          style={{position: 'absolute', right: '0'}}
+          />
           <div className='under-curve'></div>
     </section>
   );

@@ -594,7 +594,7 @@ h6,
   position: relative;
   z-index: 999;
   float: right;
-  margin-top: -300px;
+  margin-top: -320px;
   margin-right: 150px;
 }
 
@@ -3758,7 +3758,7 @@ img.has-shadow {
 .hero-dotted {
   position: absolute;
   width: 50%;
-  right: 0px;
+  right: 0%;
   top: 20%;
 }
 
@@ -3770,13 +3770,11 @@ img.has-shadow {
 
 @media (max-width: 1024px) {
   .hero-dotted {
-    position: relative;
-    left: 5%;
     bottom: 20%;
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   .hero-dotted {
     display: none;
     position: relative;
@@ -3788,29 +3786,42 @@ img.has-shadow {
 .middle-dotted {
   position: absolute;
   width: 60%;
-  left: 72%;
-  top: -8%;
-  bottom: 20%;
+  right: 0px;
+  top: 40%;
 }
 
 @media (max-width: 1600px) {
   .middle-dotted {
     position: absolute;
-    right: 0%;
-    top: 60%;
+    right: 0px;
+    top: 100%;
     width: 48%;
   }
 }
 @media (max-width: 1024px) {
   .middle-dotted {
+    right: 0px;
+    top: 41.5%;
+  }
+}
+@media (max-width: 1000px) {
+  .middle-dotted {
     position: absolute;
-    left: 54%;
-    top: 0%;
+    right: 0px;
+    top: 45%;
+    width: 48%;
+  }
+}
+@media (max-width: 768px) {
+  .middle-dotted {
+    position: absolute;
+    right: 0px;
+    top: 55%;
     width: 48%;
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   .middle-dotted {
     display: none;
   }
@@ -3819,11 +3830,11 @@ img.has-shadow {
 .under-curve {
   background-image: url("./assets/images/section/TeamsPage/hero-bottom-curve.svg");
   background-repeat: no-repeat;
-  height: 200px;
+  height: 400px;
   width: 100%;
   background-size: cover;
   position: relative;
-  bottom: 1%;
+  bottom: -22%;
   margin: 0;
 }
 
@@ -3831,24 +3842,27 @@ img.has-shadow {
   .under-curve {
     bottom: 30%;
     margin: 0;
+    height: 300px;
+    bottom: -5%;
   }
 }
 @media (max-width: 768px) {
   .under-curve {
-    bottom: 22%;
+    bottom: 0%;
     margin: 0;
   }
 }
 @media (max-width: 600px) {
   .under-curve {
-    bottom: 66%;
+    bottom: -5%;
     margin: 0;
   }
 }
 @media (max-width: 450px) {
   .under-curve {
-    bottom: 8%;
+    bottom: 3%;
     margin: 0;
+    height: 200px;
   }
 }
 
@@ -4162,6 +4176,13 @@ img.has-shadow {
     text-align: center;
   }
 }
+@media (max-width: 450px) {
+  #offer-card-icon {
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
 
 .open-position {
   height: 300px;
@@ -4220,10 +4241,10 @@ img.has-shadow {
   background-repeat: no-repeat;
   height: 500px;
   background-size: cover;
-  background-position: 0 -750px;
+  background-position: 0 -850px;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1600px) {
   .career-illus {
     background-image: url("./assets/images/section/CareersFAQsPage/Curved-line-middle.svg");
     background-repeat: no-repeat;
@@ -4246,9 +4267,14 @@ img.has-shadow {
   .career-illus {
     background-image: url("./assets/images/section/CareersFAQsPage/Curved-line-middle.svg");
     background-repeat: no-repeat;
-    height: 300px;
+    height: 200px;
     background-size: cover;
-    background-position: 0 -310px;
+    background-position: 0 -320px;
+  }
+}
+@media (max-width: 600px) {
+  .career-illus {
+    background-position: 0 -200px;
   }
 }
 @media (max-width: 450px) {
@@ -4259,7 +4285,7 @@ img.has-shadow {
 
 .FAQ-header {
   width: 100%;
-  max-width: 50%;
+  max-width: 70%;
   padding-top: 30px;
 }
 

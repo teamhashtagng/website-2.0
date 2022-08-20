@@ -28,7 +28,7 @@ export default function (){
             <Box sx={{ width: '100%', marginTop:'8%' }}>
                 <TabContext value={value}>
                     <Box sx={{ borderBottom: 1, border: 'none' }}>
-                    <TabList onChange={handleChange} className="tab" aria-label="lab API tabs example">
+                    <TabList onChange={handleChange} className="tab" aria-label="lab API tabs example" variant="scrollable" allowScrollButtonsMobile>
                         <Tab label="Developer" className="tab" value="1" />
                         <Tab label="Marketing" className="tab" value="2" />
                         <Tab label="Designer" className="tab" value="3" />
