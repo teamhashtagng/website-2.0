@@ -4,6 +4,7 @@ import Image from "../../elements/Image";
 import PrimaryButton from "../../elements/PrimaryButton";
 import AccordionQuestion from "./Accordion";
 import dotted from '../../../assets/images/section/CareersFAQsPage/FAQs-dotted.svg'
+import { Link } from "react-router-dom";
 
 
 export default function FAQquestions (){
@@ -71,7 +72,9 @@ export default function FAQquestions (){
                     </Grid>
                     <Grid item xs={12} sm={12} md={12} sx={{paddingTop: '1%', paddingBottom: '3%'}}>
                         <center>
-                        <PrimaryButton bgColor={'#00B9BC'} text={'  Contact Us  '}/>
+                        <Link to="/contact-us">
+                            <PrimaryButton bgColor={'#00B9BC'} text={'  Contact Us  '}/>
+                        </Link>
                         </center>
                     </Grid>
                 </Grid>

@@ -15,7 +15,7 @@ export default function (){
     };
 
     return (
-        <div className='container' style={{ marginBottom: '10%' }}>
+        <div className='container' style={{ marginBottom: '10%' }} id='open-postions'>
             <Grid container>
                 <Grid item xs={12} sm={12} md={12} style={{ zIndex: '1'}} className="btns">
                 {/* <p className="m-0 reveal-from-bottom primary-color" data-reveal-delay="400"><b>OONFTs</b></p> */}
@@ -36,9 +36,9 @@ export default function (){
                     </TabList>
                     </Box>
                     <TabPanel value="1"> <Developer/> </TabPanel>
-                    <TabPanel value="2"><Developer/></TabPanel>
-                    <TabPanel value="3"><Developer/></TabPanel>
-                    <TabPanel value="4"><Developer/></TabPanel>
+                    <TabPanel value="2">Nothing for now</TabPanel>
+                    <TabPanel value="3">Nothing for now</TabPanel>
+                    <TabPanel value="4">Nothing for now</TabPanel>
                 </TabContext>
             </Box>
         </div>

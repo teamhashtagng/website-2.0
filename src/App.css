@@ -4220,7 +4220,17 @@ img.has-shadow {
   background-repeat: no-repeat;
   height: 500px;
   background-size: cover;
-  background-position: 0 -500px;
+  background-position: 0 -750px;
+}
+
+@media (max-width: 1500px) {
+  .career-illus {
+    background-image: url("./assets/images/section/CareersFAQsPage/Curved-line-middle.svg");
+    background-repeat: no-repeat;
+    height: 500px;
+    background-size: cover;
+    background-position: 0 -500px;
+  }
 }
 
 @media (max-width: 1300px) {
@@ -4378,6 +4388,12 @@ img.has-shadow {
   .job-dotted-apply {
     display: none;
   }
+}
+
+.form-active,
+.form-active:hover,
+.form-active:active {
+  color: #000 !important;
 }
 
 /*# sourceMappingURL=style.css.map */

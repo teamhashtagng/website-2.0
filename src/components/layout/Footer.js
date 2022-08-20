@@ -59,8 +59,8 @@ const Footer = ({
                     </Grid>
                     <Grid item md={4} sm={4} xs={12}>
                       <h5 style={{color: "#2E2F6E"}}>Team</h5>
-                      <p>Join Us</p>
-                      <p>Management</p>
+                      <p>Corw Team</p>
+                      <p>Advistory Team</p>
                     </Grid>
                     <Grid item md={4} sm={4} xs={12}>
                       <h5 style={{color: "#2E2F6E"}}>Careers</h5>
@@ -87,7 +87,7 @@ const Footer = ({
                       <p>teamhashtagng@gmail.com <br/> hello@hashtagng.com</p>
                     </Grid>
                     <Grid item xs={12} sm={4} md={4}>
-                      <p>091 294 03029</p>
+                      <p>0912 940 3029</p>
                     </Grid>
                   </Grid>
                 </Grid>

@@ -58,9 +58,9 @@ const Hero = ({
               <p className="m-0 mb-32 reveal-from-bottom hero-subtitle" data-reveal-delay="400">
                 We are a Nigeria-based startup & we are ready for new talent to join our company.
               </p>
-              <Link to="/job-description">
+              <a href='#open-postions'>
               <PrimaryButton text={'View Jobs'} bgColor={'#00B9BC'}/>
-              </Link>
+              </a>
               </Grid>
             <Grid item xs={12} sm={6} md={6}>
               <Image
