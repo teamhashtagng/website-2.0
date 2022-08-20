@@ -3759,7 +3759,7 @@ img.has-shadow {
   position: absolute;
   width: 50%;
   right: 0%;
-  top: 20%;
+  top: 30%;
 }
 
 @media (max-width: 1300px) {
@@ -3878,6 +3878,20 @@ img.has-shadow {
   max-width: 200px;
   margin: 15px auto;
   margin-top: 40px;
+}
+
+.click-line {
+  background-color: #c2bfbf;
+  height: 1.3px;
+}
+
+@media (max-width: 600px) {
+  #profile-img {
+    width: 100%;
+    max-width: 100px;
+    margin: 15px auto;
+    margin-top: 40px;
+  }
 }
 
 #profile-img-click {
@@ -4098,9 +4112,10 @@ img.has-shadow {
 @media (max-width: 1200px) {
   .bottom-dotted-contact {
     width: 50%;
-    top: 150%;
+    top: 140%;
   }
 }
+
 @media (max-width: 1000px) {
   .bottom-dotted-contact {
     width: 40%;
@@ -4147,6 +4162,7 @@ img.has-shadow {
     top: 95%;
   }
 }
+
 @media (max-width: 1000px) {
   .middle-dotted-Career {
     position: absolute;

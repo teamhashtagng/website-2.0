@@ -46,12 +46,12 @@ const Hero = ({
       {...props}
       className={outerClasses}
     >
-      <div className="container-sm" style={{position: 'relative'}}>
         <Image
             className='hero-dotted'
             src={DottedImage}
             alt="Hero" 
             />
+      <div className="container-sm" style={{position: 'relative'}}>
         <div className={innerClasses}>
           <Grid container spacing={5}>
             <Grid item xs={12} sm={6} md={6} style={{display: "flex", flexDirection: "column", justifyContent: "center"}} className="btns">
