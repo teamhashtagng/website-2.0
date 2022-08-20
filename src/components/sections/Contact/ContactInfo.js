@@ -31,14 +31,14 @@ export default function ContactInfo() {
                         <AccessTimeFilledIcon sx={{ color: '#2E2F6E'}}/>
                     </div>
                     <Typography variant="p" id='contact-info-text' gutterBottom>OPENING HOURS</Typography><br/>
-                    <Typography variant="p" fontSize={'17px'} gutterBottom>Monday to Friday: 10am to 7pm Saturday: 10am to 4pm</Typography>
+                    <Typography variant="p" fontSize={'17px'} gutterBottom>Monday to Friday: 10am to 7pm <br/>Saturday: 10am to 4pm</Typography>
                 </Box>
                 <Box sx={{mt: '40px', mb: '30px'}}>
                     <div>
                         <PhoneIcon sx={{ color: '#2E2F6E'}}/>
                     </div>
                     <Typography variant="p" id='contact-info-text' gutterBottom>PHONE</Typography><br/>
-                    <Typography variant="p" fontSize={'17px'} gutterBottom>Call customer services on 0912 940 3029</Typography>
+                    <Typography variant="p" fontSize={'17px'} gutterBottom>Call customer services on <br/> 0912 940 3029</Typography>
                 </Box>
             </Grid>
         </Grid>
