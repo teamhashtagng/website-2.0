@@ -95,7 +95,7 @@ const Footer = ({
               </Grid>
             </Box>
             <br/><br/>
-              <div className="footer-copyright" style={{color: "#9CA9B3", textAlign: 'center'}}>Copyright © 2022 Hashtag Digital Services Ltd. All right reserved</div>
+              <div className="footer-copyright" style={{color: "#9CA9B3", textAlign: 'center'}}>&copy; 2022 Hashtag Digital Services. All right reserved</div>
           </div>
         </div>
       </div>

@@ -577,8 +577,8 @@ h6,
   border-radius: 50%;
   display: inline-block;
   margin: 0;
-  position: absolute;
-  top: 40%;
+  /* top: 40%; */
+  margin-top: 90px;
 }
 
 .border-right {
@@ -594,13 +594,26 @@ h6,
   position: relative;
   z-index: 999;
   float: right;
-  margin-top: -320px;
-  margin-right: 150px;
+  margin-top: -300px;
+  margin-right: 120px;
+}
+
+.we-are-fun {
+  position: absolute;
+  right: 0;
+  margin-right: 100px;
+  margin-top: 400px;
+  color: white;
+  font-size: 100px;
+  line-height: 100px;
 }
 
 @media (max-width: 768px) {
   .products-h1 {
     margin-top: 0px !important;
+  }
+  .dot {
+    margin-top: 10px;
   }
   .border-right {
     border-right: none;
@@ -610,6 +623,20 @@ h6,
   }
   .about-quote {
     margin-top: -50px;
+    margin-right: 25px;
+  }
+  .we-are-fun {
+    /* position: relative; */
+    margin-left: 100px !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .dot {
+    margin-top: 80px;
+  }
+  .about-quote {
+    margin-top: -250px;
     margin-right: 25px;
   }
 }
