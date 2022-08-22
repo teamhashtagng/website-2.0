@@ -1,10 +1,12 @@
 import React from 'react';
 import { Button, Grid } from '@mui/material';
 import classNames from 'classnames';
+import { Link } from 'react-router-dom';
 import { SectionProps } from '../../../utils/SectionProps';
 import Image from '../../elements/Image';
 
 import DottedImage from '../../../assets/images/section/TeamsPage/Hero-dotted-design.svg'
+import PrimaryButton from '../../elements/PrimaryButton';
 
 const propTypes = {
   ...SectionProps.types
@@ -56,20 +58,21 @@ const Hero = ({
               <p className="m-0 mb-32 reveal-from-bottom hero-subtitle" data-reveal-delay="400">
                 We are a Nigeria-based startup & we are ready for new talent to join our company.
               </p>
-              <Button variant="contained" 
-                    sx={{width: '200px', bgcolor: '#00B9BC', mt: '5px', boxShadow: 'none' }}
-                > View Jobs</Button>
-            </Grid>
+              <a href='#open-postions'>
+              <PrimaryButton text={'View Jobs'} bgColor={'#00B9BC'}/>
+              </a>
+              </Grid>
             <Grid item xs={12} sm={6} md={6}>
-              <Image
-                className='hero-dotted'
-                src={DottedImage}
-                alt="Hero" 
-                />
             </Grid>
           </Grid>
         </div>
       </div>
+        <Image
+          className='hero-dotted'
+          src={DottedImage}
+          alt="Hero" 
+          style={{position: 'absolute', right: '0'}}
+          />
           <div className='under-curve'></div>
     </section>
   );

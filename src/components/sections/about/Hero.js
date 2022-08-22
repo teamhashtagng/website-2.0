@@ -58,15 +58,15 @@ const Hero = ({
               </p>
             </Grid>
             <Grid item xs={12} sm={6} md={6}>
-              <Image
-                className='hero-dotted'
-                src={DottedImage}
-                alt="Hero" 
-                />
             </Grid>
           </Grid>
         </div>
       </div>
+        <Image
+          className='hero-dotted'
+          src={DottedImage}
+          alt="Hero" 
+          />
           <div className='under-curve'></div>
     </section>
   );
