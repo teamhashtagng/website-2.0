@@ -47,10 +47,8 @@ export default function ContactForm(){
                 variant="standard"
                 sx={{mt: '30px'}}
                 />
-                <div style={{}}>
-                    <Button variant="contained" 
-                    sx={{width: '200px', bgcolor: '#00B9BC', mt: '40px', boxShadow: 'none' }}
-                    > Submit</Button>
+                <div style={{ marginTop: '8%'}}>
+                    <PrimaryButton text={'Submit'} bgColor={'#00B9BC'}/>
                 </div>
             </Box>
         </Box>

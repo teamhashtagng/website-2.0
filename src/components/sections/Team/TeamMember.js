@@ -16,15 +16,6 @@ const TeamMember = ({
   ...props
 }) => {
 
-  const outerClasses = classNames(
-    'hero section center-content',
-    topOuterDivider && 'has-top-divider',
-    bottomOuterDivider && 'has-bottom-divider',
-    hasBgColor && 'has-bg-color',
-    invertColor && 'invert-color',
-    className
-  );
-
   const innerClasses = classNames(
     'hero-inner section-inner',
     topDivider && 'has-top-divider',
@@ -32,11 +23,7 @@ const TeamMember = ({
   );
 
   return (
-    <section
-      {...props}
-      className={outerClasses}
-    >
-      <div className="container-sm">
+      <div className="container-sm" style={{marginTop: '-8%'}}>
         <div className={innerClasses}>
           <Grid container>
             <Grid item xs={12} sm={12} md={12} sx={{position: 'relative'}} className="btns">
@@ -46,17 +33,16 @@ const TeamMember = ({
               </h2>
             </Grid>
          </Grid>
-          <Image
-            className='middle-dotted'
-            src={DottedImage}
-            alt="Hero" 
-          />
 
           <TeamGrid/>
 
         </div>
+        <Image
+          className='middle-dotted'
+          src={DottedImage}
+          alt="Hero" 
+        />
       </div>
-    </section>
   );
 }
 export default TeamMember;

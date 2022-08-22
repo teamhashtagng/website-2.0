@@ -1,5 +1,7 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
+import PrimaryButton from "../../elements/PrimaryButton";
 
 export default function Developer (){
     return (
@@ -10,7 +12,9 @@ export default function Developer (){
                     <Typography variant="body2" gutterBottom>Lagos, Full-Time</Typography>
                 </Grid>
                 <Grid item xs={12} sm={3} md={2}>
-                    <Button variant="contained" id="apply-button">Apply Now</Button>
+                    <Link to="/job-description">
+                        <PrimaryButton text={'Apply Now'} bgColor={'#2E2F6E'}/>
+                    </Link>
                 </Grid>
                 <hr className="job-line"/>
             </Grid>
@@ -20,7 +24,10 @@ export default function Developer (){
                     <Typography variant="body2" gutterBottom>Lagos, Full-Time</Typography>
                 </Grid>
                 <Grid item xs={12} sm={3} md={2}>
-                    <Button variant="contained" id="apply-button">Apply Now</Button>
+                    <Link to="/job-description">
+                        <PrimaryButton text={'Apply Now'} bgColor={'#2E2F6E'}/>
+                    </Link>
+                    {/* {<Button variant="contained" id="apply-button">Apply Now</Button>} */}
                 </Grid>
                 <hr className="job-line"/>
             </Grid>

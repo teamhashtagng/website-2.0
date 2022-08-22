@@ -5,14 +5,15 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-export default function AccordionQuestion({title, description}) {
+export default function AccordionQuestion({title, description, panelNo, state, handleChange}) {
+  console.log(panelNo)
   return (
     <div>
-      <Accordion>
+      <Accordion state={state === true} onChange={handleChange}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
+          aria-controls="panel1a-conten"
+          id="panel1a-heade"
         >
           <Typography>{title}</Typography>
         </AccordionSummary>

@@ -9,10 +9,12 @@ import ContactUs from '../views/Contact';
 import NotFound from '../views/NotFound'
 import JobApplication from '../views/JobApplication'
 import JobDescription from '../views/JobDescription'
+import ScrollToTop from './ScrollToTop';
 
 const AppRoute = () => {
   return (
     <Router>
+      <ScrollToTop/>
       <Routes>
         <Route exact path="/" element={<Home/>} />
         <Route path="/about-us" element={<About />} />

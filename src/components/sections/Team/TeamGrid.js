@@ -17,9 +17,9 @@ import TeamData from './TeamData';
 
     return (
         <Box sx={{ flexGrow: 1, mt: '80px'}}>
-        <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+        <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 12, sm: 12, md: 12 }}>
           {desc.map((_, index) => (
-            <Grid item xs={12} sm={4} md={4} key={index}>
+            <Grid item xs={6} sm={6} md={4} key={index}>
               <TeamCard 
                 key={_.id}
                 profile={_.imge}

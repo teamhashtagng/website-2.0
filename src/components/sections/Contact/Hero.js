@@ -46,13 +46,13 @@ const Hero = ({
       {...props}
       className={outerClasses}
     >
+        <Image
+        className='hero-dotted-contact'
+        src={DottedImage}
+        alt="Hero" 
+        />
       <div className="container-sm">
         <div className={innerClasses}>
-            <Image
-            className='hero-dotted-contact'
-            src={DottedImage}
-            alt="Hero" 
-            />
           <Grid container spacing={5}>
             <Grid item xs={12} sm={12} md={12} style={{display: "flex", flexDirection: "column", justifyContent: "center", textAlign: 'center'}} className="btns">
               {/* <p className="m-0 reveal-from-bottom primary-color" data-reveal-delay="400"><b>OONFTs</b></p> */}
