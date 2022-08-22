@@ -16,6 +16,12 @@ const theme = createTheme({
       main: '#11cb5f',
     },
   },
+    typography: {
+      fontFamily: [
+        'Red Hat Text',
+        'sans-serif',
+      ].join(','),
+    },
 });
 
 

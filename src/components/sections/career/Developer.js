@@ -1,10 +1,22 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import PrimaryButton from "../../elements/PrimaryButton";
 
 export default function Developer (){
+
+    const theme = createTheme({
+        typography: {
+          fontFamily: [
+            'Red Hat Text',
+            'sans-serif',
+          ].join(','),
+        },
+      });
+
     return (
+        <ThemeProvider theme={theme}>
         <React.Fragment>
             <Grid container spacing={0} sx={{marginTop: '4%'}}>
                 <Grid item xs={12} sm={9} md={10}>
@@ -32,5 +44,6 @@ export default function Developer (){
                 <hr className="job-line"/>
             </Grid>
         </React.Fragment>
+        </ThemeProvider>
     )
 }

@@ -8,8 +8,8 @@ const JobPostingNewsletter = () => {
       <Grid container>
         <Grid item xs={12} sm={12} md={12}>
           <Box >
-              <h4 id='newsletter-text'>Subscribe to Hashtag's Newsletter</h4>
-              <p id='newsletter-text'>and be the first to get our juicy information </p>
+              <h4 id='newsletter-text'>Subscribe to job posting newsletterr</h4>
+              <p id='newsletter-text'>and be the first to be notified </p>
           </Box>
         </Grid>
         <Grid item xs={12} sm={12} md={12}>

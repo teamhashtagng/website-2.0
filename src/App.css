@@ -3946,7 +3946,7 @@ img.has-shadow {
 .Hero-Banner-Contact {
   background-image: url("./assets/images/section/ContactPage/Hero-image.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   height: 700px;
   margin-top: 90px;
 }
@@ -4102,11 +4102,22 @@ img.has-shadow {
 
 .contact-illus {
   background-image: url("./assets/images/section/ContactPage/Curve-line-bottom.svg");
-  height: 500px;
+  height: 600px;
   background-size: cover;
-  background-position: 20% 50%;
+  background-position: 20% 30%;
   background-repeat: no-repeat;
   margin-top: 8%;
+}
+
+@media (max-width: 1300px) {
+  .contact-illus {
+    background-image: url("./assets/images/section/ContactPage/Curve-line-bottom.svg");
+    height: 500px;
+    background-size: cover;
+    background-position: 20% 50%;
+    background-repeat: no-repeat;
+    margin-top: 8%;
+  }
 }
 
 @media (max-width: 1000px) {
