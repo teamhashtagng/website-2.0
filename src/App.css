@@ -3784,13 +3784,14 @@ img.has-shadow {
 
 .hero-dotted {
   position: absolute;
-  width: 50%;
+  width: 45%;
   right: 0%;
-  top: 30%;
+  top: 20%;
 }
 
 @media (max-width: 1300px) {
   .hero-dotted {
+    width: 50%;
     top: 20%;
   }
 }
@@ -3812,12 +3813,12 @@ img.has-shadow {
 
 .middle-dotted {
   position: absolute;
-  width: 60%;
+  width: 50%;
   right: 0px;
-  top: 40%;
+  top: 65%;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1300px) {
   .middle-dotted {
     position: absolute;
     right: 0px;
