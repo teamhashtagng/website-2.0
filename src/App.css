@@ -560,21 +560,32 @@ h6,
   margin-top: -200px !important;
 }
 
-.subform-width {
-  width: 50% !important;
+.job-subscribe-btn {
+  position: absolute;
+  right: 16.2%;
+  top: 20%;
 }
 
 .subscribe-btn {
   position: absolute;
-  right: 25.2%;
+  right: 20.2%;
   top: 10%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1030px) {
   .subscribe-btn {
     position: absolute;
-    right: 5.2%;
-    top: 10.5%;
+    right: 15%;
+    top: 9%;
+  }
+}
+
+@media (max-width: 600px) {
+  .subscribe-btn,
+  .job-subscribe-btn {
+    position: relative;
+    margin: 0;
+    max-width: 100%;
   }
 }
 
@@ -625,9 +636,6 @@ h6,
   }
   .border-right {
     border-right: none;
-  }
-  .subform-width {
-    width: 90% !important;
   }
   .about-quote {
     margin-top: -50px;
@@ -3683,7 +3691,72 @@ img.has-shadow {
 
 .border-white {
   border: 1px solid #00b9bc !important;
-  border-radius: 10px !important;
+  background-color: inherit;
+  height: 45.75px;
+  padding-left: 3%;
+  color: #fff !important;
+  outline: 0;
+}
+
+.subform-width,
+.subform-width:hover,
+.subform-width:active {
+  width: 60%;
+  border-radius: 10px;
+  border: 1px solid #00b9bc !important;
+  border-radius: 10px;
+}
+
+.subform-width-1 {
+  width: 100%;
+  max-width: 30%;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.subform-width-2 {
+  width: 100%;
+  max-width: 70%;
+  border-radius: 0px 10px 10px 0px;
+}
+
+@media (max-width: 1030px) {
+  .subform-width {
+    width: 70%;
+    border-radius: 10px;
+  }
+
+  .subform-width-1 {
+    width: 100%;
+    max-width: 30%;
+  }
+  .subform-width-2 {
+    width: 100%;
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 600px) {
+  .border-white {
+    padding-left: 10%;
+    display: block;
+    margin-bottom: 7%;
+  }
+
+  .subform-width {
+    width: 90%;
+    border-radius: 10px;
+  }
+
+  .subform-width-1 {
+    width: 90%;
+    max-width: 150%;
+    border-radius: 10px;
+  }
+  .subform-width-2 {
+    width: 90%;
+    max-width: 150%;
+    border-radius: 10px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -4313,19 +4386,19 @@ img.has-shadow {
     background-repeat: no-repeat;
     height: 500px;
     background-size: cover;
-    background-position: 0 -500px;
+    background-position: 0 -450px;
   }
 }
-
-@media (max-width: 1300px) {
+@media (max-width: 1030px) {
   .career-illus {
     background-image: url("./assets/images/section/CareersFAQsPage/Curved-line-middle.svg");
     background-repeat: no-repeat;
     height: 500px;
     background-size: cover;
-    background-position: 0 -310px;
+    background-position: 0 -350px;
   }
 }
+
 @media (max-width: 1000px) {
   .career-illus {
     background-image: url("./assets/images/section/CareersFAQsPage/Curved-line-middle.svg");
@@ -4369,7 +4442,7 @@ img.has-shadow {
 .FAQ-question-bg {
   background-image: url("./assets/images/section/CareersFAQsPage/FAQ-questions-bg.svg");
   background-repeat: no-repeat;
-  background-position: 0 -20px;
+  background-position: 0 18%;
   background-size: cover;
   position: relative;
   height: auto;

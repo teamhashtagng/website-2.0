@@ -18,7 +18,7 @@ const HashtagNewsletter = () => {
                 noValidate
                 autoComplete="off"
                 >
-                <TextField size='small' className='border-white subform-width' id="outlined-basic" inputProps={{sx:{color:"white"}}} placeholder='Email Address' variant="outlined" />
+                <TextField size='small' className='subform-width' id="outlined-basic" inputProps={{sx:{color:"white"}}} placeholder='Email Address' variant="outlined" />
                 <div className='subscribe-btn'>
                   <PrimaryButton bgColor={'#00B9BC'} text={'Subscribe'} width={'100px'} />
                 </div> 

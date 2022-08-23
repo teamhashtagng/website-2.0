@@ -23,7 +23,7 @@ export default function Developer (){
                     <Typography variant="h6" gutterBottom>Frontend Engineer</Typography>
                     <Typography variant="body2" gutterBottom>Lagos, Full-Time</Typography>
                 </Grid>
-                <Grid item xs={12} sm={3} md={2}>
+                <Grid item xs={12} sm={3} md={2} sx={{marginTop: '3%'}}>
                     <Link to="/job-description">
                         <PrimaryButton text={'Apply Now'} bgColor={'#2E2F6E'}/>
                     </Link>
@@ -35,7 +35,7 @@ export default function Developer (){
                     <Typography variant="h6" gutterBottom>Backend Engineer</Typography>
                     <Typography variant="body2" gutterBottom>Lagos, Full-Time</Typography>
                 </Grid>
-                <Grid item xs={12} sm={3} md={2}>
+                <Grid item xs={12} sm={3} md={2} sx={{marginTop: '3%'}}>
                     <Link to="/job-description">
                         <PrimaryButton text={'Apply Now'} bgColor={'#2E2F6E'}/>
                     </Link>
