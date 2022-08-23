@@ -18,7 +18,7 @@ const theme = createTheme({
   },
     typography: {
       fontFamily: [
-        'Red Hat Text',
+        'Red Hat Display',
         'sans-serif',
       ].join(','),
     },

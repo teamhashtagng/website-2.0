@@ -15,6 +15,12 @@ export default function (){
             main: '#00B9BC',
           },
         },
+        typography: {
+            fontFamily: [
+              'Red Hat Display',
+              'sans-serif',
+            ].join(','),
+        },
       });
 
     const [value, setValue] = React.useState('1');

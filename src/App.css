@@ -4193,7 +4193,7 @@ img.has-shadow {
   top: 80%;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1300px) {
   .middle-dotted-Career {
     position: absolute;
     width: 30%;
@@ -4210,7 +4210,7 @@ img.has-shadow {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   .middle-dotted-Career {
     display: none;
   }
@@ -4296,10 +4296,10 @@ img.has-shadow {
   background-repeat: no-repeat;
   height: 500px;
   background-size: cover;
-  background-position: 0 -850px;
+  background-position: 0 -750px;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1300px) {
   .career-illus {
     background-image: url("./assets/images/section/CareersFAQsPage/Curved-line-middle.svg");
     background-repeat: no-repeat;

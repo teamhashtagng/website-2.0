@@ -26,7 +26,7 @@ export default function TeamCard({profile, name, role, social, description, stat
               id='profile-img'
             />
             <CardContent>
-              <Typography gutterBottom variant="h5" id='Team-card-name' component="div" color='#2E2F6E'>
+              <Typography gutterBottom variant="h6" id='Team-card-name' component="div" color='#2E2F6E'>
                 {name}
               </Typography>
               <Typography variant="body2" color="text.secondary">
