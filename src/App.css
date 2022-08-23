@@ -560,14 +560,39 @@ h6,
   margin-top: -200px !important;
 }
 
-.subform-width {
-  width: 50% !important;
+.job-subscribe-btn {
+  position: absolute;
+  right: 22.5%;
+  top: 20%;
 }
 
 .subscribe-btn {
   position: absolute;
-  left: 0;
-  margin-right: 150px;
+  right: 20.2%;
+  top: 10%;
+}
+
+@media (max-width: 1030px) {
+  .subscribe-btn {
+    position: absolute;
+    right: 15%;
+    top: 9%;
+  }
+  .job-subscribe-btn {
+    position: absolute;
+    right: 16.2%;
+    top: 20%;
+  }
+}
+
+@media (max-width: 600px) {
+  .subscribe-btn,
+  .job-subscribe-btn {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    padding: 0 auto;
+  }
 }
 
 .dot {
@@ -617,9 +642,6 @@ h6,
   }
   .border-right {
     border-right: none;
-  }
-  .subform-width {
-    width: 90% !important;
   }
   .about-quote {
     margin-top: -50px;
@@ -3675,7 +3697,72 @@ img.has-shadow {
 
 .border-white {
   border: 1px solid #00b9bc !important;
-  border-radius: 10px !important;
+  background-color: inherit;
+  height: 45.75px;
+  padding-left: 3%;
+  color: #fff !important;
+  outline: 0;
+}
+
+.subform-width,
+.subform-width:hover,
+.subform-width:active {
+  width: 60%;
+  border-radius: 10px;
+  border: 1px solid #00b9bc !important;
+  border-radius: 10px;
+}
+
+.subform-width-1 {
+  width: 100%;
+  max-width: 30%;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.subform-width-2 {
+  width: 100%;
+  max-width: 50%;
+  border-radius: 0px 10px 10px 0px;
+}
+
+@media (max-width: 1030px) {
+  .subform-width {
+    width: 70%;
+    border-radius: 10px;
+  }
+
+  .subform-width-1 {
+    width: 100%;
+    max-width: 30%;
+  }
+  .subform-width-2 {
+    width: 100%;
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 600px) {
+  .border-white {
+    padding-left: 5%;
+    display: block;
+    margin-bottom: 7%;
+  }
+
+  .subform-width {
+    width: 90%;
+    border-radius: 10px;
+  }
+
+  .subform-width-1 {
+    width: 90%;
+    max-width: 150%;
+    border-radius: 10px;
+  }
+  .subform-width-2 {
+    width: 90%;
+    max-width: 150%;
+    border-radius: 10px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -3784,13 +3871,14 @@ img.has-shadow {
 
 .hero-dotted {
   position: absolute;
-  width: 50%;
+  width: 45%;
   right: 0%;
-  top: 30%;
+  top: 20%;
 }
 
 @media (max-width: 1300px) {
   .hero-dotted {
+    width: 50%;
     top: 20%;
   }
 }
@@ -3812,12 +3900,12 @@ img.has-shadow {
 
 .middle-dotted {
   position: absolute;
-  width: 60%;
+  width: 50%;
   right: 0px;
-  top: 40%;
+  top: 65%;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1300px) {
   .middle-dotted {
     position: absolute;
     right: 0px;
@@ -3946,14 +4034,19 @@ img.has-shadow {
 .Hero-Banner-Contact {
   background-image: url("./assets/images/section/ContactPage/Hero-image.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   height: 700px;
   margin-top: 90px;
 }
 
 @media (max-width: 1080px) {
   .Hero-Banner-Contact {
-    height: 600px;
+    height: 500px;
+  }
+}
+@media (max-width: 1000px) {
+  .Hero-Banner-Contact {
+    height: 400px;
   }
 }
 
@@ -3981,7 +4074,7 @@ img.has-shadow {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   .hero-dotted-contact {
     display: none;
   }
@@ -4018,9 +4111,15 @@ img.has-shadow {
   }
 }
 
+@media (max-width: 1030px) {
+  .overlay-section {
+    margin-top: -8rem;
+  }
+}
+
 @media (max-width: 850px) {
   .overlay-section {
-    margin-top: -18rem;
+    margin-top: -6rem;
   }
 }
 
@@ -4102,12 +4201,13 @@ img.has-shadow {
 
 .contact-illus {
   background-image: url("./assets/images/section/ContactPage/Curve-line-bottom.svg");
-  height: 500px;
+  height: 600px;
   background-size: cover;
-  background-position: 20% 50%;
+  background-position: 20% 30%;
   background-repeat: no-repeat;
   margin-top: 8%;
 }
+
 
 .h1 {
   background-image: url("./assets/images/section/Error404Page/curve-line-bottom-2.svg");
@@ -4116,6 +4216,16 @@ img.has-shadow {
   background-position: 20% 0;
   background-repeat: no-repeat;
   /* margin-top: 6%; */
+
+@media (max-width: 1300px) {
+  .contact-illus {
+    background-image: url("./assets/images/section/ContactPage/Curve-line-bottom.svg");
+    height: 500px;
+    background-size: cover;
+    background-position: 20% 50%;
+    background-repeat: no-repeat;
+    margin-top: 8%;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -4153,8 +4263,8 @@ img.has-shadow {
 }
 @media (max-width: 1200px) {
   .bottom-dotted-contact {
-    width: 50%;
-    top: 140%;
+    width: 40%;
+    top: 75%;
   }
 }
 
@@ -4162,10 +4272,26 @@ img.has-shadow {
   .bottom-dotted-contact {
     width: 40%;
     position: absolute;
-    top: 110%;
+    top: 80%;
   }
 }
-@media (max-width: 450px) {
+
+@media (max-width: 828px) {
+  .bottom-dotted-contact {
+    width: 40%;
+    position: absolute;
+    top: 120%;
+  }
+}
+@media (max-width: 768px) {
+  .bottom-dotted-contact {
+    width: 40%;
+    position: absolute;
+    top: 140%;
+  }
+}
+
+@media (max-width: 600px) {
   .bottom-dotted-contact {
     display: none;
   }
@@ -4210,7 +4336,7 @@ img.has-shadow {
   top: 80%;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1300px) {
   .middle-dotted-Career {
     position: absolute;
     width: 30%;
@@ -4219,15 +4345,22 @@ img.has-shadow {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1030px) {
   .middle-dotted-Career {
     position: absolute;
     left: 0%;
-    top: 50%;
+    top: 40%;
+  }
+}
+@media (max-width: 768px) {
+  .middle-dotted-Career {
+    position: absolute;
+    left: 0%;
+    top: 55%;
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   .middle-dotted-Career {
     display: none;
   }
@@ -4246,6 +4379,10 @@ img.has-shadow {
   }
   .offer-card-text {
     text-align: center;
+  }
+  #space-question {
+    width: 100%;
+    max-width: 80%;
   }
 }
 @media (max-width: 450px) {
@@ -4313,17 +4450,7 @@ img.has-shadow {
   background-repeat: no-repeat;
   height: 500px;
   background-size: cover;
-  background-position: 0 -850px;
-}
-
-@media (max-width: 1600px) {
-  .career-illus {
-    background-image: url("./assets/images/section/CareersFAQsPage/Curved-line-middle.svg");
-    background-repeat: no-repeat;
-    height: 500px;
-    background-size: cover;
-    background-position: 0 -500px;
-  }
+  background-position: 0 -750px;
 }
 
 @media (max-width: 1300px) {
@@ -4332,10 +4459,20 @@ img.has-shadow {
     background-repeat: no-repeat;
     height: 500px;
     background-size: cover;
-    background-position: 0 -310px;
+    background-position: 0 -450px;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1030px) {
+  .career-illus {
+    background-image: url("./assets/images/section/CareersFAQsPage/Curved-line-middle.svg");
+    background-repeat: no-repeat;
+    height: 400px;
+    background-size: cover;
+    background-position: 0 -350px;
+  }
+}
+
+@media (max-width: 800px) {
   .career-illus {
     background-image: url("./assets/images/section/CareersFAQsPage/Curved-line-middle.svg");
     background-repeat: no-repeat;
@@ -4378,7 +4515,7 @@ img.has-shadow {
 .FAQ-question-bg {
   background-image: url("./assets/images/section/CareersFAQsPage/FAQ-questions-bg.svg");
   background-repeat: no-repeat;
-  background-position: 0 -20px;
+  background-position: 0 18%;
   background-size: cover;
   position: relative;
   height: auto;
@@ -4404,7 +4541,7 @@ img.has-shadow {
   bottom: -12%;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   .Answer-dotted {
     display: none;
   }
@@ -4425,8 +4562,19 @@ img.has-shadow {
   background-repeat: no-repeat;
   background-size: cover;
   height: 400px;
-  background-position: 0 -600px;
+  background-position: 0 -750px;
   position: relative;
+}
+
+@media (max-width: 1300px) {
+  .job-bottom-line {
+    background-image: url("./assets/images/section/FrontendDescPage/Curved-line-bottom.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    background-position: 0 -600px;
+    position: relative;
+  }
 }
 
 .job-dotted {
@@ -4450,15 +4598,22 @@ img.has-shadow {
 @media (max-width: 1000px) {
   .job-bottom-line {
     height: 300px;
-    background-position: 0 -300px;
+    background-position: 0 -250px;
     position: relative;
+  }
+
+  .job-dotted-apply {
+    position: absolute;
+    right: 0;
+    bottom: 8%;
+    width: 55%;
   }
 
   .job-dotted {
     position: absolute;
     right: 0;
     bottom: 270%;
-    width: 60%;
+    width: 55%;
   }
 }
 
@@ -4496,6 +4651,110 @@ img.has-shadow {
 
 #newsletter-text {
   color: #fff !important;
+}
+
+.error-hero-h1 {
+  font-size: 6rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.not-found-dotted {
+}
+
+.not-found-bg {
+  background-image: url("./assets/images/section/Error404Page/curve-line-bottom.svg");
+  background-repeat: no-repeat;
+  background-position: 0 45%;
+  background-size: cover;
+}
+
+.hero-oops {
+  width: 100%;
+  max-width: 100%;
+}
+
+.not-found-dotted {
+  position: absolute;
+  width: 30%;
+  left: 0;
+  top: 35%;
+}
+
+.not-found-page {
+  margin-top: 10%;
+  height: 120vh;
+}
+
+@media (max-width: 1300px) {
+  .not-found-bg {
+    background-position: 0 35%;
+  }
+
+  .not-found-dotted {
+    position: absolute;
+    width: 30%;
+    left: 0;
+    top: 45%;
+  }
+}
+@media (max-width: 1030px) {
+  .not-found-bg {
+    background-position: 0 45%;
+    height: 70vh;
+  }
+
+  .not-found-dotted {
+    position: absolute;
+    width: 30%;
+    left: 0;
+    top: 25%;
+  }
+
+  .error-hero-h1 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .not-found-page {
+    height: 100vh;
+  }
+}
+@media (max-width: 768px) {
+  .not-found-bg {
+    background-position: 0 20%;
+    height: 70vh;
+  }
+
+  .not-found-dotted {
+    position: absolute;
+    width: 30%;
+    left: 0;
+    top: 30%;
+  }
+
+  .error-hero-h1 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .not-found-bg {
+    background-position: 0 0;
+    height: 100vh;
+  }
+
+  .not-found-dotted {
+    display: none;
+  }
+
+  .error-hero-h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

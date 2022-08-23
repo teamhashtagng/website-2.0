@@ -12,13 +12,16 @@ const HashtagNewsletter = () => {
                 component="form"
                 sx={{
                     '& > :not(style)': { m: 1 },
+                    position: 'relative',
                 }}
                 // className='subform-width'
                 noValidate
                 autoComplete="off"
                 >
-                <TextField size='small' className='border-white subform-width' id="outlined-basic" inputProps={{sx:{color:"white"}}} placeholder='Email Address' variant="outlined" />
-                <PrimaryButton className='subscribe-btn' bgColor={'#00B9BC'} text={'Subscribe'} width={'100px'} /> 
+                <TextField size='small' className='subform-width' id="outlined-basic" inputProps={{sx:{color:"white"}}} placeholder='Email Address' variant="outlined" />
+                <div className='subscribe-btn'>
+                  <PrimaryButton bgColor={'#00B9BC'} text={'Subscribe'} width={'100px'} />
+                </div> 
             </Box>
         </Box>
     </div>
