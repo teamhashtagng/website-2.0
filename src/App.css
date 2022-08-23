@@ -566,8 +566,16 @@ h6,
 
 .subscribe-btn {
   position: absolute;
-  left: 0;
-  margin-right: 150px;
+  right: 25.2%;
+  top: 10%;
+}
+
+@media (max-width: 768px) {
+  .subscribe-btn {
+    position: absolute;
+    right: 5.2%;
+    top: 10.5%;
+  }
 }
 
 .dot {
@@ -4408,8 +4416,19 @@ img.has-shadow {
   background-repeat: no-repeat;
   background-size: cover;
   height: 400px;
-  background-position: 0 -600px;
+  background-position: 0 -750px;
   position: relative;
+}
+
+@media (max-width: 1300px) {
+  .job-bottom-line {
+    background-image: url("./assets/images/section/FrontendDescPage/Curved-line-bottom.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    background-position: 0 -600px;
+    position: relative;
+  }
 }
 
 .job-dotted {
@@ -4433,15 +4452,22 @@ img.has-shadow {
 @media (max-width: 1000px) {
   .job-bottom-line {
     height: 300px;
-    background-position: 0 -300px;
+    background-position: 0 -250px;
     position: relative;
+  }
+
+  .job-dotted-apply {
+    position: absolute;
+    right: 0;
+    bottom: 8%;
+    width: 55%;
   }
 
   .job-dotted {
     position: absolute;
     right: 0;
     bottom: 270%;
-    width: 60%;
+    width: 55%;
   }
 }
 
@@ -4511,7 +4537,7 @@ img.has-shadow {
 
 .not-found-page {
   margin-top: 10%;
-  height: 100vh;
+  height: 120vh;
 }
 
 @media (max-width: 1300px) {
@@ -4543,6 +4569,9 @@ img.has-shadow {
     font-size: 5rem;
     margin-bottom: 2rem;
     text-align: center;
+  }
+  .not-found-page {
+    height: 100vh;
   }
 }
 @media (max-width: 768px) {
