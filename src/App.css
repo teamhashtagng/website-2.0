@@ -4208,7 +4208,6 @@ img.has-shadow {
   margin-top: 8%;
 }
 
-
 .h1 {
   background-image: url("./assets/images/section/Error404Page/curve-line-bottom-2.svg");
   height: 800px;
@@ -4664,7 +4663,7 @@ img.has-shadow {
 }
 
 .not-found-bg {
-  background-image: url("./assets/images/section/Error404Page/curve-line-bottom.svg");
+  background-image: url("./assets/images/section/Error404Page/curve-line-bottom-2.svg");
   background-repeat: no-repeat;
   background-position: 0 45%;
   background-size: cover;
