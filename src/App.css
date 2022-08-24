@@ -4216,6 +4216,7 @@ img.has-shadow {
   background-position: 20% 0;
   background-repeat: no-repeat;
   /* margin-top: 6%; */
+}
 
 @media (max-width: 1300px) {
   .contact-illus {
