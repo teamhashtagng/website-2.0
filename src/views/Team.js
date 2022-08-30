@@ -8,9 +8,9 @@ const Team = () => {
   return (
     <LayoutDefault>
         <div>
-          <Hero/>
+          {/* <Hero/>
           <TeamMember/>
-          <CTA/>
+          <CTA/> */}
         </div>
     </LayoutDefault>
   )
