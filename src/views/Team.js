@@ -1,8 +1,8 @@
 import React from 'react'
 import LayoutDefault from '../layouts/LayoutDefault'
-import Hero from '../components/sections/team/Hero'
-import TeamMember from '../components/sections/team/TeamMember'
-import CTA from '../components/sections/team/CTA'
+import Hero from '../components/sections/team/HeroSection'
+import TeamMember from '../components/sections/team/TeamMemberSection'
+import CTA from '../components/sections/team/CtaSection'
 
 const Team = () => {
   return (
