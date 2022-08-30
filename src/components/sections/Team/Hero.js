@@ -60,7 +60,7 @@ const Hero = ({
                 Our Team
               </h1>
               <p className="m-0 mb-32 reveal-from-bottom hero-subtitle" data-reveal-delay="400">
-                We are a software & media solutions company based in Lagos, Nigeria.
+                We are a software &amp; media solutions company based in Lagos, Nigeria.
               </p>
             </Grid>
             <Grid item xs={12} sm={6} md={6}>
