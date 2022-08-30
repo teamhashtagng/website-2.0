@@ -8,9 +8,9 @@ const ContactUs = () => {
   return (
     <LayoutDefault>
         <div style={{marginTop: "100px"}}>
-            <Hero/>
+            {/* <Hero/>
             <ContactDetail/>
-            <ContactIllustration/>
+            <ContactIllustration/> */}
         </div>
         
     </LayoutDefault>
