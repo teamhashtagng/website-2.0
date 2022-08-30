@@ -7,10 +7,8 @@ const NotFound = () => {
   return (
     <LayoutDefault>
         <div style={{marginTop: "100px"}}>
-
-            <Hero/>
+          <Hero/>
         </div>
-        
     </LayoutDefault>
   )
 }
