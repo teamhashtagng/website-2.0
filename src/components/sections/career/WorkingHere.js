@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Grid } from '@mui/material';
+import { Grid } from '@mui/material';
 import Image from '../../elements/Image';
 import DottedImage from '../../../assets/images/section/CareersFAQsPage/Dotted-about-here.svg';
 import Offers from './Offers';

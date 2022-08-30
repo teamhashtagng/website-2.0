@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Icon, Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import Image from '../../elements/Image';
 
 export default function OfferCard({icon, header, body}){

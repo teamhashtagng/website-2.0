@@ -1,6 +1,5 @@
 import React from 'react';
 import { Grid } from '@mui/material';
-import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import { SectionProps } from '../../../utils/SectionProps';
 import Image from '../../elements/Image';

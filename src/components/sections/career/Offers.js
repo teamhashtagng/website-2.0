@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Grid } from '@mui/material';
+import { Grid } from '@mui/material';
 import OfferCard from './OffersCard';
 import Trophy from '../../../assets/images/section/CareersFAQsPage/Trophy.svg';
 import Gadgets from '../../../assets/images/section/CareersFAQsPage/Gadgets.svg';

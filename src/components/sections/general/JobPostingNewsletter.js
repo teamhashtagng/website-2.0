@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, TextField, Box } from '@mui/material'
+import { Grid, Box } from '@mui/material'
 import PrimaryButton from '../../elements/PrimaryButton'
 
 const JobPostingNewsletter = () => {

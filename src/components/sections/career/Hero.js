@@ -1,7 +1,6 @@
 import React from 'react';
-import { Button, Grid } from '@mui/material';
+import { Grid } from '@mui/material';
 import classNames from 'classnames';
-import { Link } from 'react-router-dom';
 import { SectionProps } from '../../../utils/SectionProps';
 import Image from '../../elements/Image';
 

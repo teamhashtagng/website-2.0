@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Tab, Tabs, Typography } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 import React from "react";
 import Question from '../../../assets/images/section/CareersFAQsPage/Space-guy-question.png'
 import Image from "../../elements/Image";

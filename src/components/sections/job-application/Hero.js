@@ -1,18 +1,7 @@
-import { Container, Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import { Link } from "react-router-dom";
 import React from "react";
-import PrimaryButton from "../../elements/PrimaryButton";
 import classNames from 'classnames';
-import { SectionProps } from '../../../utils/SectionProps';
-
-const propTypes = {
-  ...SectionProps.types
-}
-
-const defaultProps = {
-  ...SectionProps.defaults
-}
-
 
 export default function Hero({
     className,

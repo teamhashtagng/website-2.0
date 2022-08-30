@@ -1,7 +1,6 @@
 import React from 'react'
 import Hero from '../components/sections/not-found/Hero'
 import LayoutDefault from '../layouts/LayoutDefault'
-import Illustration from '../components/sections/error404/Illustration'
 
 const NotFound = () => {
   return (

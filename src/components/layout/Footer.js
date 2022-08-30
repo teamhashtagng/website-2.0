@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import { Grid, Box } from '@mui/material'
 import Logo from '../../assets/images/logo-png.png';
-import FooterNav from './partials/FooterNav';
+// import FooterNav from './partials/FooterNav';
 import FooterSocial from './partials/FooterSocial';
 
 const propTypes = {
