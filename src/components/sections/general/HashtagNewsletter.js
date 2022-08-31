@@ -6,7 +6,7 @@ const HashtagNewsletter = () => {
   return (
     <div style={{padding: '30px 10px 50px', textAlign: 'center', backgroundColor: '#2E2F6E'}}>
         <Box sx={{pb: 5}}>
-            <h4 style={{color: '#fff'}}>Subscribe to Hashtag's Newsletter</h4>
+            <h4 style={{color: '#fff'}}>Subscribe to Hashtag Newsletter</h4>
             <p style={{marginTop: '-15px', color: '#fefefe'}}>and be the first to get our juicy information </p>
             <Box
                 component="form"
