@@ -562,14 +562,14 @@ h6,
 
 .job-subscribe-btn {
   position: absolute;
-  right: 22.5%;
+  right: 11.2%;
   top: 20%;
 }
 
 .subscribe-btn {
   position: absolute;
-  right: 20.2%;
-  top: 10%;
+  right: 20.8%;
+  top: 11.5%;
 }
 
 @media (max-width: 1030px) {
@@ -620,6 +620,20 @@ h6,
   border-right: 1px solid black;
 }
 
+.value-items {
+  margin-top: 5%;
+}
+
+@media screen and (max-width: 600px) {
+  .core-value-icon {
+    margin: 0 auto !important;
+  }
+
+  .we-fun-bg {
+    background-position: 20% 50% !important;
+  }
+}
+
 .about-quote {
   padding: 30px 30px 10px;
   border-radius: 40px;
@@ -629,8 +643,7 @@ h6,
   position: relative;
   z-index: 999;
   float: right;
-  margin-top: -300px;
-  margin-right: 120px;
+  bottom: 80px;
 }
 
 .we-are-fun {
@@ -641,6 +654,15 @@ h6,
   color: white;
   font-size: 100px;
   line-height: 100px;
+}
+
+@media (max-width: 1050px) {
+  .value-items {
+    margin-top: 15%;
+  }
+  .about-quote {
+    bottom: -40px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -654,12 +676,15 @@ h6,
     border-right: none;
   }
   .about-quote {
-    margin-top: -50px;
-    margin-right: 25px;
+    bottom: 10px;
   }
   .we-are-fun {
     /* position: relative; */
     margin-left: 100px !important;
+  }
+
+  .value-items {
+    margin-top: 9%;
   }
 }
 
@@ -669,7 +694,12 @@ h6,
   }
   .about-quote {
     margin-top: -250px;
-    margin-right: 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .text-align-mobile {
+    text-align: center;
   }
 }
 
@@ -3830,6 +3860,10 @@ img.has-shadow {
   .extra-space {
     display: none !important;
   }
+}
+
+#about-bg {
+  background-image: url("./assets/images/section/AboutPage/Hero-image-grediant.png");
 }
 
 .Hero-Banner {
