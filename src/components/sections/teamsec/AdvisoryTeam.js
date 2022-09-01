@@ -5,7 +5,7 @@ import Image from '../../elements/Image';
 import DottedImage from '../../../assets/images/section/TeamsPage/Hero-dotted-design.svg'
 import TeamGrid from './TeamGrid';
 
-const TeamMember = ({
+const AdvisoryTeam = ({
   className,
   topOuterDivider,
   bottomOuterDivider,
@@ -23,12 +23,12 @@ const TeamMember = ({
   );
 
   return (
-      <div className="container-sm" style={{marginTop: '-8%'}}>
+      <div className="container-sm" style={{marginTop: '-8%'}} id='Advisory-team' >
         <div className={innerClasses}>
           <Grid container>
             <Grid item xs={12} sm={12} md={12} sx={{position: 'relative'}} className="btns">
               <h2 className=" mt-0 mb-16 reveal-from-bottom " data-reveal-delay="200" style={{color: '#2E2F6E', marginTop: '5%', textAlign: 'center'}}>
-                Meet The Brains
+                Meet The Advisory Team
               </h2>
             </Grid>
           </Grid>
@@ -42,4 +42,4 @@ const TeamMember = ({
       </div>
   );
 }
-export default TeamMember;
+export default AdvisoryTeam;
