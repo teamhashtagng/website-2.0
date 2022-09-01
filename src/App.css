@@ -588,10 +588,20 @@ h6,
 @media (max-width: 600px) {
   .subscribe-btn,
   .job-subscribe-btn {
-    position: relative;
+    position: absolute;
+    right: 0;
+    left: 0;
     margin: 0;
     width: 100%;
     padding: 0 auto;
+  }
+
+  .subscribe-btn {
+    top: 140%;
+  }
+
+  .job-subscribe-btn {
+    top: 95%;
   }
 }
 
@@ -3742,6 +3752,10 @@ img.has-shadow {
 }
 
 @media (max-width: 600px) {
+  .newletter-mobile {
+    height: 45vh !important;
+  }
+
   .border-white {
     padding-left: 5%;
     display: block;
@@ -3749,18 +3763,18 @@ img.has-shadow {
   }
 
   .subform-width {
-    width: 90%;
+    width: 100%;
     border-radius: 10px;
   }
 
   .subform-width-1 {
-    width: 90%;
-    max-width: 150%;
+    width: 100%;
+    max-width: 180%;
     border-radius: 10px;
   }
   .subform-width-2 {
-    width: 90%;
-    max-width: 150%;
+    width: 100%;
+    max-width: 180%;
     border-radius: 10px;
   }
 }

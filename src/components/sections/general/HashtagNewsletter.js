@@ -11,7 +11,7 @@ const HashtagNewsletter = () => {
             <Box
                 component="form"
                 sx={{
-                    '& > :not(style)': { m: 1 },
+                    '& > :not(style)': { m: 0 },
                     position: 'relative',
                 }}
                 // className='subform-width'
@@ -20,7 +20,7 @@ const HashtagNewsletter = () => {
                 >
                 <TextField size='small' className='subform-width' id="outlined-basic" inputProps={{sx:{color:"white"}}} placeholder='Email Address' variant="outlined" />
                 <div className='subscribe-btn'>
-                  <PrimaryButton bgColor={'#00B9BC'} text={'Subscribe'} width={'100px'} />
+                  <PrimaryButton bgColor={'#00B9BC'} text={'Subscribe'} />
                 </div> 
             </Box>
         </Box>
