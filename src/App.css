@@ -621,7 +621,33 @@ h6,
 }
 
 .value-items {
-  margin-top: 5%;
+  margin-top: 3%;
+}
+
+.about-curve {
+  width: 100%;
+  margin-top: -1080px;
+  z-index: 1 !important;
+}
+
+@media (max-width: 1300px) {
+  .about-curve {
+    width: 100%;
+    margin-top: -600px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .about-curve {
+    width: 100%;
+    margin-top: -550px;
+  }
+}
+@media (max-width: 768px) {
+  .about-curve {
+    width: 100%;
+    margin-top: -450px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -688,7 +714,7 @@ h6,
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .dot {
     margin-top: 80px;
   }
@@ -700,6 +726,11 @@ h6,
 @media screen and (max-width: 600px) {
   .text-align-mobile {
     text-align: center;
+  }
+
+  .about-curve {
+    width: 100%;
+    margin-top: -400px;
   }
 }
 
