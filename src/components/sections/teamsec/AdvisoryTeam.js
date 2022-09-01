@@ -3,7 +3,7 @@ import { Box, Grid } from '@mui/material';
 import classNames from 'classnames';
 import Image from '../../elements/Image';
 import DottedImage from '../../../assets/images/section/TeamsPage/Hero-dotted-design.svg'
-import TeamGrid from './TeamGrid';
+import AdvisoryGrid from './AdvisoryGrid';
 
 const AdvisoryTeam = ({
   className,
@@ -23,7 +23,7 @@ const AdvisoryTeam = ({
   );
 
   return (
-      <div className="container-sm" style={{marginTop: '-8%'}} id='Advisory-team' >
+      <div className="container-sm" style={{marginTop: '3%'}} id='advisory-team' >
         <div className={innerClasses}>
           <Grid container>
             <Grid item xs={12} sm={12} md={12} sx={{position: 'relative'}} className="btns">
@@ -32,13 +32,8 @@ const AdvisoryTeam = ({
               </h2>
             </Grid>
           </Grid>
-          <TeamGrid/>
+          <AdvisoryGrid/>
         </div>
-        <Image
-          className='middle-dotted'
-          src={DottedImage}
-          alt="Hero" 
-        />
       </div>
   );
 }

@@ -23,7 +23,7 @@ const TeamMember = ({
   );
 
   return (
-      <div className="container-sm" style={{marginTop: '-8%'}}>
+      <div className="container-sm" style={{marginTop: '-8%'}} id='core-team'>
         <div className={innerClasses}>
           <Grid container>
             <Grid item xs={12} sm={12} md={12} sx={{position: 'relative'}} className="btns">
