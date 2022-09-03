@@ -3982,6 +3982,7 @@ img.has-shadow {
   width: 50%;
   right: 0px;
   top: 65%;
+  z-index: 0 !important;
 }
 
 @media (max-width: 1300px) {
@@ -4070,6 +4071,7 @@ img.has-shadow {
 #profile-img {
   width: 100%;
   max-width: 200px;
+  max-height: 200px;
   margin: 15px auto;
   margin-top: 40px;
 }

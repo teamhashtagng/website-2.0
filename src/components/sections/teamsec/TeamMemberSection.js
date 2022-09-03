@@ -34,11 +34,11 @@ const TeamMember = ({
           </Grid>
           <TeamGrid/>
         </div>
-        <Image
+{/* {        <Image
           className='middle-dotted'
           src={DottedImage}
           alt="Hero" 
-        />
+        />} */}
       </div>
   );
 }

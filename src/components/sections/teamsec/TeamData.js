@@ -1,5 +1,12 @@
 import React from 'react'
 import Felix from '../../../assets/images/section/TeamsPage/Felix.png'
+import Adedayo from '../../../assets/images/section/TeamsPage/teamphoto/adedayo.png'
+import Dolapo from '../../../assets/images/section/TeamsPage/teamphoto/dolapo.png'
+import Emmanuel from '../../../assets/images/section/TeamsPage/teamphoto/emmanuel.png'
+import Ibrahim from '../../../assets/images/section/TeamsPage/teamphoto/Ibrahim.png'
+import Kingsley from '../../../assets/images/section/TeamsPage/teamphoto/Kingsley.png'
+import Omoshewa from '../../../assets/images/section/TeamsPage/teamphoto/Omoshewa.png'
+import Samson from '../../../assets/images/section/TeamsPage/teamphoto/samson.png'
 export default [
     {
         id: 1,
@@ -21,7 +28,7 @@ export default [
     },
     {
         id: 2,
-        imge: Felix,
+        imge: Omoshewa,
         name: 'Omoshewa Olabanji',
         role: 'Product',
         description:
@@ -39,7 +46,7 @@ export default [
     },
     {
         id: 3,
-        imge: Felix,
+        imge: Samson,
         name: 'Samson Samuels',
         role: 'Cofounder/Product Lead',
         description:
@@ -80,7 +87,7 @@ export default [
     },
     {
         id: 5,
-        imge: Felix,
+        imge: Emmanuel,
         name: 'Emmanuel Adubi',
         role: 'Engineering',
         description: 
@@ -97,7 +104,7 @@ export default [
     },
     {
         id: 6,
-        imge: Felix,
+        imge: Adedayo,
         name: 'Adedayo Ilesanmi',
         role: 'Engineering',
         description: 
@@ -114,7 +121,7 @@ export default [
     },
     {
         id: 7,
-        imge: Felix,
+        imge: Dolapo,
         name: 'Dolapo Damilola',
         role: 'Content Creator',
         description: 
@@ -153,7 +160,7 @@ export default [
     },
     {
         id: 9,
-        imge: Felix,
+        imge: Kingsley,
         name: 'Kingsley Mbilitem',
         role: 'Product Designer',
         description: 
@@ -173,7 +180,7 @@ export default [
     },
     {
         id: 10,
-        imge: Felix,
+        imge: Ibrahim,
         name: 'Ibrahim Muhammed',
         role: 'Graphics designer',
         description:
