@@ -7,6 +7,7 @@ import Logo from '../../assets/images/logo-png.png';
 // import FooterNav from './partials/FooterNav';
 import FooterSocial from './partials/FooterSocial';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 const propTypes = {
   topOuterDivider: PropTypes.bool,
@@ -59,28 +60,28 @@ const Footer = ({
                       <Link to='/'>
                         <p>Hashtag</p>
                       </Link>
-                      <Link to='/#portfolio'>
+                      <HashLink smooth to='/#portfolio'>
                         <p>Portfolio</p>
-                      </Link>
+                      </HashLink >
                       <p>Blog</p>
                     </Grid>
                     <Grid item md={4} sm={4} xs={12}>
                       <h5 style={{color: "#2E2F6E"}}>Team</h5>
-                      <Link to='/team#core-team'>
+                      <HashLink smooth to='/team#core-team'>
                         <p>Core Team</p>
-                      </Link>
-                      <Link to='/team#advisory-team'>
+                      </HashLink>
+                      <HashLink smooth to='/team#advisory-team'>
                         <p>Advisory Team</p>
-                      </Link>
+                      </HashLink>
                     </Grid>
                     <Grid item md={4} sm={4} xs={12}>
                       <h5 style={{color: "#2E2F6E"}}>Careers</h5>
-                      <Link to='/careers#open-postions'>
+                      <HashLink smooth to='/careers#open-postions'>
                         <p>Openings</p>
-                      </Link>
-                      <Link to='/careers#FAQs'>
+                      </HashLink>
+                      <HashLink smooth to='/careers#FAQs'>
                         <p>FAQs</p>
-                      </Link>
+                      </HashLink>
                     </Grid>
                   </Grid>
                 </Grid>

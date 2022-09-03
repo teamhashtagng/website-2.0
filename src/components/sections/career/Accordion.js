@@ -9,7 +9,7 @@ export default function AccordionQuestion({title, description, panelNo, state, h
   console.log(panelNo)
   return (
     <div>
-      <Accordion state={state === true} onChange={handleChange}>
+      <Accordion state={state === panelNo} onChange={handleChange}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-conten"
