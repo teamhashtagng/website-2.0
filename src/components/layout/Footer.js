@@ -60,7 +60,7 @@ const Footer = ({
                       <Link to='/'>
                         <p>Hashtag</p>
                       </Link>
-                      <HashLink smooth to='/#portfolio'>
+                      <HashLink smooth to='/#product'>
                         <p>Portfolio</p>
                       </HashLink >
                       <p>Blog</p>

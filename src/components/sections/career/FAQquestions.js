@@ -9,12 +9,12 @@ import QuestionData from "./QuestionData";
 
 
 export default function FAQquestions (){
+    //const [question ] = React.useexpanded(QuestionData)
 
     const [expanded, setExpanded] = React.useState(false);
     console.log(expanded)
-    const handleChange = (isExpanded, panel) => {
+    const handleChange = (panel) => (event, isExpanded) => {
         setExpanded(isExpanded ? panel : false);
-        console.log(panel)
     };
 
     return(
@@ -27,8 +27,8 @@ export default function FAQquestions (){
                         panelNo={_.panelNo}
                         title={_.title}
                         description={_.description}
-                        state={expanded}
-                        handleChange={(event, isExpanded) => handleChange(isExpanded, _.panelNo)}
+                        expanded={expanded}
+                        handleChange={handleChange( _.panelNo)}
                     />
                     </Grid>
                 ))}
