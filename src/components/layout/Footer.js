@@ -60,28 +60,28 @@ const Footer = ({
                       <Link to='/'>
                         <p>Hashtag</p>
                       </Link>
-                      <HashLink smooth to='/#product'>
+                      <a href='/#product'>
                         <p>Portfolio</p>
-                      </HashLink >
+                      </a >
                       <p>Blog</p>
                     </Grid>
                     <Grid item md={4} sm={4} xs={12}>
                       <h5 style={{color: "#2E2F6E"}}>Team</h5>
-                      <HashLink smooth to='/team#core-team'>
+                      <a href='/team#core-team'>
                         <p>Core Team</p>
-                      </HashLink>
-                      <HashLink smooth to='/team#advisory-team'>
+                      </a>
+                      <a href='/team#advisory-team'>
                         <p>Advisory Team</p>
-                      </HashLink>
+                      </a>
                     </Grid>
                     <Grid item md={4} sm={4} xs={12}>
                       <h5 style={{color: "#2E2F6E"}}>Careers</h5>
-                      <HashLink smooth to='/careers#open-postions'>
+                      <a href='/careers#open-postions'>
                         <p>Openings</p>
-                      </HashLink>
-                      <HashLink smooth to='/careers#FAQs'>
+                      </a>
+                      <a href='/careers#FAQs'>
                         <p>FAQs</p>
-                      </HashLink>
+                      </a>
                     </Grid>
                   </Grid>
                 </Grid>

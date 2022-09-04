@@ -5,7 +5,7 @@ import { Box, Grid } from '@mui/material'
 
 const OurProducts = () => {
   return (
-    <Box>
+    <Box id='product'>
       <div className='container'>
         <Grid container>
           <Grid item sm={8} md={8}>
