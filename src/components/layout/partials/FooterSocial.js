@@ -18,7 +18,7 @@ const FooterSocial = ({
     >
       <ul className="list-reset">
         <li>
-          <a href="https://linkedin.com/company/hashtagng">
+          <a href="https://linkedin.com/company/hashtagng" target='_blank'>
             <svg
               width="16"
               height="16"
@@ -31,7 +31,7 @@ const FooterSocial = ({
           </a>
         </li>
         <li>
-          <a href="https://twitter.com/teamhashtagng">
+          <a href="https://twitter.com/teamhashtagng" target='_blank'>
             <svg
               width="16"
               height="16"
@@ -44,7 +44,7 @@ const FooterSocial = ({
           </a>
         </li>
         <li>
-          <a href="https://instagram.com/teamhashtagng">
+          <a href="https://instagram.com/teamhashtagng" target='_blank'>
             <svg
               width="16"
               height="16"
