@@ -97,13 +97,13 @@ const Footer = ({
                 <Grid item xs={12} sm={8} md={8}>
                   <Grid container spacing={5}>
                     <Grid item xs={12} sm={4} md={4}>
-                      <p>Office address: Anibaba street, Owode-onirin, Lagos.</p>
+                      <p><a style={{color: '#727272'}} href='https://goo.gl/maps/qZ7YDAjC2UTa5SZa7' target='_blank'>Office address: Anibaba street, Owode-onirin, Lagos.</a></p>
                     </Grid>
                     <Grid item xs={12} sm={4} md={4}>
-                      <p>teamhashtagng@gmail.com <br/> hello@hashtagng.com</p>
+                      <p><a style={{color: '#727272'}} href='mailto:teamhashtagng@gmail.com'>teamhashtagng@gmail.com</a> <br/> <a style={{color: '#727272'}} href='mailto:hello@hashtagng.com'>hello@hashtagng.com</a></p>
                     </Grid>
                     <Grid item xs={12} sm={4} md={4}>
-                      <p>0912 940 3029</p>
+                      <p ><a style={{color: '#727272'}} href='tel:09129403029'>0912 940 3029</a></p>
                     </Grid>
                   </Grid>
                 </Grid>
