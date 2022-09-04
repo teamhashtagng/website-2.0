@@ -10,7 +10,7 @@ const About = () => {
   return (
     <LayoutDefault>
         <Hero/>
-        <Description/>
+        <Description/> 
         <MissionVisionValues/>
         <Statistics/>
         <WeAreFun/>

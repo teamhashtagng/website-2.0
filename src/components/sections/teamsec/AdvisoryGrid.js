@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Box, Grid } from '@mui/material';
-import TeamCard from './TeamCard';
-import TeamData from './TeamData';
+import AdvisoryCard from './AdvisoryCard';
+import TeamData from './AdvisoryData';
 
- export default function TeamGrid (){
+ export default function AdvisoryGrid (){
 
     const [desc, setDesc] = React.useState(TeamData)
 
@@ -16,15 +16,14 @@ import TeamData from './TeamData';
     }
 
     return (
-      <Box sx={{ flexGrow: 1, mt: '80px', zIndex: '9999'}}>
+        <Box sx={{ flexGrow: 1, mt: '80px'}}>
         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 12, sm: 12, md: 12 }}>
           {desc.map((_, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
-              <TeamCard 
+              <AdvisoryCard 
                 key={_.id}
                 profile={_.imge}
                 name={_.name}
-                role={_.role}
                 social={_.social}
                 description={_.description}
                 state={_.on}

@@ -562,14 +562,14 @@ h6,
 
 .job-subscribe-btn {
   position: absolute;
-  right: 22.5%;
+  right: 11.2%;
   top: 20%;
 }
 
 .subscribe-btn {
   position: absolute;
-  right: 20.2%;
-  top: 10%;
+  right: 20.8%;
+  top: 11.5%;
 }
 
 @media (max-width: 1030px) {
@@ -588,10 +588,20 @@ h6,
 @media (max-width: 600px) {
   .subscribe-btn,
   .job-subscribe-btn {
-    position: relative;
+    position: absolute;
+    right: 0;
+    left: 0;
     margin: 0;
     width: 100%;
     padding: 0 auto;
+  }
+
+  .subscribe-btn {
+    top: 140%;
+  }
+
+  .job-subscribe-btn {
+    top: 95%;
   }
 }
 
@@ -610,6 +620,46 @@ h6,
   border-right: 1px solid black;
 }
 
+.value-items {
+  margin-top: 3%;
+}
+
+.about-curve {
+  width: 100%;
+  margin-top: -1080px;
+  z-index: 1 !important;
+}
+
+@media (max-width: 1300px) {
+  .about-curve {
+    width: 100%;
+    margin-top: -600px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .about-curve {
+    width: 100%;
+    margin-top: -550px;
+  }
+}
+@media (max-width: 768px) {
+  .about-curve {
+    width: 100%;
+    margin-top: -450px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .core-value-icon {
+    margin: 0 auto !important;
+  }
+
+  .we-fun-bg {
+    background-position: 20% 50% !important;
+  }
+}
+
 .about-quote {
   padding: 30px 30px 10px;
   border-radius: 40px;
@@ -619,8 +669,7 @@ h6,
   position: relative;
   z-index: 999;
   float: right;
-  margin-top: -300px;
-  margin-right: 120px;
+  bottom: 80px;
 }
 
 .we-are-fun {
@@ -631,6 +680,15 @@ h6,
   color: white;
   font-size: 100px;
   line-height: 100px;
+}
+
+@media (max-width: 1050px) {
+  .value-items {
+    margin-top: 15%;
+  }
+  .about-quote {
+    bottom: -40px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -644,22 +702,35 @@ h6,
     border-right: none;
   }
   .about-quote {
-    margin-top: -50px;
-    margin-right: 25px;
+    bottom: 10px;
   }
   .we-are-fun {
     /* position: relative; */
     margin-left: 100px !important;
   }
+
+  .value-items {
+    margin-top: 9%;
+  }
 }
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .dot {
     margin-top: 80px;
   }
   .about-quote {
     margin-top: -250px;
-    margin-right: 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .text-align-mobile {
+    text-align: center;
+  }
+
+  .about-curve {
+    width: 100%;
+    margin-top: -400px;
   }
 }
 
@@ -3742,6 +3813,10 @@ img.has-shadow {
 }
 
 @media (max-width: 600px) {
+  .newletter-mobile {
+    height: 45vh !important;
+  }
+
   .border-white {
     padding-left: 5%;
     display: block;
@@ -3749,18 +3824,18 @@ img.has-shadow {
   }
 
   .subform-width {
-    width: 90%;
+    width: 100%;
     border-radius: 10px;
   }
 
   .subform-width-1 {
-    width: 90%;
-    max-width: 150%;
+    width: 100%;
+    max-width: 180%;
     border-radius: 10px;
   }
   .subform-width-2 {
-    width: 90%;
-    max-width: 150%;
+    width: 100%;
+    max-width: 180%;
     border-radius: 10px;
   }
 }
@@ -3816,6 +3891,10 @@ img.has-shadow {
   .extra-space {
     display: none !important;
   }
+}
+
+#about-bg {
+  background-image: url("./assets/images/section/AboutPage/Hero-image-grediant.png");
 }
 
 .Hero-Banner {
@@ -3903,6 +3982,7 @@ img.has-shadow {
   width: 50%;
   right: 0px;
   top: 65%;
+  z-index: 0 !important;
 }
 
 @media (max-width: 1300px) {
@@ -3991,22 +4071,23 @@ img.has-shadow {
 #profile-img {
   width: 100%;
   max-width: 200px;
+  max-height: 200px;
   margin: 15px auto;
   margin-top: 40px;
-}
-
-.click-line {
-  background-color: #c2bfbf;
-  height: 1.3px;
 }
 
 @media (max-width: 600px) {
   #profile-img {
     width: 100%;
-    max-width: 100px;
+    height: 200px;
     margin: 15px auto;
     margin-top: 40px;
   }
+}
+
+.click-line {
+  background-color: #c2bfbf;
+  height: 1.3px;
 }
 
 #profile-img-click {

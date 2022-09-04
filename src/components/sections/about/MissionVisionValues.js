@@ -7,12 +7,13 @@ import { Box, Grid } from '@mui/material'
 
 const MissionVisionValues = () => {
   return (
-    <Box style={{position: 'relative', zIndex: '999'}}>
-      <div className='container'>
+    <Box style={{position: 'relative', zIndex: '999'}} className="value-items" >
+      <div className='container text-align-mobile'>
         <Grid container spacing={3}>
           <Grid item xs={12} md={3.5} sm={3.5} className='border-right'>
             <Image 
               src={Mission}
+              className='core-value-icon'
             />
             <h3>Our Mission</h3>
             <p>To create relatable digital solutions for Africans</p>
@@ -21,6 +22,7 @@ const MissionVisionValues = () => {
           <Grid item xs={12} md={3.5} sm={3.5} className='border-right'>
             <Image 
               src={Vision}
+              className='core-value-icon'
             />
             <h3>Our Vision</h3>
             <p>Preference for indigenous technology within Africa</p>
@@ -29,6 +31,7 @@ const MissionVisionValues = () => {
           <Grid item xs={12} md={3.5} sm={3.5}>
             <Image 
               src={CoreValues}
+              className='core-value-icon'
             />
             <h3>Core Values</h3>
             <p>Innovation & problem-solving, Effective communication, Learning & growth, Empathy, Productive collaboration</p>

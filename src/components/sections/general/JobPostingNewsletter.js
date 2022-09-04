@@ -4,7 +4,7 @@ import PrimaryButton from '../../elements/PrimaryButton'
 
 const JobPostingNewsletter = () => {
   return (
-    <div style={{textAlign: 'center', backgroundColor: '#2E2F6E', paddingBottom: '3%'}}>
+    <div style={{textAlign: 'center', backgroundColor: '#2E2F6E', paddingBottom: '3%'}} className='newletter-mobile'>
       <Grid container>
         <Grid item xs={12} sm={12} md={12}>
           <Box >
@@ -16,7 +16,7 @@ const JobPostingNewsletter = () => {
             <Box
                 component="form"
                 sx={{
-                    '& > :not(style)': { m: 1, width: '70%' },
+                    '& > :not(style)': { m: 1, width: '100%' },
                     position: 'relative',
                     display: 'flex',
                     justifyContent: 'center'
@@ -31,7 +31,7 @@ const JobPostingNewsletter = () => {
                       <input className='border-white subform-width-1' id="outlined-basic-1" placeholder='Name' type="text" />
                       <input className='border-white subform-width-2' id="outlined-basic-2" placeholder='Email Address' type="email" />
                       <div className='job-subscribe-btn'>
-                        <PrimaryButton bgColor={'#00B9BC'} text={'Subscribe'} width={'100px'} />
+                        <PrimaryButton bgColor={'#00B9BC'} text={'Subscribe'} />
                       </div>
                     </center>
                   </Grid>

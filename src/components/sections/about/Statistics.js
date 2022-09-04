@@ -26,10 +26,11 @@ const Statistics = () => {
         <div style={{ paddingBottom: '100px', backgroundColor: '#2E2F6E'}}>
             <Image
               src={CurvedLinesDown}
-              style={{position: 'absolute', right: '0', marginTop: '-600px', zIndex: '999'}}
+              style={{position: 'absolute', right: '0'}}
+              className='about-curve'
             />
-            <div className='container' style={{paddingBottom: '100px'}}>
-                <Box style={{backgroundColor: 'white', borderRadius: '30px', width: '100%', padding: '20px', textAlign: 'center'}}>
+            <div className='container' style={{paddingBottom: '100px', zIndex: '9999'}}>
+                <Box style={{backgroundColor: 'white', borderRadius: '30px', width: '100%', padding: '20px', textAlign: 'center', zIndex: '9999'}}>
                     <Grid container spacing={3}>
                         <Grid item xs={12} md={2.5} sm={2.5}>
                             <h1>9+</h1>

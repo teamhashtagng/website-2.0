@@ -44,6 +44,7 @@ const Hero = ({
     <section
       {...props}
       className={outerClasses}
+      id='about-bg'
     >
       <div className="container-sm">
         <div className={innerClasses}>
