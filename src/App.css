@@ -4076,18 +4076,18 @@ img.has-shadow {
   margin-top: 40px;
 }
 
-.click-line {
-  background-color: #c2bfbf;
-  height: 1.3px;
-}
-
 @media (max-width: 600px) {
   #profile-img {
     width: 100%;
-    max-width: 100px;
+    height: 200px;
     margin: 15px auto;
     margin-top: 40px;
   }
+}
+
+.click-line {
+  background-color: #c2bfbf;
+  height: 1.3px;
 }
 
 #profile-img-click {

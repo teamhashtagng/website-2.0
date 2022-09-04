@@ -1,8 +1,10 @@
-import Felix from '../../../assets/images/section/TeamsPage/Felix.png'
+import Adeola from '../../../assets/images/section/TeamsPage/teamphoto/adeola.png'
+import Emmanuel from '../../../assets/images/section/TeamsPage/teamphoto/emmanuel-obu.png'
+import Femi from '../../../assets/images/section/TeamsPage/teamphoto/femi.png'
 export default [
     {
         id: 1,
-        imge: Felix,
+        imge: Emmanuel,
         name: 'Emmanuel Obu',
         description: `
             An erudite, write-brained brand and corporate strategist, public speaker and 
@@ -19,7 +21,7 @@ export default [
     },
     {
         id: 2,
-        imge: Felix,
+        imge: Femi,
         name: 'Femi Ibiwoye',
         description: `
             I am a programmer and an entrepreneur, I have been working as a software developer 
@@ -35,22 +37,7 @@ export default [
     },
     {
         id: 3,
-        imge: Felix,
-        name: 'Femi Ibiwoye',
-        description: `
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-        sed do eiusmod tempor incididunt ut labore et dolore magna 
-        aliqua. Ut enim ad minim veniam, quis nostrud exercitation nisi....`,
-        on: true,
-        social: {
-            Facebook: 'https://www.instagram.com/teamhashtagng/',
-            Twitter: 'https://twitter.com/teamhashtagng',
-            LinkedIn: 'https://www.linkedin.com/company/hashtagng/about/'
-        }
-    },
-    {
-        id: 4,
-        imge: Felix,
+        imge: Adeola,
         name: 'Adeola Kolawole',
         description: `
             It's delightful and rewarding to see clients satisfied after the delivery of 

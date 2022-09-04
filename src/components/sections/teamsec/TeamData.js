@@ -1,5 +1,4 @@
 import React from 'react'
-import Felix from '../../../assets/images/section/TeamsPage/Felix.png'
 import Adedayo from '../../../assets/images/section/TeamsPage/teamphoto/adedayo.png'
 import Dolapo from '../../../assets/images/section/TeamsPage/teamphoto/dolapo.png'
 import Emmanuel from '../../../assets/images/section/TeamsPage/teamphoto/emmanuel.png'
@@ -7,6 +6,9 @@ import Ibrahim from '../../../assets/images/section/TeamsPage/teamphoto/Ibrahim.
 import Kingsley from '../../../assets/images/section/TeamsPage/teamphoto/Kingsley.png'
 import Omoshewa from '../../../assets/images/section/TeamsPage/teamphoto/Omoshewa.png'
 import Samson from '../../../assets/images/section/TeamsPage/teamphoto/samson.png'
+import Felix from '../../../assets/images/section/TeamsPage/teamphoto/felix.png'
+import Abraham from '../../../assets/images/section/TeamsPage/teamphoto/abraham.png'
+import Akintade from '../../../assets/images/section/TeamsPage/teamphoto/akintade.png'
 export default [
     {
         id: 1,
@@ -67,7 +69,7 @@ export default [
     },
     {
         id: 4,
-        imge: Felix,
+        imge: Abraham,
         name: 'Abraham Ameh',
         role: 'Engineering',
         description: 
@@ -139,7 +141,7 @@ export default [
     },
     {
         id: 8,
-        imge: Felix,
+        imge: Akintade,
         name: 'Akintade Britto',
         role: 'Founder/Tech Lead',
         description: 
