@@ -21,7 +21,7 @@ const JobPostingNewsletter = () => {
                     display: 'flex',
                     justifyContent: 'center'
                 }}
-                // className='subform-width'
+                className='form-width'
                 noValidate
                 autoComplete="off"
                 >

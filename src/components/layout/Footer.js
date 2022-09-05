@@ -63,7 +63,9 @@ const Footer = ({
                       <a href='/#product'>
                         <p>Portfolio</p>
                       </a >
-                      <p>Blog</p>
+                      <a href='https://hashtagng.medium.com/' target='_blank' rel="noopener noreferrer">
+                        <p>Blog</p>
+                      </a>
                     </Grid>
                     <Grid item md={4} sm={4} xs={12}>
                       <h5 style={{color: "#2E2F6E"}}>Team</h5>

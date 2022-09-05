@@ -580,8 +580,8 @@ h6,
   }
   .job-subscribe-btn {
     position: absolute;
-    right: 16.2%;
-    top: 20%;
+    right: 7.2%;
+    top: 21%;
   }
 }
 
@@ -3808,13 +3808,13 @@ img.has-shadow {
   }
   .subform-width-2 {
     width: 100%;
-    max-width: 70%;
+    max-width: 60%;
   }
 }
 
 @media (max-width: 600px) {
   .newletter-mobile {
-    height: 45vh !important;
+    height: 50vh !important;
   }
 
   .border-white {
@@ -3837,6 +3837,18 @@ img.has-shadow {
     width: 100%;
     max-width: 180%;
     border-radius: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .newletter-mobile {
+    height: 45vh !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .newletter-mobile {
+    height: 60vh !important;
   }
 }
 
@@ -4329,10 +4341,10 @@ img.has-shadow {
 
 .bottom-dotted-contact {
   position: absolute;
-  width: 40%;
+  width: 30%;
   right: 0%;
   bottom: 0%;
-  top: 130%;
+  top: 140%;
 }
 
 @media (max-width: 1300px) {
@@ -4414,7 +4426,7 @@ img.has-shadow {
   position: absolute;
   width: 23%;
   left: 0%;
-  top: 80%;
+  top: 100%;
 }
 
 @media (max-width: 1300px) {
@@ -4531,7 +4543,7 @@ img.has-shadow {
   background-repeat: no-repeat;
   height: 500px;
   background-size: cover;
-  background-position: 0 -750px;
+  background-position: 0 -600px;
 }
 
 @media (max-width: 1300px) {
@@ -4643,7 +4655,7 @@ img.has-shadow {
   background-repeat: no-repeat;
   background-size: cover;
   height: 400px;
-  background-position: 0 -750px;
+  background-position: 0 -570px;
   position: relative;
 }
 
