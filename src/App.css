@@ -3784,6 +3784,10 @@ img.has-shadow {
   border-radius: 10px;
 }
 
+.alert-width {
+  width: 60%;
+}
+
 .subform-width-1 {
   width: 100%;
   max-width: 30%;
@@ -3797,7 +3801,8 @@ img.has-shadow {
 }
 
 @media (max-width: 1030px) {
-  .subform-width .subform-width:hover,
+  .subform-width,
+  .subform-width:hover,
   .subform-width:active {
     width: 70%;
     border-radius: 10px;
@@ -3824,10 +3829,15 @@ img.has-shadow {
     margin-bottom: 7%;
   }
 
-  .subform-width .subform-width:hover,
+  .subform-width,
+  .subform-width:hover,
   .subform-width:active {
     width: 100%;
     border-radius: 10px;
+  }
+
+  .alert-width {
+    width: 100%;
   }
 
   .subform-width-1 {
