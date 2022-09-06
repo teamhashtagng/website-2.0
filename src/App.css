@@ -3797,7 +3797,8 @@ img.has-shadow {
 }
 
 @media (max-width: 1030px) {
-  .subform-width {
+  .subform-width .subform-width:hover,
+  .subform-width:active {
     width: 70%;
     border-radius: 10px;
   }
@@ -3823,7 +3824,8 @@ img.has-shadow {
     margin-bottom: 7%;
   }
 
-  .subform-width {
+  .subform-width .subform-width:hover,
+  .subform-width:active {
     width: 100%;
     border-radius: 10px;
   }
@@ -4424,7 +4426,7 @@ img.has-shadow {
 
 .middle-dotted-Career {
   position: absolute;
-  width: 23%;
+  width: 20%;
   left: 0%;
   top: 100%;
 }
@@ -4543,7 +4545,7 @@ img.has-shadow {
   background-repeat: no-repeat;
   height: 500px;
   background-size: cover;
-  background-position: 0 -600px;
+  background-position: 0 -630px;
 }
 
 @media (max-width: 1300px) {
@@ -4654,8 +4656,8 @@ img.has-shadow {
   background-image: url("./assets/images/section/FrontendDescPage/Curved-line-bottom.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 400px;
-  background-position: 0 -570px;
+  height: 500px;
+  background-position: 0 -650px;
   position: relative;
 }
 
