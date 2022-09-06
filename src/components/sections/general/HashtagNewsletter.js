@@ -36,7 +36,7 @@ function HashtagNewsletter() {
     }
   }
 
-  async function submitForm(event){
+  function submitForm(event){
     event.preventDefault()
     setOpen(true)
 
