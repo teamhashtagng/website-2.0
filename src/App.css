@@ -4438,7 +4438,7 @@ img.has-shadow {
   position: absolute;
   width: 20%;
   left: 0%;
-  top: 100%;
+  margin-top: -12%;
 }
 
 @media (max-width: 1300px) {
@@ -4446,7 +4446,7 @@ img.has-shadow {
     position: absolute;
     width: 30%;
     left: 0%;
-    top: 95%;
+    margin-top: -25%;
   }
 }
 
@@ -4454,14 +4454,15 @@ img.has-shadow {
   .middle-dotted-Career {
     position: absolute;
     left: 0%;
-    top: 40%;
+    margin-top: -25%;
   }
 }
+
 @media (max-width: 768px) {
   .middle-dotted-Career {
     position: absolute;
     left: 0%;
-    top: 55%;
+    margin-top: -22%;
   }
 }
 
@@ -4555,7 +4556,7 @@ img.has-shadow {
   background-repeat: no-repeat;
   height: 500px;
   background-size: cover;
-  background-position: 0 -630px;
+  background-position: 0 -600px;
 }
 
 @media (max-width: 1300px) {

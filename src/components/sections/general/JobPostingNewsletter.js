@@ -2,50 +2,38 @@ import React from 'react'
 import { Grid, Box } from '@mui/material'
 import PrimaryButton from '../../elements/PrimaryButton'
 
-const JobPostingNewsletter = () => {
+function JobPostingNewsletter (){
   const [open, setOpen] = React.useState(true);
   const [error, setError] = React.useState(null);
-  const [email, setEmail] = React.useState("")
-  const [name, setName] = React.useState("")
+  const [formData, setFormData] = React.useState(
+    {fullName: "", email: ""}
+  )
 
   function isValidEmail(emailAdd) {
     return /\S+@\S+\.\S+/.test(emailAdd);
   }
 
-  function handleChange(event){
-    const emailAddress = event.target.value
-    const FullName = event.target.value
-    setEmail(emailAddress)
-    setName(FullName)
-  }
+  const handleChange = e => 
+    setFormData({ ...formData, [e.target.name]: e.target.value});
   
-  console.log(name, email)
-
-  function handleChange(event){
-    const emailAddress = event.target.value
-    setEmail(emailAddress)
-  }
+  console.log(formData)
 
   function submitForm(event){
     event.preventDefault()
     setOpen(true)
 
-    let data = JSON.stringify({
-      email: email
-    })
-
-    if (!isValidEmail(email)) {
+    if (!isValidEmail(formData.email)) {
       setError('Email is invalid');
-    } else if (isValidEmail(email)) {
+    } else if (isValidEmail(formData.email)) {
       setError('Email is valid');
     } else {
       setError(null);
     }
     
 
-    console.log(email)
+    console.log(formData)
 
-    setEmail("")
+    setFormData({fullName: '', email: ''})
   }
 
 
@@ -68,8 +56,8 @@ const JobPostingNewsletter = () => {
                     justifyContent: 'center'
                 }}
                 className='form-width'
-                noValidate
                 autoComplete="off"
+                onSubmit={submitForm}
                 >
                 <Grid container spacing={0}>
                   <Grid item xs={12} sm={12} md={12}>
@@ -78,8 +66,8 @@ const JobPostingNewsletter = () => {
                         className='border-white subform-width-1' 
                         id="outlined-basic-1" 
                         placeholder='Name' type="text" 
-                        name='name'
-                        value={name}
+                        name='fullName'
+                        value={formData.fullName}
                         onChange={handleChange}
                       />
                       <input 
@@ -88,7 +76,7 @@ const JobPostingNewsletter = () => {
                         placeholder='Email Address' 
                         type="email" 
                         name='email'
-                        value={email}
+                        value={formData.email}
                         onChange={handleChange}
                       />
                       <div className='job-subscribe-btn'>
