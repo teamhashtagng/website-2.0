@@ -1,46 +1,90 @@
 import React from 'react'
-import { Grid, Box } from '@mui/material'
+import { Grid, Box, Collapse, IconButton, Alert } from '@mui/material'
 import PrimaryButton from '../../elements/PrimaryButton'
+import CloseIcon from '@mui/icons-material/Close';
 
 function JobPostingNewsletter (){
   const [open, setOpen] = React.useState(true);
-  const [error, setError] = React.useState(null);
+  const [error, setError] = React.useState({});
+  const [valid, setValid] = React.useState(false);
   const [formData, setFormData] = React.useState(
     {fullName: "", email: ""}
   )
 
-  function isValidEmail(emailAdd) {
-    return /\S+@\S+\.\S+/.test(emailAdd);
+  function isValidForm(values) {
+    const errors ={};
+    const regex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
+    if (!values.fullName){
+      errors.fullName = "Name is required !  ";
+    } else if (values.fullName.length > 20) {
+      errors.fullName = 'Name cannot exceed 20 characters !  ';
+    } else if (!isNaN(values.fullName)) {
+      errors.fullName = "Must input string !  ";
+    }
+
+    if (!values.email){
+      errors.email = "Email is required !  ";
+    }  else if (!regex.test(values.email)){
+       errors.email = "This is not a valid email !  ";
+     };
+    return errors;
+
   }
 
   const handleChange = e => 
     setFormData({ ...formData, [e.target.name]: e.target.value});
-  
-  console.log(formData)
-
-  function submitForm(event){
-    event.preventDefault()
-    setOpen(true)
-
-    if (!isValidEmail(formData.email)) {
-      setError('Email is invalid');
-    } else if (isValidEmail(formData.email)) {
-      setError('Email is valid');
-    } else {
-      setError(null);
-    }
     
-
     console.log(formData)
-
-    setFormData({fullName: '', email: ''})
+    
+    function submitForm(event){
+      event.preventDefault()
+      setOpen(true)
+      
+      setError(isValidForm(formData))
+      
+      setValid(true)
+      console.log(valid)
+      
+      console.log(formData)
+      
+      setFormData({fullName: '', email: ''})
   }
 
 
   return (
     <div style={{textAlign: 'center', backgroundColor: '#2E2F6E', paddingBottom: '3%'}} className='newletter-mobile'>
       <Grid container>
-        <Grid item xs={12} sm={12} md={12}>
+        <Grid item xs={12} sm={12} md={12} sx={{marginTop: '1%'}}>
+        {Object.keys(error).length && <center> 
+            <Collapse in={open}><Alert severity="error" variant="filled"  action={
+            <IconButton
+              aria-label="close"
+              color="inherit"
+              size="small"
+              onClick={() => {
+                setOpen(false);
+              }}
+            >
+              <CloseIcon fontSize="inherit" />
+            </IconButton>
+            }
+            className='alert-width'>{error.fullName}{ error.email}</Alert></Collapse>
+          </center>}
+        {Object.keys(error).length === 0 && valid && <center> 
+            <Collapse in={open}><Alert severity="success" variant="filled"  action={
+            <IconButton
+              aria-label="close"
+              color="inherit"
+              size="small"
+              onClick={() => {
+                setOpen(false);
+              }}
+            >
+              <CloseIcon fontSize="inherit" />
+            </IconButton>
+            }
+            className='alert-width'>Thank You For Subscribing</Alert></Collapse>
+          </center>}
           <Box >
               <h4 id='newsletter-text'>Subscribe to job posting newsletter</h4>
               <p id='newsletter-text'>and be the first to be notified </p>
@@ -65,7 +109,8 @@ function JobPostingNewsletter (){
                       <input 
                         className='border-white subform-width-1' 
                         id="outlined-basic-1" 
-                        placeholder='Name' type="text" 
+                        placeholder='Name' 
+                        type="text" 
                         name='fullName'
                         value={formData.fullName}
                         onChange={handleChange}

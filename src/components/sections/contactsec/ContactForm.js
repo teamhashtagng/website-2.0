@@ -16,7 +16,6 @@ export default function ContactForm(){
                 sx={{
                     '& .MuiTextField-root': { width: '100%' },
                 }}
-                noValidate
                 autoComplete="off"
             >
                 <TextField
