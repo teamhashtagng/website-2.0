@@ -104,8 +104,7 @@ function HashtagNewsletter() {
                     position: 'relative',
                 }}
                 // className='subform-width'
-                noValidate
-                autoComplete="off"
+                autoComplete="on"
                 onSubmit={submitForm}
                 >
                 <TextField 

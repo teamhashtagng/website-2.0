@@ -4208,6 +4208,7 @@ img.has-shadow {
 
 .overlay-section {
   margin-top: -12rem;
+  z-index: 999;
 }
 
 @media (max-width: 1300px) {
@@ -4280,8 +4281,9 @@ img.has-shadow {
   background: #ffffff;
   padding: 0 20px;
   max-width: 550px;
-  height: 620px;
+  height: auto;
   box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.12);
+  z-index: 999;
 }
 
 @media (max-width: 1000px) {

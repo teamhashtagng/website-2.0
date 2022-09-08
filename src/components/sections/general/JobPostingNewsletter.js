@@ -55,7 +55,7 @@ function JobPostingNewsletter (){
     <div style={{textAlign: 'center', backgroundColor: '#2E2F6E', paddingBottom: '3%'}} className='newletter-mobile'>
       <Grid container>
         <Grid item xs={12} sm={12} md={12} sx={{marginTop: '1%'}}>
-        {Object.keys(error).length && <center> 
+        {Object.keys(error).length ? <center> 
             <Collapse in={open}><Alert severity="error" variant="filled"  action={
             <IconButton
               aria-label="close"
@@ -69,7 +69,7 @@ function JobPostingNewsletter (){
             </IconButton>
             }
             className='alert-width'>{error.fullName}{ error.email}</Alert></Collapse>
-          </center>}
+          </center> : <center></center>}
         {Object.keys(error).length === 0 && valid && <center> 
             <Collapse in={open}><Alert severity="success" variant="filled"  action={
             <IconButton
