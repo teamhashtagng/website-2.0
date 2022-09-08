@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import PrimaryButton from '../../elements/PrimaryButton';
-import { Box, Grid, TextField } from '@mui/material';
+import { Alert, Box, Button, Collapse, IconButton, Grid, TextField } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
 
 const theme = createTheme({
   palette: {
@@ -24,98 +25,213 @@ const theme = createTheme({
 
 
 export default function FormData() {
+
+    const [open, setOpen] = React.useState(true);
+const [error, setError] = React.useState({});
+const [valid, setValid] = React.useState(false);
+const [formData, setFormData] = React.useState(
+  {fullName: "", email: "", phoneNumber: "", upload: {}, attracted: "", passion: "", portfolio: "", linkedIn : ""}
+)
+
+function isValidForm(values) {
+    const errors ={};
+    const regex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
+    if (!values.fullName){
+      errors.fullName = "Name is required !  ";
+    } else if (values.fullName.length > 20) {
+      errors.fullName = 'Name cannot exceed 20 characters !  ';
+    } else if (!isNaN(values.fullName)) {
+      errors.fullName = "Must input string !  ";
+    }
+
+    if (!values.email){
+      errors.email = "Email is required !  ";
+    }  else if (!regex.test(values.email)){
+       errors.email = "This is not a valid email !  ";
+    };
+
+    if (!values.phoneNumber){
+        errors.phoneNumber = "phoneNumber is required !";
+    } else if (isNaN(values.phoneNumber)) {
+        errors.phoneNumber = "Contact Must be a Number !  ";
+      }
+
+    if (!Object.keys(values.upload).length){
+    errors.attracted = "Resume is required !";
+    }
+
+    if (!values.attracted){
+    errors.attracted = "Field is required !";
+    }
+    if (!values.passion){
+    errors.passion = "Field is required !";
+    }
+    if (!values.linkedIn){
+    errors.linkedIn = "Linkedin is required !";
+    }
+    return errors;
+
+  }
+
+  function handleChange (e){
+    const {name, value} = e.target
+    setFormData({ ...formData, [name]: value});
+  }
+
+  console.log(formData)
+
+  function submitForm(event){
+    event.preventDefault()
+    setOpen(true)
+    
+    setError(isValidForm(formData))
+    
+    setValid(true)
+    console.log(valid)
+    
+    console.log(formData)
+    
+    //setFormData({fullName: '', email: '',subject: "", message: ""})
+  }
+
+
     return (
       <ThemeProvider theme={theme}>
-                <Box
-                    component="form"
-                    sx={{
-                        '& .MuiTextField-root': { m: 1, width: '100%' },
-                    }}
-                    noValidate
-                    autoComplete="off"
-                    className="form-active"
-                >
-                    <Grid container spacing={4} sx={{marginTop: '1%', color: '#000000'}}>
-                        <Grid item xs={12} sm={12} md={12}>
-                        <TextField
-                            id="form-active filled-required"
-                            required
-                            label="Full Name"
-                            focused
-                            variant="standard"
-                        />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12}>
-                        <TextField
-                            required
-                            id="filled-required"
-                            label="Email Address"
-                            variant="standard"
-                            focused
-                        />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12}>
-                        <TextField
-                            required
-                            id="filled-required"
-                            label="Contact Number"
-                            variant="standard"
-                            focused
-                        />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12}>
-                            <Grid container spacing={1} sx={{color: '#000000', width: '50%'}}>
-                            <Grid item xs={12} sm={6} md={6}>
-                                <p className=" reveal-from-bottom hero-subtitle" data-reveal-delay="400" style={{color: '#000000'}}>
-                                    CV / Resume *
-                                </p>
-                            </Grid>
-                            <Grid item xs={12} sm={6} md={6}>
-                                <PrimaryButton text={'Upload your CV'} bgColor={'#2E2F6E'} />
-                            </Grid>
-                            </Grid>
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12}>
-                        <TextField
-                            required
-                            id="filled-required"
-                            label="What part of the job and working with us attracted you the most?"
-                            variant="standard"
-                            focused
-                        />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12}>
-                        <TextField
-                            required
-                            id="filled-required"
-                            label="What is a work, study or passion project that you’re most proud of?"
-                            variant="standard"
-                            focused
-                        />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12}>
-                        <TextField
-                            required
-                            id="filled-required"
-                            label="Portfolio"
-                            variant="standard"
-                            focused
-                        />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12}>
-                        <TextField
-                            required
-                            id="filled-required"
-                            label="LinkedIn"
-                            variant="standard"
-                            focused
-                        />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12}>
-                        <PrimaryButton text={'Apply Now'} bgColor={'#00B9BC'} />
-                        </Grid>
-                    </Grid>
-                </Box>
+
+        {Object.keys(error).length ? <center> 
+            <Collapse in={open}><Alert severity="error" variant="filled" sx={{width: '100%', marginTop: '5%'}}  action={
+            <IconButton
+              aria-label="close"
+              color="inherit"
+              size="small"
+              onClick={() => {
+                setOpen(false);
+              }}
+            >
+              <CloseIcon fontSize="inherit" />
+            </IconButton>
+            }
+            className='alert-width'>{error.fullName}  { error.email}  
+            { error.passion} {error.phoneNumber} { error.attracted}  { error.linkedIn} 
+            { error.portfolio} { error.upload}</Alert></Collapse>
+          </center> : <center></center>}
+        {!Object.keys(error).length && valid && <center> 
+            <Collapse in={open}><Alert severity="success" variant="filled" sx={{width: '100%', marginTop: '5%'}}  action={
+            <IconButton
+              aria-label="close"
+              color="inherit"
+              size="small"
+              onClick={() => {
+                setOpen(false);
+              }}
+            >
+              <CloseIcon fontSize="inherit" />
+            </IconButton>
+            }
+            className='alert-width'>Thank You For Applying</Alert></Collapse>
+          </center>}
+        <Box
+            component="form"
+            sx={{
+                '& .MuiTextField-root': { m: 1, width: '100%' },
+            }}
+            noValidate
+            autoComplete="off"
+            className="form-active"
+            onSubmit={submitForm}
+        >
+            <Grid container spacing={4} sx={{marginTop: '1%', color: '#000000'}}>
+                <Grid item xs={12} sm={12} md={12}>
+                <TextField
+                    id="form-active filled-required"
+                    required
+                    label="Full Name"
+                    focused
+                    variant="standard"
+                    name='fullName'
+                    value={formData.fullName}
+                    onChange={handleChange}
+                />
+                </Grid>
+                <Grid item xs={12} sm={12} md={12}>
+                <TextField
+                    required
+                    id="filled-required"
+                    label="Email Address"
+                    variant="standard"
+                    focused
+                    name='email'
+                    value={formData.email}
+                    onChange={handleChange}
+                />
+                </Grid>
+                <Grid item xs={12} sm={12} md={12}>
+                <TextField
+                    required
+                    id="filled-required"
+                    label="Contact Number"
+                    variant="standard"
+                    focused
+                    name='phoneNumber'
+                    value={formData.phoneNumber}
+                    onChange={handleChange}
+                />
+                </Grid>
+                <Grid item xs={12} sm={12} md={12}>
+                    <input type='file' accept=".pdf, .doc, .docx" name="upload" onChange={handleChange}/>
+                </Grid>
+                <Grid item xs={12} sm={12} md={12}>
+                <TextField
+                    required
+                    id="filled-required"
+                    label="What part of the job and working with us attracted you the most?"
+                    variant="standard"
+                    focused
+                    name='attracted'
+                    value={formData.attracted}
+                    onChange={handleChange}
+                />
+                </Grid>
+                <Grid item xs={12} sm={12} md={12}>
+                <TextField
+                    required
+                    id="filled-required"
+                    label="What is a work, study or passion project that you’re most proud of?"
+                    variant="standard"
+                    focused
+                    name='passion'
+                    value={formData.passion}
+                    onChange={handleChange}
+                />
+                </Grid>
+                <Grid item xs={12} sm={12} md={12}>
+                <TextField
+                    id="filled-required"
+                    label="Portfolio"
+                    variant="standard"
+                    focused
+                    name='portfolio'
+                    value={formData.portfolio}
+                    onChange={handleChange}
+                />
+                </Grid>
+                <Grid item xs={12} sm={12} md={12}>
+                <TextField
+                    required
+                    id="filled-required"
+                    label="LinkedIn"
+                    variant="standard"
+                    focused
+                    name='linkedIn'
+                    value={formData.linkedIn}
+                    onChange={handleChange}
+                />
+                </Grid>
+                <Grid item xs={12} sm={12} md={12}>
+                <PrimaryButton text={'Apply Now'} bgColor={'#00B9BC'} />
+                </Grid>
+            </Grid>
+        </Box>
       </ThemeProvider>
     );
   }
