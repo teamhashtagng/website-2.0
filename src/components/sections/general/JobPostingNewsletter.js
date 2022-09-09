@@ -31,8 +31,10 @@ function JobPostingNewsletter (){
 
   }
 
-  const handleChange = e => 
-    setFormData({ ...formData, [e.target.name]: e.target.value});
+  function handleChange(e){ 
+    const {name, value} = e.target
+    setFormData({ ...formData, [name]: value});
+  }
     
     console.log(formData)
     

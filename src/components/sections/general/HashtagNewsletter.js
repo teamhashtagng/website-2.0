@@ -19,21 +19,32 @@ function HashtagNewsletter() {
     setEmail(emailAddress)
   }
 
-  async function SendData(data){
-    try {
-      console.log(data)
-      // make axios post request
-      const response = await axios.post( url,
-        data, {
-          headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Content-Type": "application/json"
-          }
-      });
-      console.log(response.data)
-    } catch(error) {
-      console.log(error.response)
-    }
+  // async function SendData(data){
+  //   try {
+  //     console.log(data)
+  //     // make axios post request
+  //     const response = await axios.post( url,
+  //       data, {
+  //         headers: {
+  //           "Access-Control-Allow-Origin": "*",
+  //           "Content-Type": "application/json"
+  //         }
+  //     });
+  //     console.log(response.data)
+  //   } catch(error) {
+  //     console.log(error.response)
+  //   }
+  // }
+
+  function SendData(email){
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: email
+    };
+    fetch(url, requestOptions)
+        .then(response => response.json())
+        .then(data => console.log(data));
   }
 
   function submitForm(event){
@@ -41,7 +52,7 @@ function HashtagNewsletter() {
     setOpen(true)
 
     let data = JSON.stringify({
-      email: email
+      email: email.toLowerCase()
     })
 
     if (!isValidEmail(email)) {
@@ -49,14 +60,13 @@ function HashtagNewsletter() {
     } else if (isValidEmail(email)) {
       setError('Email is valid');
       SendData(data)
+      setEmail("")
     } else {
       setError(null);
     }
     
 
     console.log(email)
-
-    setEmail("")
   }
 
   return (
