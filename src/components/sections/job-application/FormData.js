@@ -25,17 +25,18 @@ const theme = createTheme({
 
 
 export default function FormData() {
-
-    const [open, setOpen] = React.useState(true);
-const [error, setError] = React.useState({});
-const [valid, setValid] = React.useState(false);
-const [formData, setFormData] = React.useState(
-  {fullName: "", email: "", phoneNumber: "", upload: {}, attracted: "", passion: "", portfolio: "", linkedIn : ""}
-)
+  const url = 'https://newhashtagng2.herokuapp.com/jobposting/create/'
+  const regex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
+  const regexURL = new RegExp('(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?'); 
+  const [open, setOpen] = React.useState(true);
+  const [error, setError] = React.useState({});
+  const [valid, setValid] = React.useState(false);
+  const [formData, setFormData] = React.useState(
+    {fullName: "", email: "", phoneNumber: "", upload: "", attracted: "", passion: "", portfolio: "", linkedIn : ""}
+  )
 
 function isValidForm(values) {
     const errors ={};
-    const regex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
     if (!values.fullName){
       errors.fullName = "Name is required !  ";
     } else if (values.fullName.length > 20) {
@@ -56,7 +57,7 @@ function isValidForm(values) {
         errors.phoneNumber = "Contact Must be a Number !  ";
       }
 
-    if (!Object.keys(values.upload).length){
+    if (!values.upload){
     errors.attracted = "Resume is required !";
     }
 
@@ -68,17 +69,35 @@ function isValidForm(values) {
     }
     if (!values.linkedIn){
     errors.linkedIn = "Linkedin is required !";
-    }
+    } else if (!regexURL.test(values.linkedIn)){
+      errors.email = "Not a valid linkedIn link !  ";
+   };
     return errors;
 
   }
 
   function handleChange (e){
-    const {name, value} = e.target
-    setFormData({ ...formData, [name]: value});
+    const {name, value, files, type} = e.target
+    setFormData({ ...formData, [name]: type === "file" ? files[0] : value});
   }
 
-  console.log(formData)
+  function SendData(){
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        full_name: formData.fullName,
+        email_address: formData.email.toLowerCase(),
+        contact_number: formData.phoneNumber,
+        upload_resume: formData.upload,
+        most_proud_of_project: formData.passion,
+        job_interest: formData.attracted,
+        portfolio: formData.portfolio,
+        linkedin: formData.linkedIn
+      })
+    };
+    fetch(url, requestOptions).then(response => response.json()).then(data => console.log(data));
+  }
 
   function submitForm(event){
     event.preventDefault()
@@ -90,8 +109,16 @@ function isValidForm(values) {
     console.log(valid)
     
     console.log(formData)
-    
-    //setFormData({fullName: '', email: '',subject: "", message: ""})
+
+    if (formData.fullName && formData.email && formData.phoneNumber 
+      && formData.upload && formData.passion && formData.attracted 
+      && formData.portfolio && formData.linkedIn){
+      if((formData.fullName.length <= 20 && isNaN(formData.fullName)) && regex.test(formData.email) && regexURL.test(formData.linkedIn)){
+        SendData()
+        setFormData({fullName: "", email: "", phoneNumber: "", upload: null, attracted: "", passion: "", portfolio: "", linkedIn : ""})
+      }
+    } 
+  
   }
 
 

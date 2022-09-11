@@ -49,12 +49,7 @@ function JobPostingNewsletter (){
     };
     fetch(url, requestOptions).then(response => response.json()).then(data => console.log(data));
   }
-
-  function clear(){
-    setFormData({fullName: "", email: ""})
-  }
-    
-    
+     
     function submitForm(event){
       event.preventDefault()
       setOpen(true)
@@ -64,6 +59,7 @@ function JobPostingNewsletter (){
 
       if (formData.fullName && formData.email){
         if((formData.fullName.length <= 20 && isNaN(formData.fullName)) && regex.test(formData.email)){
+          SendData()
           setFormData({...formData, fullName: '', email: ''})
         }
       } 
@@ -103,7 +99,7 @@ function JobPostingNewsletter (){
               <CloseIcon fontSize="inherit" />
             </IconButton>
             }
-            className='alert-width'>Thank You For Subscribing {SendData()}</Alert></Collapse>
+            className='alert-width'>Thank You For Subscribing</Alert></Collapse>
           </center>}
           <Box >
               <h4 id='newsletter-text'>Subscribe to job posting newsletter</h4>

@@ -5,6 +5,7 @@ import CloseIcon from '@mui/icons-material/Close';
 
 export default function ContactForm(){
     const url = 'https://newhashtagng2.herokuapp.com/contactus/create/'
+    const regex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
     const [open, setOpen] = React.useState(true);
     const [error, setError] = React.useState({});
     const [valid, setValid] = React.useState(false);
@@ -14,7 +15,6 @@ export default function ContactForm(){
 
     function isValidForm(values) {
         const errors ={};
-        const regex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
         if (!values.fullName){
           errors.fullName = "Name is required !  ";
         } else if (values.fullName.length > 20) {
@@ -68,8 +68,13 @@ export default function ContactForm(){
           setValid(true)
           console.log(valid)
           
-          console.log(formData)
-          
+
+          if (formData.fullName && formData.email && formData.subject && formData.message){
+            if((formData.fullName.length <= 20 && isNaN(formData.fullName)) && regex.test(formData.email)){
+              SendData()
+              setFormData({fullName: '', email: '',subject: "", message: ""})
+            }
+          } 
           //setFormData({fullName: '', email: '',subject: "", message: ""})
         }
 
@@ -103,7 +108,7 @@ export default function ContactForm(){
               <CloseIcon fontSize="inherit" />
             </IconButton>
             }
-            className='alert-width'>Thank You For Contacting Us {SendData()}</Alert></Collapse>
+            className='alert-width'>Thank You For Contacting Us</Alert></Collapse>
           </center>}
             <h3 className="hero-h1 mt-0 mb-16 reveal-from-bottom contact-h3" data-reveal-delay="200" style={{color: '#2E2F6E'}}>
                 Drop us a line
