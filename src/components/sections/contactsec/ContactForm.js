@@ -4,6 +4,7 @@ import PrimaryButton from '../../elements/PrimaryButton';
 import CloseIcon from '@mui/icons-material/Close';
 
 export default function ContactForm(){
+    const url = 'https://newhashtagng2.herokuapp.com/contactus/create/'
     const [open, setOpen] = React.useState(true);
     const [error, setError] = React.useState({});
     const [valid, setValid] = React.useState(false);
@@ -44,7 +45,19 @@ export default function ContactForm(){
         setFormData({ ...formData, [name]: value});
       }
         
-        console.log(formData)
+      function SendData(){
+        const requestOptions = {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: formData.fullName,
+            email: formData.email.toLowerCase(),
+            subject: formData.subject,
+            message: formData.message,
+          })
+        };
+        fetch(url, requestOptions).then(response => response.json()).then(data => console.log(data));
+      }
         
         function submitForm(event){
           event.preventDefault()
@@ -57,7 +70,7 @@ export default function ContactForm(){
           
           console.log(formData)
           
-          setFormData({fullName: '', email: '',subject: "", message: ""})
+          //setFormData({fullName: '', email: '',subject: "", message: ""})
         }
 
     return(
@@ -90,7 +103,7 @@ export default function ContactForm(){
               <CloseIcon fontSize="inherit" />
             </IconButton>
             }
-            className='alert-width'>Thank You For Contacting Us</Alert></Collapse>
+            className='alert-width'>Thank You For Contacting Us {SendData()}</Alert></Collapse>
           </center>}
             <h3 className="hero-h1 mt-0 mb-16 reveal-from-bottom contact-h3" data-reveal-delay="200" style={{color: '#2E2F6E'}}>
                 Drop us a line

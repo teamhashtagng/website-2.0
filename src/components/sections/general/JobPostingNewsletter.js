@@ -2,8 +2,10 @@ import React from 'react'
 import { Grid, Box, Collapse, IconButton, Alert } from '@mui/material'
 import PrimaryButton from '../../elements/PrimaryButton'
 import CloseIcon from '@mui/icons-material/Close';
+import { Verified } from '@mui/icons-material';
 
 function JobPostingNewsletter (){
+  const url = 'https://newhashtagng2.herokuapp.com/jobposting/create_subscription/'
   const [open, setOpen] = React.useState(true);
   const [error, setError] = React.useState({});
   const [valid, setValid] = React.useState(false);
@@ -11,9 +13,9 @@ function JobPostingNewsletter (){
     {fullName: "", email: ""}
   )
 
+  const regex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
   function isValidForm(values) {
     const errors ={};
-    const regex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
     if (!values.fullName){
       errors.fullName = "Name is required !  ";
     } else if (values.fullName.length > 20) {
@@ -35,22 +37,38 @@ function JobPostingNewsletter (){
     const {name, value} = e.target
     setFormData({ ...formData, [name]: value});
   }
+
+  function SendData(){
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: formData.fullName,
+        email: formData.email.toLowerCase(),
+      })
+    };
+    fetch(url, requestOptions).then(response => response.json()).then(data => console.log(data));
+  }
+
+  function clear(){
+    setFormData({fullName: "", email: ""})
+  }
     
-    console.log(formData)
     
     function submitForm(event){
       event.preventDefault()
       setOpen(true)
       
-      setError(isValidForm(formData))
-      
+      setError(isValidForm(formData))   
       setValid(true)
-      console.log(valid)
-      
-      console.log(formData)
-      
-      setFormData({fullName: '', email: ''})
+
+      if (formData.fullName && formData.email){
+        if((formData.fullName.length <= 20 && isNaN(formData.fullName)) && regex.test(formData.email)){
+          setFormData({...formData, fullName: '', email: ''})
+        }
+      } 
   }
+
 
 
   return (
@@ -85,7 +103,7 @@ function JobPostingNewsletter (){
               <CloseIcon fontSize="inherit" />
             </IconButton>
             }
-            className='alert-width'>Thank You For Subscribing</Alert></Collapse>
+            className='alert-width'>Thank You For Subscribing {SendData()}</Alert></Collapse>
           </center>}
           <Box >
               <h4 id='newsletter-text'>Subscribe to job posting newsletter</h4>

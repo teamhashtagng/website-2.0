@@ -19,23 +19,6 @@ function HashtagNewsletter() {
     setEmail(emailAddress)
   }
 
-  // async function SendData(data){
-  //   try {
-  //     console.log(data)
-  //     // make axios post request
-  //     const response = await axios.post( url,
-  //       data, {
-  //         headers: {
-  //           "Access-Control-Allow-Origin": "*",
-  //           "Content-Type": "application/json"
-  //         }
-  //     });
-  //     console.log(response.data)
-  //   } catch(error) {
-  //     console.log(error.response)
-  //   }
-  // }
-
   function SendData(email){
     const requestOptions = {
       method: 'POST',
