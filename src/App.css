@@ -4310,7 +4310,7 @@ img.has-shadow {
   background-image: url("./assets/images/section/ContactPage/Curve-line-bottom.svg");
   height: 600px;
   background-size: cover;
-  background-position: 20% 30%;
+  background-position: 20% 35%;
   background-repeat: no-repeat;
   margin-top: 8%;
 }
@@ -4792,6 +4792,10 @@ img.has-shadow {
 .not-found-page {
   margin-top: 10%;
   height: 120vh;
+}
+
+.upload-input {
+  width: 30% !important;
 }
 
 @media (max-width: 1300px) {

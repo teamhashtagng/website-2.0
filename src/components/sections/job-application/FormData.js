@@ -216,14 +216,8 @@ export default function FormData() {
                 />
                 </Grid>
                 <Grid item xs={12} sm={12} md={12}>
-                  <TextField
-                    helperText="Please enter your CV / Résumé"
-                    type='file' 
-                    accept=".pdf, .doc, .docx" 
-                    name="upload"
-                    onChange={handleChange}
-                  />
-                  {/* {<input type='file' accept=".pdf, .doc, .docx" name="upload" onChange={handleChange}/>} */}
+                  {/* <label for="upload">CV / Résumé*</label> */}
+                  <input id='upload' type='file' accept=".pdf, .doc, .docx" name="upload" onChange={handleChange}/>
                 </Grid>
                 <Grid item xs={12} sm={12} md={12}>
                 <TextField
