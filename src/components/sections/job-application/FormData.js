@@ -33,9 +33,12 @@ export default function FormData() {
   const [valid, setValid] = React.useState(false);
   const [formData, setFormData] = React.useState(
     {fullName: "", email: "", phoneNumber: "", upload: "", attracted: "", passion: "", portfolio: "", linkedIn : ""}
-  )
+    )
+  const random = Math.floor(1000 + Math.random() * 9000)
+  const tag = `${formData.fullName + random}`
 
-function isValidForm(values) {
+  
+  function isValidForm(values) {
     const errors ={};
     if (!values.fullName){
       errors.fullName = "Name is required !  ";
@@ -44,11 +47,11 @@ function isValidForm(values) {
     } else if (!isNaN(values.fullName)) {
       errors.fullName = "Must input string !  ";
     }
-
+    
     if (!values.email){
       errors.email = "Email is required !  ";
     }  else if (!regex.test(values.email)){
-       errors.email = "This is not a valid email !  ";
+      errors.email = "This is not a valid email !  ";
     };
 
     if (!values.phoneNumber){
@@ -80,12 +83,15 @@ function isValidForm(values) {
     const {name, value, files, type} = e.target
     setFormData({ ...formData, [name]: type === "file" ? files[0] : value});
   }
-
+  
   function SendData(){
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
+        tags : {
+          name: tag
+        },
         full_name: formData.fullName,
         email_address: formData.email.toLowerCase(),
         contact_number: formData.phoneNumber,
@@ -113,12 +119,13 @@ function isValidForm(values) {
     if (formData.fullName && formData.email && formData.phoneNumber 
       && formData.upload && formData.passion && formData.attracted 
       && formData.portfolio && formData.linkedIn){
-      if((formData.fullName.length <= 20 && isNaN(formData.fullName)) && regex.test(formData.email) && regexURL.test(formData.linkedIn)){
-        SendData()
-        setFormData({fullName: "", email: "", phoneNumber: "", upload: null, attracted: "", passion: "", portfolio: "", linkedIn : ""})
+        if((formData.fullName.length <= 20 && isNaN(formData.fullName)) && regex.test(formData.email) && regexURL.test(formData.linkedIn)){
+          SendData()
+          setFormData({fullName: "", email: "", phoneNumber: "", upload: null, attracted: "", passion: "", portfolio: "", linkedIn : ""})
       }
     } 
   
+    console.log(tag)
   }
 
 
