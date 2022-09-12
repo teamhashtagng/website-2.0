@@ -2,6 +2,8 @@ import React from 'react';
 import { Grid, Typography } from '@mui/material';
 import PrimaryButton from '../../elements/PrimaryButton';
 import { Link } from 'react-router-dom';
+import Image from '../../elements/Image';
+import DottedImage from '../../../assets/images/section/FrontendDescPage/dotted-main-section.svg';
 
 export default function JobDetails (){
     return (
@@ -29,6 +31,11 @@ export default function JobDetails (){
                         </h3>
                     </Grid>
                     <Grid item xs={12} sm={12} md={12}>
+                        <Image
+                            className='job-dotted'
+                            src={DottedImage}
+                            alt="Hero" 
+                        />
                         <p className="m-0 mb-32 reveal-from-bottom hero-subtitle" style={{color: '#000000'}} data-reveal-delay="400">
                             We are looking for a Front-End Web Developer who is motivated to combine the art of 
                             design with the art of programming. Responsibilities will include translation of the 
