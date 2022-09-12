@@ -28,6 +28,7 @@ export default function FormData() {
   const url = 'https://newhashtagng2.herokuapp.com/jobposting/create/'
   const regex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
   const regexURL = new RegExp('(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?'); 
+  const numbers = /^[0-9]+$/;
   const [open, setOpen] = React.useState(true);
   const [error, setError] = React.useState({});
   const [valid, setValid] = React.useState(false);
@@ -56,7 +57,7 @@ export default function FormData() {
 
     if (!values.phoneNumber){
         errors.phoneNumber = "phoneNumber is required !";
-    } else if (isNaN(values.phoneNumber)) {
+    } else if (values.phoneNumber.match(numbers)) {
         errors.phoneNumber = "Contact Must be a Number !  ";
       }
 
@@ -181,6 +182,7 @@ export default function FormData() {
                     required
                     label="Full Name"
                     focused
+                    type='text'
                     variant="standard"
                     name='fullName'
                     value={formData.fullName}
@@ -193,6 +195,7 @@ export default function FormData() {
                     id="filled-required"
                     label="Email Address"
                     variant="standard"
+                    type='email'
                     focused
                     name='email'
                     value={formData.email}
@@ -205,6 +208,7 @@ export default function FormData() {
                     id="filled-required"
                     label="Contact Number"
                     variant="standard"
+                    type='number'
                     focused
                     name='phoneNumber'
                     value={formData.phoneNumber}
@@ -212,7 +216,14 @@ export default function FormData() {
                 />
                 </Grid>
                 <Grid item xs={12} sm={12} md={12}>
-                    <input type='file' accept=".pdf, .doc, .docx" name="upload" onChange={handleChange}/>
+                  <TextField
+                    helperText="Please enter your CV / Résumé"
+                    type='file' 
+                    accept=".pdf, .doc, .docx" 
+                    name="upload"
+                    onChange={handleChange}
+                  />
+                  {/* {<input type='file' accept=".pdf, .doc, .docx" name="upload" onChange={handleChange}/>} */}
                 </Grid>
                 <Grid item xs={12} sm={12} md={12}>
                 <TextField
@@ -220,6 +231,7 @@ export default function FormData() {
                     id="filled-required"
                     label="What part of the job and working with us attracted you the most?"
                     variant="standard"
+                    type='text'
                     focused
                     name='attracted'
                     value={formData.attracted}
@@ -232,6 +244,7 @@ export default function FormData() {
                     id="filled-required"
                     label="What is a work, study or passion project that you’re most proud of?"
                     variant="standard"
+                    type='text'
                     focused
                     name='passion'
                     value={formData.passion}
@@ -243,6 +256,7 @@ export default function FormData() {
                     id="filled-required"
                     label="Portfolio"
                     variant="standard"
+                    type='text'
                     focused
                     name='portfolio'
                     value={formData.portfolio}
@@ -255,6 +269,7 @@ export default function FormData() {
                     id="filled-required"
                     label="LinkedIn"
                     variant="standard"
+                    type='text'
                     focused
                     name='linkedIn'
                     value={formData.linkedIn}
