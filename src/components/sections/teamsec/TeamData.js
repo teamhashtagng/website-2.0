@@ -23,8 +23,8 @@ export default [
             <span style={{color: '#2E2F6E', fontWeight: '700'}}>Fun Fact :</span> He loves to play games and listen to music a lot </p>,
         on: true,
         social: {
-            Instagram: '#',
-            Twitter: '#',
+            Instagram: '',
+            Twitter: '',
             LinkedIn: 'https://www.linkedin.com/in/awoyale-felix-5490ab141/'
         }
     },
@@ -41,8 +41,8 @@ export default [
             <span style={{color: '#2E2F6E', fontWeight: '700'}}>Fun Fact :</span> I am a selfless, cheerful and disciplined person. </p>,
         on: true,
         social: {
-            Instagram: '#',
-            Twitter: '#',
+            Instagram: '',
+            Twitter: '',
             LinkedIn: 'https://www.linkedin.com/in/omoshewa-olabanji-206bb5228/'
         }
     },
@@ -62,8 +62,8 @@ export default [
             <span style={{color: '#2E2F6E', fontWeight: '700'}}>Fun Fact :</span> Samson is a professional photographer, a great teacher, and a lover of cats and dogs </p>,
         on: true,
         social: {
-            Instagram: '#',
-            Twitter: '#',
+            Instagram: '',
+            Twitter: '',
             LinkedIn: 'https://www.linkedin.com/in/sammieneutron/'
         }
     },
@@ -82,8 +82,8 @@ export default [
             Startups and Tech based events, Hackathons and Hangout </p>,
         on: true,
         social: {
-            Instagram: '#',
-            Twitter: '#',
+            Instagram: '',
+            Twitter: '',
             LinkedIn: 'https://www.linkedin.com/in/ameh-abraham-2553951bb/'
         }
     },
@@ -99,8 +99,8 @@ export default [
             <span style={{color: '#2E2F6E', fontWeight: '700'}}>Fun Fact :</span> I love excellent music, good food and good sleep for few hours.</p>,
         on: true,
         social: {
-            Instagram: '#',
-            Twitter: '#',
+            Instagram: '',
+            Twitter: '',
             LinkedIn: 'https://www.linkedin.com/in/emmanueladubi/'
         }
     },
@@ -116,8 +116,8 @@ export default [
             <span style={{color: '#2E2F6E', fontWeight: '700'}}>Fun Fact :</span> Certified Foodie who binge watches for a living </p>,
         on: true,
         social: {
-            Instagram: '#',
-            Twitter: '#',
+            Instagram: '',
+            Twitter: '',
             LinkedIn: 'hhttps://www.linkedin.com/in/adedayo-ilesanmi-a574571a1'
         }
     },
@@ -134,8 +134,8 @@ export default [
             <span style={{color: '#2E2F6E', fontWeight: '700'}}>Fun Fact :</span> Loves to feed people</p>,
         on: true,
         social: {
-            Instagram: '#',
-            Twitter: '#',
+            Instagram: '',
+            Twitter: '',
             LinkedIn: 'https://www.linkedin.com/in/dolapo-bankole-27a505170'
         }
     },
@@ -155,8 +155,8 @@ export default [
             <span style={{color: '#2E2F6E', fontWeight: '700'}}>Fun Fact :</span> N/A </p>,
         on: true,
         social: {
-            Instagram: '#',
-            Twitter: '#',
+            Instagram: '',
+            Twitter: '',
             LinkedIn: 'https://www.linkedin.com/in/akintade-britto/'
         }
     },
@@ -175,8 +175,8 @@ export default [
             <span style={{color: '#2E2F6E', fontWeight: '700'}}>Fun Fact :</span> N/A</p>,
         on: true,
         social: {
-            Instagram: '#',
-            Twitter: '#',
+            Instagram: '',
+            Twitter: '',
             LinkedIn: 'https://www.linkedin.com/in/kingsleymbilitem/'
         }
     },
@@ -193,8 +193,8 @@ export default [
             <span style={{color: '#2E2F6E', fontWeight: '700'}}>Fun Fact :</span> I'm a dancer, enjoy football games and I am a cat lover</p>,
         on: true,
         social: {
-            Instagram: '#',
-            Twitter: '#',
+            Instagram: '',
+            Twitter: '',
             LinkedIn: 'https://www.linkedin.com/in/ibrahim-muhammed-9b52ab178'
         }
     },
