@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import PrimaryButton from '../../elements/PrimaryButton';
-import { Alert, Box, Button, Collapse, IconButton, Grid, TextField, Modal, Typography } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
+import { Box, Button, Grid, TextField, Modal, Typography, Stack } from '@mui/material';
 import ErrorIcon from '@mui/icons-material/Error';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import { Link } from 'react-router-dom';
 
 const theme = createTheme({
   palette: {
@@ -179,14 +179,17 @@ export default function FormData() {
             >
               <Box sx={style} style={{color: 'green'}}>
                 <CheckCircleIcon sx={{fontSize: '100px'}}/>
-                <Typography id="keep-mounted-modal-title" variant="h6" component="h2" style={{color: 'green'}}>
-                  Thank You For Applying.
+                <Typography id="keep-mounted-modal-title" variant="h6" component="h2" style={{color: '#2E2F6E'}}>
+                  Your application was successful
                 </Typography>
                 <Typography id="keep-mounted-modal-description" sx={{ mt: 2, mb: 3 }}>
-                  Your application will be reviewed, and you will be given feedback as soon as possible.
+                  A message has been sent to your email, 
+                  our team will get back to  you shortly. 
                 </Typography>
-
-                <Button onClick={handleClose} variant="contained" sx={{backgroundColor:'#00B9BC'}}>Continue</Button>
+                
+                <Link to='/careers'>
+                  <Button onClick={handleClose} variant="contained" sx={{backgroundColor:'#00B9BC'}}>Continue</Button>
+                </Link>
               </Box>
             </Modal>
           </center>}
@@ -241,8 +244,13 @@ export default function FormData() {
                 />
                 </Grid>
                 <Grid item xs={12} sm={12} md={12}>
-                  {/* <label for="upload">CV / Résumé*</label> */}
-                  <input id='upload' type='file' accept=".pdf, .doc, .docx" name="upload" onChange={handleChange} style={{width: '100%'}}/>
+                  <Stack direction="row" alignItems="center" spacing={4} sx={{marginLeft: '1%'}}>
+                    <label for="upload">CV / Résumé*</label>
+                    <Button variant="contained" component="label" sx={{backgroundColor: '#2E2F6E', borderRadius: '10px', fontSize: '16px', fontWeight: 400}}>
+                      Upload your CV
+                      <input required hidden id='upload' type='file' accept=".pdf, .doc, .docx" name="upload" onChange={handleChange}/>
+                    </Button>
+                  </Stack>
                 </Grid>
                 <Grid item xs={12} sm={12} md={12}>
                 <TextField
