@@ -150,25 +150,6 @@ export default function FormData() {
 
     return (
       <ThemeProvider theme={theme}>
-
-        {/* <Modal
-          keepMounted
-          open={open}
-          onClose={handleClose}
-        >
-          <Box sx={style} style={{color: 'green'}}>
-            <CheckCircleIcon sx={{fontSize: '100px'}}/>
-            <Typography id="keep-mounted-modal-title" variant="h6" component="h2" style={{color: 'green'}}>
-              Thank You For Applying.
-            </Typography>
-            <Typography id="keep-mounted-modal-description" sx={{ mt: 2, mb: 3 }}>
-              Your application will be reviewed, and you will be given feedback as soon as possible.
-            </Typography>
-
-            <Button onClick={handleClose} variant="contained" sx={{bgColor:'#00B9BC'}}>Continue</Button>
-          </Box>
-        </Modal> */}
-
         {Object.keys(error).length ? <center> 
           <Modal
             keepMounted
