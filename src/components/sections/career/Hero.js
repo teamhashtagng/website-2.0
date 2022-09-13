@@ -6,6 +6,7 @@ import Image from '../../elements/Image';
 
 import DottedImage from '../../../assets/images/section/TeamsPage/Hero-dotted-design.svg'
 import PrimaryButton from '../../elements/PrimaryButton';
+import { HashLink } from 'react-router-hash-link';
 
 const propTypes = {
   ...SectionProps.types
@@ -57,9 +58,12 @@ const Hero = ({
               <p className="m-0 mb-32 reveal-from-bottom hero-subtitle" data-reveal-delay="400">
                 We are a Nigeria-based startup & we are ready for new talent to join our company.
               </p>
-              <a href='#open-postions'>
+              <HashLink 
+                to='#open-postions'
+                smooth
+              >
               <PrimaryButton text={'View Jobs'} bgColor={'#00B9BC'}/>
-              </a>
+              </HashLink>
               </Grid>
             <Grid item xs={12} sm={6} md={6}>
             </Grid>

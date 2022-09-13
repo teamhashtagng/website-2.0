@@ -26,19 +26,19 @@ export default function ContactInfo() {
                 </Box>
             </Grid>
             <Grid item xs={12} sm={6} md={6}>
-            <Box sx={{mt: '40px', mb: '30px'}}>
+                <Box sx={{mt: '40px', mb: '70px'}}>
                     <div>
                         <AccessTimeFilledIcon sx={{ color: '#2E2F6E'}}/>
                     </div>
                     <Typography variant="p" id='contact-info-text' gutterBottom>OPENING HOURS</Typography><br/>
-                    <Typography variant="p" fontSize={'17px'} gutterBottom>Monday to Friday: 10am to 7pm <br/>Saturday: 10am to 4pm</Typography>
+                    <Typography variant="p" fontSize={'17px'} gutterBottom>Monday to Friday: 9am to 5pm</Typography>
                 </Box>
                 <Box sx={{mt: '40px', mb: '30px'}}>
                     <div>
                         <PhoneIcon sx={{ color: '#2E2F6E'}}/>
                     </div>
                     <Typography variant="p" id='contact-info-text' gutterBottom>PHONE</Typography><br/>
-                    <Typography variant="p" fontSize={'17px'} gutterBottom>Call customer services on <br/> 0912 940 3029</Typography>
+                    <Typography variant="p" fontSize={'17px'} gutterBottom>Reach us on mobile <br/> 0912 940 3029</Typography>
                 </Box>
             </Grid>
         </Grid>

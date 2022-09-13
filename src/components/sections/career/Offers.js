@@ -11,7 +11,7 @@ import food from '../../../assets/images/section/CareersFAQsPage/Healthy-food.sv
 export default function Offers (){
     return (
         <React.Fragment>
-            <Grid container spacing={5} sx={{marginTop: '3%'}}>
+            <Grid container spacing={5} sx={{marginTop: '3%', zIndex: '999'}}>
                 <Grid item xs={12} sm={6} md={6}>
                     <OfferCard
                         icon={Trophy}

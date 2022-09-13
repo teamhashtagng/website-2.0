@@ -7,6 +7,7 @@ import PrimaryButton from '../../elements/PrimaryButton';
 
 import SpaceGuy1 from '../../../assets/images/space-guy-1.png'
 import HeroLines from '../../../assets/images/section/HomePage/hero-line.png'
+import { Link } from 'react-router-dom';
 
 const propTypes = {
   ...SectionProps.types
@@ -61,7 +62,9 @@ const Hero = ({
               In this hub we create digital solutions, to solve real world problems.
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
-                <PrimaryButton bgColor={'#2E2F6E'} text={'Let us discuss'}/>
+                <Link to='/contact-us'>
+                  <PrimaryButton bgColor={'#2E2F6E'} text={'Let us discuss'}/>
+                </Link>
               </div>
             </Grid>
             <Grid item xs={12} sm={6} md={6}>

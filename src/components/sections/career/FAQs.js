@@ -6,7 +6,7 @@ import FAQquestions from "./FAQquestions";
 
 export default function FAQs(){
     return (
-        <Container maxWidth='false' className="FAQ-question-bg">
+        <Container maxWidth='false' className="FAQ-question-bg" id='FAQs'>
             <div className="container" style={{marginTop: '2%'}}>
             <Grid container spacing={1} sx={{marginTop: '7%', marginBottom: '10%'}} className='offer-card-text'>
                 <Grid item xs={12} sm={6} md={6} sx={{paddingTop: '3%'}}>
