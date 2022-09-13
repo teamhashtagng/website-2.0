@@ -1,8 +1,10 @@
 import * as React from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import PrimaryButton from '../../elements/PrimaryButton';
-import { Alert, Box, Button, Collapse, IconButton, Grid, TextField } from '@mui/material';
+import { Alert, Box, Button, Collapse, IconButton, Grid, TextField, Modal, Typography } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
+import ErrorIcon from '@mui/icons-material/Error';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 const theme = createTheme({
   palette: {
@@ -29,14 +31,30 @@ export default function FormData() {
   const regex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
   const regexURL = new RegExp('(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?'); 
   const numbers = /^[0-9]+$/;
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
   const [error, setError] = React.useState({});
   const [valid, setValid] = React.useState(false);
   const [formData, setFormData] = React.useState(
     {fullName: "", email: "", phoneNumber: "", upload: "", attracted: "", passion: "", portfolio: "", linkedIn : ""}
     )
   const random = Math.floor(1000 + Math.random() * 9000)
-  const tag = `${formData.fullName + random}`
+  const tag = `${formData.fullName + random}`;
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    boxShadow: 24,
+    textAlign: 'center',
+    boxShadow: "rgb(145 158 171 / 20%) 0px 11px 15px -7px, rgb(145 158 171 / 14%) 0px 24px 38px 3px, rgb(145 158 171 / 12%) 0px 9px 46px 8px",
+    padding: "32px",
+    borderRadius: "25px"
+  };
 
   
   function isValidForm(values) {
@@ -57,7 +75,7 @@ export default function FormData() {
 
     if (!values.phoneNumber){
         errors.phoneNumber = "phoneNumber is required !";
-    } else if (values.phoneNumber.match(numbers)) {
+    } else if (!values.phoneNumber.match(numbers)) {
         errors.phoneNumber = "Contact Must be a Number !  ";
       }
 
@@ -108,7 +126,7 @@ export default function FormData() {
 
   function submitForm(event){
     event.preventDefault()
-    setOpen(true)
+    handleOpen()
     
     setError(isValidForm(formData))
     
@@ -120,50 +138,76 @@ export default function FormData() {
     if (formData.fullName && formData.email && formData.phoneNumber 
       && formData.upload && formData.passion && formData.attracted 
       && formData.portfolio && formData.linkedIn){
-        if((formData.fullName.length <= 20 && isNaN(formData.fullName)) && regex.test(formData.email) && regexURL.test(formData.linkedIn)){
+        if((formData.fullName.length <= 20 && isNaN(formData.fullName)) 
+          && regex.test(formData.email) && regexURL.test(formData.linkedIn) 
+          && formData.phoneNumber.match(numbers)){
           SendData()
           setFormData({fullName: "", email: "", phoneNumber: "", upload: null, attracted: "", passion: "", portfolio: "", linkedIn : ""})
       }
     } 
-  
-    console.log(tag)
   }
 
 
     return (
       <ThemeProvider theme={theme}>
 
+        {/* <Modal
+          keepMounted
+          open={open}
+          onClose={handleClose}
+        >
+          <Box sx={style} style={{color: 'green'}}>
+            <CheckCircleIcon sx={{fontSize: '100px'}}/>
+            <Typography id="keep-mounted-modal-title" variant="h6" component="h2" style={{color: 'green'}}>
+              Thank You For Applying.
+            </Typography>
+            <Typography id="keep-mounted-modal-description" sx={{ mt: 2, mb: 3 }}>
+              Your application will be reviewed, and you will be given feedback as soon as possible.
+            </Typography>
+
+            <Button onClick={handleClose} variant="contained" sx={{bgColor:'#00B9BC'}}>Continue</Button>
+          </Box>
+        </Modal> */}
+
         {Object.keys(error).length ? <center> 
-            <Collapse in={open}><Alert severity="error" variant="filled" sx={{width: '100%', marginTop: '5%'}}  action={
-            <IconButton
-              aria-label="close"
-              color="inherit"
-              size="small"
-              onClick={() => {
-                setOpen(false);
-              }}
-            >
-              <CloseIcon fontSize="inherit" />
-            </IconButton>
-            }
-            className='alert-width'>{error.fullName}  { error.email}  
-            { error.passion} {error.phoneNumber} { error.attracted}  { error.linkedIn} 
-            { error.portfolio} { error.upload}</Alert></Collapse>
+          <Modal
+            keepMounted
+            open={open}
+            onClose={handleClose}
+          >
+            <Box sx={style} style={{color: 'red'}}>
+              <ErrorIcon sx={{fontSize: '100px'}}/>
+              <Typography id="keep-mounted-modal-title" variant="h6" component="h2" style={{color: 'red'}}>
+                Error Submiting This Form!
+              </Typography>
+              <Typography id="keep-mounted-modal-description" sx={{ mt: 2, mb: 4 }}>
+                {error.fullName}  { error.email}  
+                { error.passion} {error.phoneNumber} { error.attracted}  { error.linkedIn} 
+                { error.portfolio} { error.upload}
+              </Typography>
+
+              <Button onClick={handleClose} variant="contained" sx={{backgroundColor:'#00B9BC'}}>Continue</Button>
+            </Box>
+          </Modal>
           </center> : <center></center>}
         {!Object.keys(error).length && valid && <center> 
-            <Collapse in={open}><Alert severity="success" variant="filled" sx={{width: '100%', marginTop: '5%'}}  action={
-            <IconButton
-              aria-label="close"
-              color="inherit"
-              size="small"
-              onClick={() => {
-                setOpen(false);
-              }}
+            <Modal
+              keepMounted
+              open={open}
+              onClose={handleClose}
             >
-              <CloseIcon fontSize="inherit" />
-            </IconButton>
-            }
-            className='alert-width'>Thank You For Applying</Alert></Collapse>
+              <Box sx={style} style={{color: 'green'}}>
+                <CheckCircleIcon sx={{fontSize: '100px'}}/>
+                <Typography id="keep-mounted-modal-title" variant="h6" component="h2" style={{color: 'green'}}>
+                  Thank You For Applying.
+                </Typography>
+                <Typography id="keep-mounted-modal-description" sx={{ mt: 2, mb: 3 }}>
+                  Your application will be reviewed, and you will be given feedback as soon as possible.
+                </Typography>
+
+                <Button onClick={handleClose} variant="contained" sx={{backgroundColor:'#00B9BC'}}>Continue</Button>
+              </Box>
+            </Modal>
           </center>}
         <Box
             component="form"
@@ -275,6 +319,7 @@ export default function FormData() {
                 </Grid>
             </Grid>
         </Box>
+        
       </ThemeProvider>
     );
   }
