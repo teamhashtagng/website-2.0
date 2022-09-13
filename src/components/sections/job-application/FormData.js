@@ -242,7 +242,7 @@ export default function FormData() {
                 </Grid>
                 <Grid item xs={12} sm={12} md={12}>
                   {/* <label for="upload">CV / Résumé*</label> */}
-                  <input id='upload' type='file' accept=".pdf, .doc, .docx" name="upload" onChange={handleChange}/>
+                  <input id='upload' type='file' accept=".pdf, .doc, .docx" name="upload" onChange={handleChange} style={{width: '100%'}}/>
                 </Grid>
                 <Grid item xs={12} sm={12} md={12}>
                 <TextField
