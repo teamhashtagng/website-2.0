@@ -133,7 +133,7 @@ export default function FormData() {
     setValid(true)
     console.log(valid)
     
-    console.log(random)
+    console.log(formData)
 
     if (formData.fullName && formData.email && formData.phoneNumber 
       && formData.upload && formData.passion && formData.attracted 
@@ -249,9 +249,21 @@ export default function FormData() {
                     <Button variant="contained" component="label" sx={{backgroundColor: '#2E2F6E', borderRadius: '10px', fontSize: '16px', fontWeight: 400}}>
                       Upload your CV
                       <input required hidden id='upload' type='file' accept=".pdf, .doc, .docx" name="upload" onChange={handleChange}/>
-                      {formData.upload && <CheckCircleIcon sx={{marginLeft: '5px', fontSize: '20px'}}/>}
                     </Button>
                   </Stack>
+                  {
+                      formData.upload && 
+                      <Stack direction="row" alignItems="center" spacing={1} sx={{marginTop: '15px'}} >
+
+                        <CheckCircleIcon sx={{marginLeft: '5px', fontSize: '20px', color: 'green'}}/>
+                        <Typography variant="overline" gutterBottom sx={{lineHeight: '15px'}}>
+                          {formData.upload.name}
+                        </Typography>
+                        {/* <Typography variant="p">
+                          {formData.upload.File.name}
+                        </Typography> */}
+                    </Stack>
+                    }
                 </Grid>
                 <Grid item xs={12} sm={12} md={12}>
                 <TextField
