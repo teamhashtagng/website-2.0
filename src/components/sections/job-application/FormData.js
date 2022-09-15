@@ -37,7 +37,7 @@ export default function FormData() {
   const [formData, setFormData] = React.useState(
     {fullName: "", email: "", phoneNumber: "", upload: "", attracted: "", passion: "", portfolio: "", linkedIn : ""}
     )
-  const random = Math.floor(1000 + Math.random() * 9000)
+  const random = Math.floor(10000000000 + Math.random() * 90000000000)
   const tag = `${formData.fullName + random}`;
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -75,7 +75,7 @@ export default function FormData() {
 
     if (!values.phoneNumber){
         errors.phoneNumber = "phoneNumber is required !";
-    } else if (!values.phoneNumber.match(numbers)) {
+    } else if (isNaN(values.phoneNumber)) {
         errors.phoneNumber = "Contact Must be a Number !  ";
       }
 
@@ -133,14 +133,14 @@ export default function FormData() {
     setValid(true)
     console.log(valid)
     
-    console.log(formData)
+    console.log(random)
 
     if (formData.fullName && formData.email && formData.phoneNumber 
       && formData.upload && formData.passion && formData.attracted 
       && formData.portfolio && formData.linkedIn){
         if((formData.fullName.length <= 20 && isNaN(formData.fullName)) 
           && regex.test(formData.email) && regexURL.test(formData.linkedIn) 
-          && formData.phoneNumber.match(numbers)){
+          && isNaN(formData.phoneNumber)){
           SendData()
           setFormData({fullName: "", email: "", phoneNumber: "", upload: null, attracted: "", passion: "", portfolio: "", linkedIn : ""})
       }
@@ -236,7 +236,7 @@ export default function FormData() {
                     id="filled-required"
                     label="Contact Number"
                     variant="standard"
-                    type='number'
+                    type='text'
                     focused
                     name='phoneNumber'
                     value={formData.phoneNumber}
@@ -249,6 +249,7 @@ export default function FormData() {
                     <Button variant="contained" component="label" sx={{backgroundColor: '#2E2F6E', borderRadius: '10px', fontSize: '16px', fontWeight: 400}}>
                       Upload your CV
                       <input required hidden id='upload' type='file' accept=".pdf, .doc, .docx" name="upload" onChange={handleChange}/>
+                      {formData.upload && <CheckCircleIcon sx={{marginLeft: '5px', fontSize: '20px'}}/>}
                     </Button>
                   </Stack>
                 </Grid>
