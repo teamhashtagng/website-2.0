@@ -7,7 +7,7 @@ import Kingsley from '../../../assets/images/section/TeamsPage/teamphoto/Kingsle
 import Omoshewa from '../../../assets/images/section/TeamsPage/teamphoto/Omoshewa.png'
 import Samson from '../../../assets/images/section/TeamsPage/teamphoto/samson.png'
 import Felix from '../../../assets/images/section/TeamsPage/teamphoto/felix.png'
-import Abraham from '../../../assets/images/section/TeamsPage/teamphoto/abraham.png'
+import Abraham from '../../../assets/images/section/TeamsPage/teamphoto/Abraham.png'
 import Akintade from '../../../assets/images/section/TeamsPage/teamphoto/akintade.png'
 export default [
     {
@@ -89,19 +89,20 @@ export default [
     },
     {
         id: 5,
-        imge: Emmanuel,
-        name: 'Emmanuel Adubi',
-        role: 'Engineering',
+        imge: Dolapo,
+        name: 'Dolapo Damilola',
+        role: 'Content Creator',
         description: 
-            <p>I'm a passionate python programmer. I'm also a Python Django backend developer. 
-            I love doing research and constantly learning about new things.<br/><br/>
+            <p>Dolapo is a social media manager and content writer. She is a prolific writer 
+            and content creator with over 2years of experience. She's also a Film and stage 
+            producer/director.<br/><br/>
 
-            <span style={{color: '#2E2F6E', fontWeight: '700'}}>Fun Fact :</span> I love excellent music, good food and good sleep for few hours.</p>,
+            <span style={{color: '#2E2F6E', fontWeight: '700'}}>Fun Fact :</span> Loves to feed people</p>,
         on: true,
         social: {
             Instagram: '',
             Twitter: '',
-            LinkedIn: 'https://www.linkedin.com/in/emmanueladubi/'
+            LinkedIn: 'https://www.linkedin.com/in/dolapo-bankole-27a505170'
         }
     },
     {
@@ -123,20 +124,19 @@ export default [
     },
     {
         id: 7,
-        imge: Dolapo,
-        name: 'Dolapo Damilola',
-        role: 'Content Creator',
+        imge: Emmanuel,
+        name: 'Emmanuel Adubi',
+        role: 'Engineering',
         description: 
-            <p>Dolapo is a social media manager and content writer. She is a prolific writer 
-            and content creator with over 2years of experience. She's also a Film and stage 
-            producer/director.<br/><br/>
+            <p>I'm a passionate python programmer. I'm also a Python Django backend developer. 
+            I love doing research and constantly learning about new things.<br/><br/>
 
-            <span style={{color: '#2E2F6E', fontWeight: '700'}}>Fun Fact :</span> Loves to feed people</p>,
+            <span style={{color: '#2E2F6E', fontWeight: '700'}}>Fun Fact :</span> I love excellent music, good food and good sleep for few hours.</p>,
         on: true,
         social: {
             Instagram: '',
             Twitter: '',
-            LinkedIn: 'https://www.linkedin.com/in/dolapo-bankole-27a505170'
+            LinkedIn: 'https://www.linkedin.com/in/emmanueladubi/'
         }
     },
     {
