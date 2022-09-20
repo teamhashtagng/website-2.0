@@ -3,10 +3,8 @@ import React from 'react';
 
 export default function BgImage (){
     return (
-        <React.Fragment>
-        <Container maxWidth='false' className='career-illus'>
+        <div className='job-bottom-line'>
             
-        </Container>
-        </React.Fragment>
+        </div>
     )
 }
