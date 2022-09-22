@@ -22,7 +22,7 @@ const OurProducts = () => {
       </div>
       <Image 
           src={Partycoo}
-          style={{marginTop: '-20px'}}
+          style={{marginTop: '-20px' }}
         />
     </Box>
   )
