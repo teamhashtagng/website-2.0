@@ -23,8 +23,8 @@ export default [
             <span style={{color: '#2E2F6E', fontWeight: '700'}}>Fun Fact :</span> He loves to play games and listen to music a lot </p>,
         on: true,
         social: {
-            Instagram: '#',
-            Twitter: '#',
+            Instagram: '',
+            Twitter: '',
             LinkedIn: 'https://www.linkedin.com/in/awoyale-felix-5490ab141/'
         }
     },
@@ -41,8 +41,8 @@ export default [
             <span style={{color: '#2E2F6E', fontWeight: '700'}}>Fun Fact :</span> I am a selfless, cheerful and disciplined person. </p>,
         on: true,
         social: {
-            Instagram: '#',
-            Twitter: '#',
+            Instagram: '',
+            Twitter: '',
             LinkedIn: 'https://www.linkedin.com/in/omoshewa-olabanji-206bb5228/'
         }
     },
@@ -62,8 +62,8 @@ export default [
             <span style={{color: '#2E2F6E', fontWeight: '700'}}>Fun Fact :</span> Samson is a professional photographer, a great teacher, and a lover of cats and dogs </p>,
         on: true,
         social: {
-            Instagram: '#',
-            Twitter: '#',
+            Instagram: '',
+            Twitter: '',
             LinkedIn: 'https://www.linkedin.com/in/sammieneutron/'
         }
     },
@@ -82,26 +82,27 @@ export default [
             Startups and Tech based events, Hackathons and Hangout </p>,
         on: true,
         social: {
-            Instagram: '#',
-            Twitter: '#',
+            Instagram: '',
+            Twitter: '',
             LinkedIn: 'https://www.linkedin.com/in/ameh-abraham-2553951bb/'
         }
     },
     {
         id: 5,
-        imge: Emmanuel,
-        name: 'Emmanuel Adubi',
-        role: 'Engineering',
+        imge: Dolapo,
+        name: 'Dolapo Damilola',
+        role: 'Content Creator',
         description: 
-            <p>I'm a passionate python programmer. I'm also a Python Django backend developer. 
-            I love doing research and constantly learning about new things.<br/><br/>
+            <p>Dolapo is a social media manager and content writer. She is a prolific writer 
+            and content creator with over 2years of experience. She's also a Film and stage 
+            producer/director.<br/><br/>
 
-            <span style={{color: '#2E2F6E', fontWeight: '700'}}>Fun Fact :</span> I love excellent music, good food and good sleep for few hours.</p>,
+            <span style={{color: '#2E2F6E', fontWeight: '700'}}>Fun Fact :</span> Loves to feed people</p>,
         on: true,
         social: {
-            Instagram: '#',
-            Twitter: '#',
-            LinkedIn: 'https://www.linkedin.com/in/emmanueladubi/'
+            Instagram: '',
+            Twitter: '',
+            LinkedIn: 'https://www.linkedin.com/in/dolapo-bankole-27a505170'
         }
     },
     {
@@ -116,27 +117,26 @@ export default [
             <span style={{color: '#2E2F6E', fontWeight: '700'}}>Fun Fact :</span> Certified Foodie who binge watches for a living </p>,
         on: true,
         social: {
-            Instagram: '#',
-            Twitter: '#',
+            Instagram: '',
+            Twitter: '',
             LinkedIn: 'hhttps://www.linkedin.com/in/adedayo-ilesanmi-a574571a1'
         }
     },
     {
         id: 7,
-        imge: Dolapo,
-        name: 'Dolapo Damilola',
-        role: 'Content Creator',
+        imge: Emmanuel,
+        name: 'Emmanuel Adubi',
+        role: 'Engineering',
         description: 
-            <p>Dolapo is a social media manager and content writer. She is a prolific writer 
-            and content creator with over 2years of experience. She's also a Film and stage 
-            producer/director.<br/><br/>
+            <p>I'm a passionate python programmer. I'm also a Python Django backend developer. 
+            I love doing research and constantly learning about new things.<br/><br/>
 
-            <span style={{color: '#2E2F6E', fontWeight: '700'}}>Fun Fact :</span> Loves to feed people</p>,
+            <span style={{color: '#2E2F6E', fontWeight: '700'}}>Fun Fact :</span> I love excellent music, good food and good sleep for few hours.</p>,
         on: true,
         social: {
-            Instagram: '#',
-            Twitter: '#',
-            LinkedIn: 'https://www.linkedin.com/in/dolapo-bankole-27a505170'
+            Instagram: '',
+            Twitter: '',
+            LinkedIn: 'https://www.linkedin.com/in/emmanueladubi/'
         }
     },
     {
@@ -155,8 +155,8 @@ export default [
             <span style={{color: '#2E2F6E', fontWeight: '700'}}>Fun Fact :</span> N/A </p>,
         on: true,
         social: {
-            Instagram: '#',
-            Twitter: '#',
+            Instagram: '',
+            Twitter: '',
             LinkedIn: 'https://www.linkedin.com/in/akintade-britto/'
         }
     },
@@ -175,8 +175,8 @@ export default [
             <span style={{color: '#2E2F6E', fontWeight: '700'}}>Fun Fact :</span> N/A</p>,
         on: true,
         social: {
-            Instagram: '#',
-            Twitter: '#',
+            Instagram: '',
+            Twitter: '',
             LinkedIn: 'https://www.linkedin.com/in/kingsleymbilitem/'
         }
     },
@@ -193,8 +193,8 @@ export default [
             <span style={{color: '#2E2F6E', fontWeight: '700'}}>Fun Fact :</span> I'm a dancer, enjoy football games and I am a cat lover</p>,
         on: true,
         social: {
-            Instagram: '#',
-            Twitter: '#',
+            Instagram: '',
+            Twitter: '',
             LinkedIn: 'https://www.linkedin.com/in/ibrahim-muhammed-9b52ab178'
         }
     },
