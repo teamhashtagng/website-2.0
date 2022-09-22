@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import PrimaryButton from '../../elements/PrimaryButton';
-import { Box, Button, Grid, TextField, Modal, Typography, Stack } from '@mui/material';
+import { Alert, Box, Button, Collapse, IconButton, Grid, TextField, Modal, Typography } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
 import ErrorIcon from '@mui/icons-material/Error';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import { Link } from 'react-router-dom';
 
 const theme = createTheme({
   palette: {
@@ -37,7 +37,7 @@ export default function FormData() {
   const [formData, setFormData] = React.useState(
     {fullName: "", email: "", phoneNumber: "", upload: "", attracted: "", passion: "", portfolio: "", linkedIn : ""}
     )
-  const random = Math.floor(10000000000 + Math.random() * 90000000000)
+  const random = Math.floor(1000 + Math.random() * 9000)
   const tag = `${formData.fullName + random}`;
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -75,7 +75,7 @@ export default function FormData() {
 
     if (!values.phoneNumber){
         errors.phoneNumber = "phoneNumber is required !";
-    } else if (isNaN(values.phoneNumber)) {
+    } else if (!values.phoneNumber.match(numbers)) {
         errors.phoneNumber = "Contact Must be a Number !  ";
       }
 
@@ -140,7 +140,7 @@ export default function FormData() {
       && formData.portfolio && formData.linkedIn){
         if((formData.fullName.length <= 20 && isNaN(formData.fullName)) 
           && regex.test(formData.email) && regexURL.test(formData.linkedIn) 
-          && isNaN(formData.phoneNumber)){
+          && formData.phoneNumber.match(numbers)){
           SendData()
           setFormData({fullName: "", email: "", phoneNumber: "", upload: null, attracted: "", passion: "", portfolio: "", linkedIn : ""})
       }
@@ -179,17 +179,14 @@ export default function FormData() {
             >
               <Box sx={style} style={{color: 'green'}}>
                 <CheckCircleIcon sx={{fontSize: '100px'}}/>
-                <Typography id="keep-mounted-modal-title" variant="h6" component="h2" style={{color: '#2E2F6E'}}>
-                  Your application was successful
+                <Typography id="keep-mounted-modal-title" variant="h6" component="h2" style={{color: 'green'}}>
+                  Thank You For Applying.
                 </Typography>
                 <Typography id="keep-mounted-modal-description" sx={{ mt: 2, mb: 3 }}>
-                  A message has been sent to your email, 
-                  our team will get back to  you shortly. 
+                  Your application will be reviewed, and you will be given feedback as soon as possible.
                 </Typography>
-                
-                <Link to='/careers'>
-                  <Button onClick={handleClose} variant="contained" sx={{backgroundColor:'#00B9BC'}}>Continue</Button>
-                </Link>
+
+                <Button onClick={handleClose} variant="contained" sx={{backgroundColor:'#00B9BC'}}>Continue</Button>
               </Box>
             </Modal>
           </center>}
@@ -236,7 +233,7 @@ export default function FormData() {
                     id="filled-required"
                     label="Contact Number"
                     variant="standard"
-                    type='text'
+                    type='number'
                     focused
                     name='phoneNumber'
                     value={formData.phoneNumber}
@@ -244,26 +241,8 @@ export default function FormData() {
                 />
                 </Grid>
                 <Grid item xs={12} sm={12} md={12}>
-                  <Stack direction="row" alignItems="center" spacing={4} sx={{marginLeft: '1%'}}>
-                    <label for="upload">CV / Résumé*</label>
-                    <Button variant="contained" component="label" sx={{backgroundColor: '#2E2F6E', borderRadius: '10px', fontSize: '16px', fontWeight: 400}}>
-                      Upload your CV
-                      <input required hidden id='upload' type='file' accept=".pdf, .doc, .docx" name="upload" onChange={handleChange}/>
-                    </Button>
-                  </Stack>
-                  {
-                      formData.upload && 
-                      <Stack direction="row" alignItems="center" spacing={1} sx={{marginTop: '15px'}} >
-
-                        <CheckCircleIcon sx={{marginLeft: '5px', fontSize: '20px', color: 'green'}}/>
-                        <Typography variant="overline" gutterBottom sx={{lineHeight: '15px'}}>
-                          {formData.upload.name}
-                        </Typography>
-                        {/* <Typography variant="p">
-                          {formData.upload.File.name}
-                        </Typography> */}
-                    </Stack>
-                    }
+                  {/* <label for="upload">CV / Résumé*</label> */}
+                  <input id='upload' type='file' accept=".pdf, .doc, .docx" name="upload" onChange={handleChange} style={{width: '100%'}}/>
                 </Grid>
                 <Grid item xs={12} sm={12} md={12}>
                 <TextField

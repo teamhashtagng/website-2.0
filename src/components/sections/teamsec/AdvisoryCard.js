@@ -32,15 +32,15 @@ export default function AdvisoryCard({profile, name, social, description, state,
             </CardContent>
           </CardActionArea>
           <CardActions sx={{justifyContent: 'center', mb: '10px'}} >
-           {social.Facebook &&  <a href={social.Facebook} target='_blank'>
-              <IconButton size="medium" sx={{ color: '#2E2F6E'}}><FacebookRoundedIcon/></IconButton>
-            </a>}
-            {social.Twitter && <a href={social.Twitter} target='_blank'>
-              <IconButton size="medium" sx={{ color: '#2E2F6E'}}><TwitterIcon/></IconButton>
-            </a>}
-           {social.LinkedIn &&  <a href={social.LinkedIn} target='_blank'>
-              <IconButton size="medium" sx={{ color: '#2E2F6E'}}><LinkedInIcon/></IconButton>
-            </a>}
+            <a href={social.Facebook} target='_blank'>
+                <IconButton size="medium" sx={{ color: '#2E2F6E'}}><FacebookRoundedIcon/></IconButton>
+            </a>
+            <a href={social.Twitter} target='_blank'>
+                <IconButton size="medium" sx={{ color: '#2E2F6E'}}><TwitterIcon/></IconButton>
+            </a>
+            <a href={social.LinkedIn} target='_blank'>
+                <IconButton size="medium" sx={{ color: '#2E2F6E'}}><LinkedInIcon/></IconButton>
+            </a>
           </CardActions>
         </Card> 
         :  
@@ -66,15 +66,15 @@ export default function AdvisoryCard({profile, name, social, description, state,
           </CardContent>
         </CardActionArea>
         <CardActions sx={{justifyContent: 'left', mb: '5px'}} id='Team-card-social-hover'>
-          {social.Facebook && <a href={social.Facebook} target='_blank' rel="noopener noreferrer">
+          <a href={social.Facebook} target='_blank' rel="noopener noreferrer">
               <IconButton size="small" sx={{ color: '#2E2F6E'}}><FacebookRoundedIcon/></IconButton>
-          </a>}
-          {social.Twitter && <a href={social.Twitter} target='_blank' rel="noopener noreferrer">
+          </a>
+          <a href={social.Twitter} target='_blank' rel="noopener noreferrer">
               <IconButton size="small" sx={{ color: '#2E2F6E'}}><TwitterIcon/></IconButton>
-          </a>}
-          {social.LinkedIn && <a href={social.LinkedIn} target='_blank' rel="noopener noreferrer">
+          </a>
+          <a href={social.LinkedIn} target='_blank' rel="noopener noreferrer">
               <IconButton size="small" sx={{ color: '#2E2F6E'}}><LinkedInIcon/></IconButton>
-          </a>}
+          </a>
         </CardActions>
       </Card> }
     </React.Fragment>
