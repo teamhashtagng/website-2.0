@@ -15,7 +15,6 @@ const Hero = () => {
       <div className="container-sm not-found-page">
           <Grid container spacing={5} >
             <Grid item xs={12} sm={6} md={6} style={{display: "flex", flexDirection: "column", justifyContent: "center"}} className="btns">
-              {/* <p className="m-0 reveal-from-bottom primary-color" data-reveal-delay="400"><b>OONFTs</b></p> */}
               <h1 className="hero-h1 mt-0 mb-16 reveal-from-bottom error-hero-h1" data-reveal-delay="200" style={{color: '#2E2F6E'}}>
                 Oops!
               </h1>
