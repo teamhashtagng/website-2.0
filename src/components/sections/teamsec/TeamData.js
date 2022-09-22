@@ -7,7 +7,7 @@ import Kingsley from '../../../assets/images/section/TeamsPage/teamphoto/Kingsle
 import Omoshewa from '../../../assets/images/section/TeamsPage/teamphoto/Omoshewa.png'
 import Samson from '../../../assets/images/section/TeamsPage/teamphoto/samson.png'
 import Felix from '../../../assets/images/section/TeamsPage/teamphoto/felix.png'
-import Abraham from '../../../assets/images/section/TeamsPage/teamphoto/Abraham.png'
+import Abraham from '../../../assets/images/section/TeamsPage/teamphoto/abraham.png'
 import Akintade from '../../../assets/images/section/TeamsPage/teamphoto/akintade.png'
 export default [
     {
