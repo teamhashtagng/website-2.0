@@ -1,17 +1,37 @@
 import React from 'react';
-import { Alert, Box, Button, Collapse, Container, Grid, IconButton, TextField, Typography } from '@mui/material';
+import { Alert, Box, Button, Modal, TextField, Typography } from '@mui/material';
 import PrimaryButton from '../../elements/PrimaryButton';
 import CloseIcon from '@mui/icons-material/Close';
+import ErrorIcon from '@mui/icons-material/Error';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import { Link } from 'react-router-dom';
 
 export default function ContactForm(){
     const url = 'https://newhashtagng2.herokuapp.com/contactus/create/'
     const regex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
-    const [open, setOpen] = React.useState(true);
+    const [open, setOpen] = React.useState(false);
     const [error, setError] = React.useState({});
     const [valid, setValid] = React.useState(false);
     const [formData, setFormData] = React.useState(
       {fullName: "", email: "", subject: "", message: ""}
     )
+
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
+    const style = {
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      width: 400,
+      bgcolor: 'background.paper',
+      boxShadow: 24,
+      textAlign: 'center',
+      boxShadow: "rgb(145 158 171 / 20%) 0px 11px 15px -7px, rgb(145 158 171 / 14%) 0px 24px 38px 3px, rgb(145 158 171 / 12%) 0px 9px 46px 8px",
+      padding: "32px",
+      borderRadius: "25px"
+    };
 
     function isValidForm(values) {
         const errors ={};
@@ -81,34 +101,42 @@ export default function ContactForm(){
     return(
         <Box className='Contact-form-box'>
           {Object.keys(error).length ? <center> 
-            <Collapse in={open}><Alert severity="error" variant="filled" sx={{width: '100%', marginTop: '5%'}}  action={
-            <IconButton
-              aria-label="close"
-              color="inherit"
-              size="small"
-              onClick={() => {
-                setOpen(false);
-              }}
-            >
-              <CloseIcon fontSize="inherit" />
-            </IconButton>
-            }
-            className='alert-width'>{error.fullName}  { error.email}  { error.subject}  { error.message}</Alert></Collapse>
+            <Modal
+            keepMounted
+            open={open}
+            onClose={handleClose}
+          >
+            <Box sx={style} style={{color: 'red'}}>
+              <ErrorIcon sx={{fontSize: '100px'}}/>
+              <Typography id="keep-mounted-modal-title" variant="h6" component="h2" style={{color: 'red'}}>
+                Error Submiting This Form!
+              </Typography>
+              <Typography id="keep-mounted-modal-description" sx={{ mt: 2, mb: 4 }}>
+                {error.fullName}  { error.email}  
+                { error.subject} {error.message}
+              </Typography>
+
+              <Button onClick={handleClose} variant="contained" sx={{backgroundColor:'#00B9BC'}}>Continue</Button>
+            </Box>
+          </Modal>
           </center> : <center></center>}
         {!Object.keys(error).length && valid && <center> 
-            <Collapse in={open}><Alert severity="success" variant="filled" sx={{width: '100%', marginTop: '5%'}}  action={
-            <IconButton
-              aria-label="close"
-              color="inherit"
-              size="small"
-              onClick={() => {
-                setOpen(false);
-              }}
+            <Modal
+              keepMounted
+              open={open}
+              onClose={handleClose}
             >
-              <CloseIcon fontSize="inherit" />
-            </IconButton>
-            }
-            className='alert-width'>Thank You For Contacting Us</Alert></Collapse>
+              <Box sx={style} style={{color: 'green'}}>
+                <CheckCircleIcon sx={{fontSize: '100px'}}/>
+                <Typography id="keep-mounted-modal-title" variant="h6" component="h6" style={{mt: 2, mb: 5 }}>
+                  Thanks for your submission
+                </Typography>
+
+                <Link to='/'>
+                  <Button onClick={handleClose} variant="contained" sx={{backgroundColor:'#00B9BC', mt: 5}}>Continue</Button>
+                </Link>
+              </Box>
+            </Modal>
           </center>}
             <h3 className="hero-h1 mt-0 mb-16 reveal-from-bottom contact-h3" data-reveal-delay="200" style={{color: '#2E2F6E'}}>
                 Drop us a line
@@ -170,9 +198,8 @@ export default function ContactForm(){
                 sx={{mt: '30px'}}
                 />
                 <div style={{ marginTop: '8%', marginBottom: '8%'}}>
-                    <PrimaryButton text={'Submit'} bgColor={'#00B9BC'} onClick={()=> (console.log('hello'))}/>
+                    <PrimaryButton text={'Submit'} bgColor={'#00B9BC'}/>
                 </div>
-               {/* { <Button variant="contained" onClick={()=> (console.log('hello'))}>Submit</Button>} */}
               </center>
             </Box>
         </Box>
