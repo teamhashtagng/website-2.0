@@ -6,7 +6,6 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function AccordionQuestion({title, description, panelNo, expanded, handleChange}) {
-  console.log(panelNo)
   return (
     <div>
       <Accordion expanded={expanded === panelNo} onChange={handleChange}>

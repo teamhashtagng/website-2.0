@@ -12,7 +12,6 @@ export default function FAQquestions (){
     //const [question ] = React.useexpanded(QuestionData)
 
     const [expanded, setExpanded] = React.useState(false);
-    console.log(expanded)
     const handleChange = (panel) => (event, isExpanded) => {
         setExpanded(isExpanded ? panel : false);
     };
