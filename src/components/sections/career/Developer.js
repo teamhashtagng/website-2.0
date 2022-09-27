@@ -33,7 +33,7 @@ export default function Developer (){
             <Grid container spacing={0} sx={{marginTop: '4%'}}>
                 <Grid item xs={12} sm={9} md={10}>
                     <Typography variant="h6" gutterBottom>Backend Engineer (Django/Python)</Typography>
-                    <Typography variant="body2" gutterBottom>Lagos, Full-Time</Typography>
+                    <Typography variant="body2" gutterBottom>Remote, Full-Time</Typography>
                 </Grid>
                 <Grid item xs={12} sm={3} md={2} sx={{marginTop: '3%'}}>
                     <Link to="/job-description">
