@@ -12,7 +12,7 @@ export default function JobDetails (){
                 <Grid container spacing={5} sx={{marginTop: '5%'}}>
                     <Grid item xs={12} sm={4} md={4}>
                         <Typography variant="body1"  gutterBottom sx={{color: '#2E2F6E', fontWeight: '700'}}>Experience</Typography>
-                        <Typography variant="body2" color={'#000000'} sx={{fontWeight: '400'}} gutterBottom>2 - 3 Years</Typography>
+                        <Typography variant="body2" color={'#000000'} sx={{fontWeight: '400'}} gutterBottom>1 - 3 Years</Typography>
                     </Grid>
                     <Grid item xs={12} sm={4} md={4}>
                     <Typography variant="body1"  gutterBottom sx={{color: '#2E2F6E', fontWeight: '700'}}>Seniority Level</Typography>
@@ -49,12 +49,11 @@ export default function JobDetails (){
                 <Grid container spacing={4} sx={{marginTop: '3%'}}>
                     <Grid item xs={12} sm={12} md={12}>
                         <h3 className="hero-h1 mt-0 mb-16 reveal-from-bottom hero-h1-banner" data-reveal-delay="200" style={{color: '#2E2F6E'}}>
-                            Duties and Responsibilities
+                            Duties and Requirements
                         </h3>
                     </Grid>
                     <Grid item xs={12} sm={12} md={12} sx={{zIndex: '999'}}>
                         <ul>
-                            <li> 1 - 3 years experience of developing applications with Django and using Django-rest-framework</li>
                             <li> Experience developing unit tests in Django and Python.</li>
                             <li> Intermediate to advanced level knowledge of Python, Docker/containerization, git & Github.</li>
                             <li> Should own a working laptop with modest configuration to work with.</li>
@@ -72,6 +71,7 @@ export default function JobDetails (){
                     </Grid>
                     <Grid item xs={12} sm={12} md={12}>
                         <ul>
+                            <li> 1 - 3 years experience of developing applications with Django and using Django-rest-framework</li>
                             <li> A Bachelor's degree in Computer science/engineering, Systems Engineering, Mathematics or related fields of study</li>
                             <li> Having worked in the past to deploy at least one application to Production by self.</li>
                             <li> Sound knowledge of API documentation with Swagger & Django-rest-framework</li>
