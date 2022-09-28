@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Alert, Box, Button, Modal, TextField, Typography } from '@mui/material';
 import PrimaryButton from '../../elements/PrimaryButton';
-import CloseIcon from '@mui/icons-material/Close';
+import emailjs from '@emailjs/browser';
 import ErrorIcon from '@mui/icons-material/Error';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { Link } from 'react-router-dom';
 
 export default function ContactForm(){
     const url = 'https://newhashtagng2.herokuapp.com/contactus/create/'
-    const regex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
+    const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     const [open, setOpen] = React.useState(false);
     const [error, setError] = React.useState({});
     const [valid, setValid] = React.useState(false);
@@ -18,6 +18,7 @@ export default function ContactForm(){
 
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+    const form = useRef()
 
     const style = {
       position: 'absolute',
@@ -64,6 +65,7 @@ export default function ContactForm(){
         const {name, value} = e.target
         setFormData({ ...formData, [name]: value});
       }
+
         
       function SendData(){
         const requestOptions = {
@@ -92,6 +94,23 @@ export default function ContactForm(){
           if (formData.fullName && formData.email && formData.subject && formData.message){
             if((formData.fullName.length <= 20 && isNaN(formData.fullName)) && regex.test(formData.email)){
               SendData()
+              emailjs.sendForm(
+                "service_xebv99g",
+                // service_xebv99g
+                "template_brdmdz5",
+                // template_brdmdz5
+                form.current,
+                "user_5DWzDq3qay2fpLzpX1XoN"
+                // user_5DWzDq3qay2fpLzpX1XoN
+              )
+              .then(
+                (result) => {
+                  console.log(result.text);
+                },
+                (error) => {
+                  console.log(error.text);
+                }
+              );
               setFormData({fullName: '', email: '',subject: "", message: ""})
             }
           } 
@@ -149,6 +168,7 @@ export default function ContactForm(){
                 sx={{
                     '& .MuiTextField-root': { width: '100%' },
                 }}
+                ref={form}
                 autoComplete="off"
                 onSubmit={submitForm}
             >
