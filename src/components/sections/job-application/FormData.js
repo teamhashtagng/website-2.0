@@ -29,9 +29,9 @@ const theme = createTheme({
 
 export default function ApplicationForm() {
   const url = `https://newhashtagng2.herokuapp.com/jobposting/create/`
-  const regex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
-  const regexURL = new RegExp('(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?'); 
-  const numbers = /^[0-9]+$/;
+  const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  const regexURL = /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/; 
+  //const numbers = /^[0-9]+$/;
   const [open, setOpen] = React.useState(false);
   const [error, setError] = React.useState({});
   const [valid, setValid] = React.useState(false);
