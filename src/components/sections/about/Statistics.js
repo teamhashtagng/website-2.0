@@ -10,8 +10,8 @@ const Statistics = () => {
   return (
     <Box>
         
-       <div style={{backgroundImage: `url(${Curves})`, backgroundSize: 'cover', height: '700px'}} data-aos="fade-up">
-       <div style={{display: "flex", justifyContent: "center"}} >
+       <div style={{backgroundImage: `url(${Curves})`, backgroundSize: 'cover', height: '700px'}}>
+       <div style={{display: "flex", justifyContent: "center"}} data-aos="fade-up">
             <Image 
                 src={SpaceMission}
                 style={{width: '500px', marginTop: '70px'}}
@@ -29,7 +29,7 @@ const Statistics = () => {
               style={{position: 'absolute', right: '0'}}
               className='about-curve'
             />
-            <div className='container' style={{paddingBottom: '100px', zIndex: '9999'}}>
+            <div className='container' style={{paddingBottom: '100px', zIndex: '9999'}} data-aos="fade-up">
                 <Box style={{backgroundColor: 'white', borderRadius: '30px', width: '100%', padding: '20px', textAlign: 'center', zIndex: '9999'}}>
                     <Grid container spacing={3}>
                         <Grid item xs={12} md={2.5} sm={2.5}>

@@ -28,11 +28,11 @@ const Services = () => {
         <div className='container' style={{paddingTop: '50px', paddingBottom: '50px'}} data-aos="fade-up">
           <h2 style={{color: '#00B9BC'}}>We proffer solutions for <br/> your business</h2>
           <p style={{color: 'white'}}>By solving new problems and enhancing <br/>existing solutions.</p>
-          <Image
-            src={ServiceDots}
-            style={{position: 'absolute', right: '0', marginTop: '-500px'}}
-          />
         </div>
+        <Image
+          src={ServiceDots}
+          style={{position: 'absolute', right: '0', marginTop: '-500px'}}
+        />
         <Box>
           <div className='container' data-aos="fade-up">
             <Grid container spacing={10} className='services_'>
@@ -65,7 +65,7 @@ const Services = () => {
       <Box style={{backgroundImage: `url(${CurvedBottom})`, backgroundSize: 'cover', height: '500px'}}>
 
       </Box>
-      <div className='container'>
+      <div className='container' data-aos="fade-up">
         <Image 
             src={SpaceGuyRocket}
             className='space-guy'
