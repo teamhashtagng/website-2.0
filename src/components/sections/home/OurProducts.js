@@ -7,7 +7,7 @@ import PrimaryButton from '../../elements/PrimaryButton';
 const OurProducts = () => {
   return (
     <Box id='product'>
-      <div className='container'>
+      <div className='container' data-aos="fade-up">
         <Grid container>
           <Grid item sm={8} md={8}>
 
@@ -21,7 +21,8 @@ const OurProducts = () => {
           </Grid>
         </Grid>
       </div>
-      <Image 
+      <div data-aos="fade-up">
+        <Image 
           src={Partycoo}
           style={{marginTop: '-20px', marginBottom: '0'}}
         />
@@ -32,6 +33,7 @@ const OurProducts = () => {
             </a>
           </center>
         </div>
+      </div>
     </Box>
   )
 }

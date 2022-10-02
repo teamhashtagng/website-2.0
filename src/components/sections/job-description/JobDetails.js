@@ -2,14 +2,12 @@ import React from 'react';
 import { Grid, Typography } from '@mui/material';
 import PrimaryButton from '../../elements/PrimaryButton';
 import { Link } from 'react-router-dom';
-import Image from '../../elements/Image';
-import DottedImage from '../../../assets/images/section/FrontendDescPage/dotted-main-section.svg';
 
 export default function JobDetails (){
     return (
         <React.Fragment>
             <div className='container'>
-                <Grid container spacing={5} sx={{marginTop: '5%'}}>
+                <Grid container spacing={5} sx={{marginTop: '5%'}} data-aos="fade-up">
                     <Grid item xs={12} sm={4} md={4}>
                         <Typography variant="body1"  gutterBottom sx={{color: '#2E2F6E', fontWeight: '700'}}>Experience</Typography>
                         <Typography variant="body2" color={'#000000'} sx={{fontWeight: '400'}} gutterBottom>1 - 3 Years</Typography>
@@ -24,18 +22,13 @@ export default function JobDetails (){
                     </Grid>
                 </Grid>
 
-                <Grid container spacing={4} sx={{marginTop: '3%'}}>
+                <Grid container spacing={4} sx={{marginTop: '3%', position: 'relative'}} data-aos="fade-up">
                     <Grid item xs={12} sm={12} md={12}>
-                        <h3 className="hero-h1 mt-0 mb-16 reveal-from-bottom hero-h1-banner" data-reveal-delay="200" style={{color: '#2E2F6E'}}>
+                        <h3 className="hero-h1 mt-0 mb-16 reveal-from-bottom hero-h1-banner" data-reveal-delay="200" style={{color: '#2E2F6E'}} >
                             Overview
                         </h3>
                     </Grid>
                     <Grid item xs={12} sm={12} md={12}>
-                        <Image
-                            className='job-dotted'
-                            src={DottedImage}
-                            alt="Hero" 
-                        />
                         <p className="m-0 mb-32 reveal-from-bottom hero-subtitle" style={{color: '#000000'}} data-reveal-delay="400">
                             Hashtag is a software & media Startup, focused on developing unique digital solutions that are
                             relatable to a typical African.
@@ -46,7 +39,7 @@ export default function JobDetails (){
                     </Grid>
                 </Grid>
 
-                <Grid container spacing={4} sx={{marginTop: '3%'}}>
+                <Grid container spacing={4} sx={{marginTop: '3%'}} data-aos="fade-up">
                     <Grid item xs={12} sm={12} md={12}>
                         <h3 className="hero-h1 mt-0 mb-16 reveal-from-bottom hero-h1-banner" data-reveal-delay="200" style={{color: '#2E2F6E'}}>
                             Duties and Requirements
@@ -63,7 +56,7 @@ export default function JobDetails (){
                         </ul>
                     </Grid>
                 </Grid>
-                <Grid container spacing={4} sx={{marginTop: '3%'}}>
+                <Grid container spacing={4} sx={{marginTop: '3%'}} data-aos="fade-up">
                     <Grid item xs={12} sm={12} md={12}>
                         <h3 className="hero-h1 mt-0 mb-16 reveal-from-bottom hero-h1-banner" data-reveal-delay="200" style={{color: '#2E2F6E'}}>
                             Skills And Qualifications

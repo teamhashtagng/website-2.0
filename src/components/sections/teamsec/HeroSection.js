@@ -51,7 +51,7 @@ const Hero = ({
             src={DottedImage}
             alt="Hero" 
             />
-      <div className="container-sm" style={{position: 'relative'}}>
+      <div className="container-sm" style={{position: 'relative'}} data-aos="fade-up">
         <div className={innerClasses}>
           <Grid container spacing={5}>
             <Grid item xs={12} sm={6} md={6} style={{display: "flex", flexDirection: "column", justifyContent: "center"}} className="btns">

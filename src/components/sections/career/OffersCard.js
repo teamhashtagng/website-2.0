@@ -4,7 +4,7 @@ import Image from '../../elements/Image';
 
 export default function OfferCard({icon, header, body}){
     return(
-        <Grid container spacing={1} sx={{marginTop: '7%'}} className='offer-card-text'>
+        <Grid container spacing={1} sx={{marginTop: '7%'}} className='offer-card-text' data-aos="fade-up">
             <Grid item xs={12} sm={3} md={3}>
             <Image
                 className='offer-card-icon'

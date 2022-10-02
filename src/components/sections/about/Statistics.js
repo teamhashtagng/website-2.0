@@ -10,8 +10,8 @@ const Statistics = () => {
   return (
     <Box>
         
-       <div style={{backgroundImage: `url(${Curves})`, backgroundSize: 'cover', height: '700px'}}>
-       <div style={{display: "flex", justifyContent: "center"}}>
+       <div style={{backgroundImage: `url(${Curves})`, backgroundSize: 'cover', height: '700px'}} data-aos="fade-up">
+       <div style={{display: "flex", justifyContent: "center"}} >
             <Image 
                 src={SpaceMission}
                 style={{width: '500px', marginTop: '70px'}}

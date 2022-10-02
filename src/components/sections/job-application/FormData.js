@@ -197,6 +197,7 @@ export default function ApplicationForm() {
             autoComplete="off"
             className="form-active"
             onSubmit={submitForm}
+            data-aos="fade-up"
         >
             <Grid container spacing={4} sx={{marginTop: '1%', color: '#000000'}}>
                 <Grid item xs={12} sm={12} md={12}>

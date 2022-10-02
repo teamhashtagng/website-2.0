@@ -4686,6 +4686,7 @@ img.has-shadow {
 .job-dotted {
   position: absolute;
   right: 0;
+  bottom: 180%;
 }
 
 .job-dotted-apply {

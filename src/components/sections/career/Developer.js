@@ -30,7 +30,7 @@ export default function Developer (){
                 </Grid>
                 <hr className="job-line"/>
             </Grid> */}
-            <Grid container spacing={0} sx={{marginTop: '4%'}}>
+            <Grid container spacing={0} sx={{marginTop: '4%'}} data-aos="fade-up">
                 <Grid item xs={12} sm={9} md={10}>
                     <Typography variant="h6" gutterBottom>Backend Engineer (Django/Python)</Typography>
                     <Typography variant="body2" gutterBottom>Remote, Full-Time</Typography>
