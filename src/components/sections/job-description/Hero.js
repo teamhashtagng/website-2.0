@@ -47,10 +47,10 @@ export default function Hero({
         <div className="container-sm">
           <div className={innerClasses}>
                 <Grid container spacing={5}>
-                <Grid item xs={12} sm={6} md={6} style={{}} className="btns">
+                <Grid item xs={12} sm={6} md={6} style={{}} className="btns" data-aos="fade-up">
                 {/* <p className="m-0 reveal-from-bottom primary-color" data-reveal-delay="400"><b>OONFTs</b></p> */}
                 <h1 className="hero-h1 mt-0 mb-16 reveal-from-bottom hero-h1-banner" data-reveal-delay="200" style={{color: '#FFFFFF'}}>
-                    Frontend Engineer
+                    Backend Engineer
                 </h1>
                 <Link to="/job-application">
                     <PrimaryButton text={'Apply Now'} bgColor={'#00B9BC'} />

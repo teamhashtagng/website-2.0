@@ -1,10 +1,11 @@
 import * as React from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import PrimaryButton from '../../elements/PrimaryButton';
-import { Alert, Box, Button, Collapse, IconButton, Grid, TextField, Modal, Typography } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
+import { Box, Button, Grid, TextField, Modal, Typography, Stack } from '@mui/material';
 import ErrorIcon from '@mui/icons-material/Error';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const theme = createTheme({
   palette: {
@@ -26,19 +27,19 @@ const theme = createTheme({
 });
 
 
-export default function FormData() {
-  const url = 'https://newhashtagng2.herokuapp.com/jobposting/create/'
-  const regex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
-  const regexURL = new RegExp('(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?'); 
-  const numbers = /^[0-9]+$/;
+export default function ApplicationForm() {
+  const url = `https://newhashtagng2.herokuapp.com/jobposting/create/`
+  const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  const regexURL = /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/; 
+  //const numbers = /^[0-9]+$/;
   const [open, setOpen] = React.useState(false);
   const [error, setError] = React.useState({});
   const [valid, setValid] = React.useState(false);
-  const [formData, setFormData] = React.useState(
+  const [formValues, setformValues] = React.useState(
     {fullName: "", email: "", phoneNumber: "", upload: "", attracted: "", passion: "", portfolio: "", linkedIn : ""}
     )
-  const random = Math.floor(1000 + Math.random() * 9000)
-  const tag = `${formData.fullName + random}`;
+  const random = Math.floor(10000000000 + Math.random() * 90000000000)
+  const tag = `${formValues.fullName + random}`;
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
@@ -61,7 +62,7 @@ export default function FormData() {
     const errors ={};
     if (!values.fullName){
       errors.fullName = "Name is required !  ";
-    } else if (values.fullName.length > 20) {
+    } else if (values.fullName.length > 30) {
       errors.fullName = 'Name cannot exceed 20 characters !  ';
     } else if (!isNaN(values.fullName)) {
       errors.fullName = "Must input string !  ";
@@ -75,7 +76,7 @@ export default function FormData() {
 
     if (!values.phoneNumber){
         errors.phoneNumber = "phoneNumber is required !";
-    } else if (!values.phoneNumber.match(numbers)) {
+    } else if (isNaN(values.phoneNumber)) {
         errors.phoneNumber = "Contact Must be a Number !  ";
       }
 
@@ -100,49 +101,43 @@ export default function FormData() {
 
   function handleChange (e){
     const {name, value, files, type} = e.target
-    setFormData({ ...formData, [name]: type === "file" ? files[0] : value});
+    setformValues({ ...formValues, [name]: type === "file" ? files[0] : value});
   }
   
-  function SendData(){
-    const requestOptions = {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        tags : {
-          name: tag
-        },
-        full_name: formData.fullName,
-        email_address: formData.email.toLowerCase(),
-        contact_number: formData.phoneNumber,
-        upload_resume: formData.upload,
-        most_proud_of_project: formData.passion,
-        job_interest: formData.attracted,
-        portfolio: formData.portfolio,
-        linkedin: formData.linkedIn
-      })
-    };
-    fetch(url, requestOptions).then(response => response.json()).then(data => console.log(data));
+  async function SendData( key, name, email, phone, file, passion, attracted, portfolio, linkedIn){
+    const data = new FormData();
+    data.append('tags', key);
+    data.append('full_name', name);
+    data.append('email_address', email);
+    data.append('contact_number', phone);
+    data.append('upload_resume', file);
+    data.append('most_proud_of_project', passion);
+    data.append('job_interest', attracted);
+    data.append('portfolio', portfolio);
+    data.append('linkedin', linkedIn);
+    const response = await axios.post(url, data);
+    console.log(response.data)
   }
 
   function submitForm(event){
     event.preventDefault()
     handleOpen()
     
-    setError(isValidForm(formData))
+    setError(isValidForm(formValues))
     
     setValid(true)
     console.log(valid)
     
-    console.log(formData)
+    console.log(formValues)
 
-    if (formData.fullName && formData.email && formData.phoneNumber 
-      && formData.upload && formData.passion && formData.attracted 
-      && formData.portfolio && formData.linkedIn){
-        if((formData.fullName.length <= 20 && isNaN(formData.fullName)) 
-          && regex.test(formData.email) && regexURL.test(formData.linkedIn) 
-          && formData.phoneNumber.match(numbers)){
-          SendData()
-          setFormData({fullName: "", email: "", phoneNumber: "", upload: null, attracted: "", passion: "", portfolio: "", linkedIn : ""})
+    if (formValues.fullName && formValues.email && formValues.phoneNumber 
+      && formValues.upload && formValues.passion && formValues.attracted 
+      && formValues.portfolio && formValues.linkedIn){
+        if((formValues.fullName.length <= 20 && isNaN(formValues.fullName)) && regex.test(formValues.email) 
+        && regexURL.test(formValues.linkedIn) && !isNaN(formValues.phoneNumber, formValues.passion)){
+          console.log(formValues)
+          SendData(tag, formValues.fullName, formValues.email, formValues.phoneNumber, formValues.upload, formValues.passion, formValues.attracted, formValues.portfolio, formValues.linkedIn )
+          setformValues({fullName: "", email: "", phoneNumber: "", upload: null, attracted: "", passion: "", portfolio: "", linkedIn : ""})
       }
     } 
   }
@@ -179,14 +174,17 @@ export default function FormData() {
             >
               <Box sx={style} style={{color: 'green'}}>
                 <CheckCircleIcon sx={{fontSize: '100px'}}/>
-                <Typography id="keep-mounted-modal-title" variant="h6" component="h2" style={{color: 'green'}}>
-                  Thank You For Applying.
+                <Typography id="keep-mounted-modal-title" variant="h6" component="h2" style={{color: '#2E2F6E'}}>
+                  Your application was successful
                 </Typography>
                 <Typography id="keep-mounted-modal-description" sx={{ mt: 2, mb: 3 }}>
-                  Your application will be reviewed, and you will be given feedback as soon as possible.
+                  A message has been sent to your email, 
+                  our team will get back to  you shortly. 
                 </Typography>
-
-                <Button onClick={handleClose} variant="contained" sx={{backgroundColor:'#00B9BC'}}>Continue</Button>
+                
+                <Link to='/careers'>
+                  <Button onClick={handleClose} variant="contained" sx={{backgroundColor:'#00B9BC'}}>Continue</Button>
+                </Link>
               </Box>
             </Modal>
           </center>}
@@ -199,6 +197,7 @@ export default function FormData() {
             autoComplete="off"
             className="form-active"
             onSubmit={submitForm}
+            data-aos="fade-up"
         >
             <Grid container spacing={4} sx={{marginTop: '1%', color: '#000000'}}>
                 <Grid item xs={12} sm={12} md={12}>
@@ -210,7 +209,7 @@ export default function FormData() {
                     type='text'
                     variant="standard"
                     name='fullName'
-                    value={formData.fullName}
+                    value={formValues.fullName}
                     onChange={handleChange}
                 />
                 </Grid>
@@ -223,7 +222,7 @@ export default function FormData() {
                     type='email'
                     focused
                     name='email'
-                    value={formData.email}
+                    value={formValues.email}
                     onChange={handleChange}
                 />
                 </Grid>
@@ -233,16 +232,34 @@ export default function FormData() {
                     id="filled-required"
                     label="Contact Number"
                     variant="standard"
-                    type='number'
+                    type='text'
                     focused
                     name='phoneNumber'
-                    value={formData.phoneNumber}
+                    value={formValues.phoneNumber}
                     onChange={handleChange}
                 />
                 </Grid>
                 <Grid item xs={12} sm={12} md={12}>
-                  {/* <label for="upload">CV / Résumé*</label> */}
-                  <input id='upload' type='file' accept=".pdf, .doc, .docx" name="upload" onChange={handleChange} style={{width: '100%'}}/>
+                  <Stack direction="row" alignItems="center" spacing={4} sx={{marginLeft: '1%'}}>
+                    <label for="upload">CV / Résumé*</label>
+                    <Button variant="contained" component="label" sx={{backgroundColor: '#2E2F6E', borderRadius: '10px', fontSize: '16px', fontWeight: 400}}>
+                      Upload your CV
+                      <input required hidden id='upload' type='file' accept=".pdf, .doc, .docx" name="upload" onChange={handleChange}/>
+                    </Button>
+                  </Stack>
+                  {
+                      formValues.upload && 
+                      <Stack direction="row" alignItems="center" spacing={1} sx={{marginTop: '15px'}} >
+
+                        <CheckCircleIcon sx={{marginLeft: '5px', fontSize: '20px', color: 'green'}}/>
+                        <Typography variant="overline" gutterBottom sx={{lineHeight: '15px'}}>
+                          {formValues.upload.name}
+                        </Typography>
+                        {/* <Typography variant="p">
+                          {formValues.upload.File.name}
+                        </Typography> */}
+                    </Stack>
+                    }
                 </Grid>
                 <Grid item xs={12} sm={12} md={12}>
                 <TextField
@@ -253,7 +270,7 @@ export default function FormData() {
                     type='text'
                     focused
                     name='attracted'
-                    value={formData.attracted}
+                    value={formValues.attracted}
                     onChange={handleChange}
                 />
                 </Grid>
@@ -266,7 +283,7 @@ export default function FormData() {
                     type='text'
                     focused
                     name='passion'
-                    value={formData.passion}
+                    value={formValues.passion}
                     onChange={handleChange}
                 />
                 </Grid>
@@ -278,7 +295,7 @@ export default function FormData() {
                     type='text'
                     focused
                     name='portfolio'
-                    value={formData.portfolio}
+                    value={formValues.portfolio}
                     onChange={handleChange}
                 />
                 </Grid>
@@ -291,7 +308,7 @@ export default function FormData() {
                     type='text'
                     focused
                     name='linkedIn'
-                    value={formData.linkedIn}
+                    value={formValues.linkedIn}
                     onChange={handleChange}
                 />
                 </Grid>

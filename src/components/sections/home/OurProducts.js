@@ -2,11 +2,12 @@ import React from 'react'
 import Image from '../../elements/Image'
 import Partycoo from '../../../assets/images/section/HomePage/Partycoo-project.png'
 import { Box, Grid } from '@mui/material'
+import PrimaryButton from '../../elements/PrimaryButton';
 
 const OurProducts = () => {
   return (
     <Box id='product'>
-      <div className='container'>
+      <div className='container' data-aos="fade-up">
         <Grid container>
           <Grid item sm={8} md={8}>
 
@@ -20,10 +21,19 @@ const OurProducts = () => {
           </Grid>
         </Grid>
       </div>
-      <Image 
+      <div data-aos="fade-up">
+        <Image 
           src={Partycoo}
-          style={{marginTop: '-20px'}}
+          style={{marginTop: '-20px', marginBottom: '0'}}
         />
+        <div className='product-btn'>
+          <center>
+            <a href='https://partycoo.com/' target='_blank' rel='noopener noreferrer'>
+              <PrimaryButton text={'View product'} bgColor={'#00B9BC'} />
+            </a>
+          </center>
+        </div>
+      </div>
     </Box>
   )
 }

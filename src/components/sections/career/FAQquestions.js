@@ -12,7 +12,6 @@ export default function FAQquestions (){
     //const [question ] = React.useexpanded(QuestionData)
 
     const [expanded, setExpanded] = React.useState(false);
-    console.log(expanded)
     const handleChange = (panel) => (event, isExpanded) => {
         setExpanded(isExpanded ? panel : false);
     };
@@ -34,7 +33,7 @@ export default function FAQquestions (){
                 ))}
                 </Grid>
 
-                <Grid container spacing={2} sx={{marginTop: '1%', marginBottom: '0%'}}>
+                <Grid container spacing={2} sx={{marginTop: '1%', marginBottom: '0%'}} data-aos="fade-up">
                     <Grid item xs={12} sm={12} md={12} sx={{paddingTop: '5%'}}>
                         <h4 className=" mt-0 mb-16 reveal-from-bottom " data-reveal-delay="200" style={{color: '#ffffff', marginTop: '5%', textAlign: 'center'}}>
                             Didn’t find an answer?

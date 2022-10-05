@@ -6,18 +6,18 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function AccordionQuestion({title, description, panelNo, expanded, handleChange}) {
-  console.log(panelNo)
   return (
     <div>
-      <Accordion expanded={expanded === panelNo} onChange={handleChange}>
+      <Accordion expanded={expanded === panelNo} onChange={handleChange} data-aos="fade-up">
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls= {`${panelNo}a-content`}
           id={`${panelNo}a-header`}
+          sx={{paddingLeft: '3%'}}
         >
-          <Typography>{title}</Typography>
+          <Typography sx={{color: '#2E2F6E', fontWeight: 700}}>{title}</Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails sx={{backgroundColor: '#E5E7EC', p: 4}}>
           <Typography>
             {description}
           </Typography>

@@ -48,7 +48,7 @@ const Hero = ({
     >
       <div className="container-sm">
         <div className={innerClasses}>
-          <Grid container spacing={5}>
+          <Grid container spacing={5} data-aos="fade-up">
             <Grid item xs={12} sm={6} md={6} style={{display: "flex", flexDirection: "column", justifyContent: "center"}} className="btns">
               <h1 className="hero-h1 mt-0 mb-16 reveal-from-bottom hero-h1-banner" data-reveal-delay="200" style={{color: '#00B9BC', marginTop: '5%'}}>
                 About Us

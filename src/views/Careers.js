@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Hero from '../components/sections/career/Hero'
 import Open from '../components/sections/career/Open'
 import OpenPositions from '../components/sections/career/OpenPositions'
@@ -7,8 +7,13 @@ import LayoutDefault from '../layouts/LayoutDefault'
 import JobPostingNewsletter from '../components/sections/general/JobPostingNewsletter'
 import FAQs from '../components/sections/career/FAQs'
 import BgImage from '../components/sections/career/BgImage'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Careers = () => {
+  useEffect(() => {
+    AOS.init({ duration: 3000 });
+  }, []);
   return (
     <LayoutDefault>
         <div>

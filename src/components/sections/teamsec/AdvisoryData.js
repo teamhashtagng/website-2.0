@@ -1,6 +1,7 @@
 import Adeola from '../../../assets/images/section/TeamsPage/teamphoto/adeola.png'
 import Emmanuel from '../../../assets/images/section/TeamsPage/teamphoto/emmanuel-obu.png'
 import Femi from '../../../assets/images/section/TeamsPage/teamphoto/femi.png'
+import samuel from '../../../assets/images/section/TeamsPage/teamphoto/samuel-sonowo.png'
 export default [
     {
         id: 1,
@@ -15,7 +16,7 @@ export default [
         on: true,
         social: {
             Facebook: 'https://web.facebook.com/emmanuel.obu.1',
-            Twitter: '#',
+            Twitter: 'https://twitter.com/obuemmanuel',
             LinkedIn: 'https://www.linkedin.com/in/obu-emmanuel-3ab0a93a/'
         }
     },
@@ -46,9 +47,27 @@ export default [
             Practice established in 2017.`,
         on: true,
         social: {
-            Facebook: '#',
-            Twitter: '#',
+            Facebook: '',
+            Twitter: '',
             LinkedIn: 'https://www.linkedin.com/in/adeolakolawole/'
+        }
+    },
+    {
+        id: 4,
+        imge: samuel,
+        name: 'Samuel Sonowo',
+        description: `
+        Samuel Sonowo is an experienced business consultant with over 9 years of experience in the 
+        financial industry. He is a graduate of Babcock university and a certified member of the 
+        Institute of Chartered Accountant of Nigeria and Financial Reporting Council of Nigeria. 
+        He has versatile knowledge in key areas of finance. The wide range of knowledge gathered 
+        over the years have given him insight and developed his capabilities in acting in any capacity 
+        as a financial consultant providing best and suitable solutions to financial issues affecting any entity`,
+        on: true,
+        social: {
+            Facebook: '',
+            Twitter: '',
+            LinkedIn: ''
         }
     },
 ]

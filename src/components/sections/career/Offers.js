@@ -18,7 +18,12 @@ export default function Offers (){
                         header={'Condusive Environment'}
                         body={'Enjoy challenging work, and a satisfying job without any hierarchy.'}
                     />
-                    <OfferCard
+                     <OfferCard
+                        icon={Learning}
+                        header={'Culture of learning'}
+                        body={'Regular brown bag hinches to keep the brain rejuvenated.'}
+                    />
+                    {/* <OfferCard
                         icon={food}
                         header={'Healthy Meals and Snacks'}
                         body={'Food is on the house so it feels like home.'}
@@ -27,24 +32,19 @@ export default function Offers (){
                         icon={Gadgets}
                         header={'Best Gadgets'}
                         body={'Pamper the tech savy in you with gadgets and advanced technology.'}
-                    />
+                    /> */}
                 </Grid>
                 <Grid item xs={12} sm={6} md={6}>
                     <OfferCard
-                            icon={Chart}
-                            header={'Shared Success'}
-                            body={'Equity ownership and opportunity await.'}
-                        />
+                        icon={Chart}
+                        header={'Shared Success'}
+                        body={'Equity ownership and opportunity await.'}
+                    />
                     <OfferCard
-                            icon={Medical}
-                            header={'Medical Insurance'}
-                            body={'We have got you covered, literally.'}
-                        />
-                    <OfferCard
-                            icon={Learning}
-                            header={'Culture of learning'}
-                            body={'Regular brown bag hinches to keep the brain rejuvenated.'}
-                        />
+                        icon={Medical}
+                        header={'Medical Insurance'}
+                        body={'We have got you covered, literally.'}
+                    />
                 </Grid>
             </Grid>
         </React.Fragment>

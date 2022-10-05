@@ -13,7 +13,7 @@ function JobPostingNewsletter (){
     {fullName: "", email: ""}
   )
 
-  const regex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
+  const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   function isValidForm(values) {
     const errors ={};
     if (!values.fullName){
@@ -68,7 +68,7 @@ function JobPostingNewsletter (){
 
 
   return (
-    <div style={{textAlign: 'center', backgroundColor: '#2E2F6E', paddingBottom: '3%'}} className='newletter-mobile'>
+    <div style={{textAlign: 'center', backgroundColor: '#2E2F6E', paddingBottom: '3%'}} className='newletter-mobile' data-aos="fade-up">
       <Grid container>
         <Grid item xs={12} sm={12} md={12} sx={{marginTop: '1%'}}>
         {Object.keys(error).length ? <center> 
