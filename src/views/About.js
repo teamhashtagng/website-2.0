@@ -11,7 +11,7 @@ import "aos/dist/aos.css";
 const About = () => {
   useEffect(() => {
     AOS.init({ duration: 3000 });
-  }, []);
+  }, []); 
   return (
     <LayoutDefault>
         <Hero/>
