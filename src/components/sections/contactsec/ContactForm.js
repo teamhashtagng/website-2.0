@@ -118,7 +118,7 @@ export default function ContactForm(){
         }
 
     return(
-        <Box className='Contact-form-box'>
+        <Box className='Contact-form-box' data-aos="fade-up">
           {Object.keys(error).length ? <center> 
             <Modal
             keepMounted

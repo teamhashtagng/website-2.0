@@ -2784,6 +2784,23 @@ textarea.form-input {
   }
 }
 
+.illustration-element-01 {
+  position: relative;
+  animation: glide 1s ease-in-out alternate infinite;
+}
+
+@keyframes glide {
+  from {
+    left: 0px;
+    top: 0px;
+  }
+
+  to {
+    left: 0px;
+    top: 30px;
+  }
+}
+
 /*--------------------------------------------------------------
 # Features split
 --------------------------------------------------------------*/
@@ -4686,6 +4703,7 @@ img.has-shadow {
 .job-dotted {
   position: absolute;
   right: 0;
+  bottom: 180%;
 }
 
 .job-dotted-apply {

@@ -53,7 +53,7 @@ function HashtagNewsletter() {
   }
 
   return (
-    <div style={{padding: '30px 10px 50px', textAlign: 'center', backgroundColor: '#2E2F6E'}}>
+    <div style={{padding: '30px 10px 50px', textAlign: 'center', backgroundColor: '#2E2F6E'}} data-aos="fade-up">
         <Box sx={{pb: 5}}>
           {error === 'Email is invalid' && <center> 
             <Collapse in={open}><Alert severity="error" variant="filled"  action={

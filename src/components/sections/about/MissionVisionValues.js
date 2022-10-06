@@ -7,7 +7,7 @@ import { Box, Grid } from '@mui/material'
 
 const MissionVisionValues = () => {
   return (
-    <Box style={{position: 'relative', zIndex: '999'}} className="value-items" >
+    <Box style={{position: 'relative', zIndex: '999'}} className="value-items" data-aos="fade-up">
       <div className='container text-align-mobile'>
         <Grid container spacing={3}>
           <Grid item xs={12} md={3.5} sm={3.5} className='border-right'>

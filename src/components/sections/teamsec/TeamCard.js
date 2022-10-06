@@ -16,6 +16,7 @@ export default function TeamCard({profile, name, role, social, description, stat
         <Card className='Team-card' 
           sx={{ maxWidth: 310, boxShadow: 'none', backgroundColor: '#e5e7ec'}}
           onClick={handleClick}
+          data-aos="fade-up"
         >
           <CardActionArea>
             <CardMedia

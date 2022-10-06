@@ -4,7 +4,7 @@ import DottedImage from '../../../assets/images/section/FrontendDescPage/dotted-
 
 export default function (){
     return (
-        <div className="job-bottom-line">
+        <div className="job-bottom-line" data-aos="fade-up">
             <Image
                 className='job-dotted-apply'
                 src={DottedImage}

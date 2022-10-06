@@ -23,9 +23,9 @@ const AdvisoryTeam = ({
   );
 
   return (
-      <div className="container-sm" style={{marginTop: '3%'}} id='advisory-team' >
+      <div className="container-sm" style={{marginTop: '3%'}} id='advisory-team' data-aos="fade-up">
         <div className={innerClasses}>
-          <Grid container>
+          <Grid container data-aos="fade-up">
             <Grid item xs={12} sm={12} md={12} sx={{position: 'relative'}} className="btns">
               <h2 className=" mt-0 mb-16 reveal-from-bottom " data-reveal-delay="200" style={{color: '#2E2F6E', marginTop: '5%', textAlign: 'center'}}>
                 Meet The Advisory Team

@@ -7,13 +7,13 @@ import tempguy from '../../../assets/images/space-guy-1.png'
 
 export default function ContactIllustration(){
     return (
-        <Container maxWidth='false' className='contact-illus'>
+        <Container maxWidth='false' className='contact-illus' data-aos="fade-up">
             <Image
                 className='bottom-dotted-contact'
                 src={dotted}
                 alt="Space guy" 
             />
-            <div className='container'>
+            <div className='container' data-aos="fade-up">
                 <div className='site-header-inner'>
                     <Grid container>
                         <Grid item xs={12} sm={12} md={12}>

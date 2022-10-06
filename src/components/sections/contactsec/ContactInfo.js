@@ -8,7 +8,7 @@ import { Box } from '@mui/system';
 
 export default function ContactInfo() {
     return (
-        <Grid container spacing={5}>
+        <Grid container spacing={5} data-aos="fade-up">
             <Grid item xs={12} sm={6} md={6} >
                 <Box sx={{mt: '40px', mb: '30px'}}>
                     <div>

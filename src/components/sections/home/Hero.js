@@ -51,7 +51,7 @@ const Hero = ({
       {...props}
       className={outerClasses}
     >
-      <div className="container">
+      <div className="container" data-aos="fade-up">
         <div className={innerClasses}>
           <Grid container spacing={5}>
             <Grid item xs={12} sm={6} md={6} style={{display: "flex", flexDirection: "column", justifyContent: "center"}} className="btns">

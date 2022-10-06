@@ -31,7 +31,7 @@ export default function (){
 
     return (
         <ThemeProvider theme={theme}>
-        <div className='container' style={{ marginBottom: '10%' }} id='open-postions'>
+        <div className='container' style={{ marginBottom: '10%' }} id='open-postions' data-aos="fade-up">
             <Grid container>
                 <Grid item xs={12} sm={12} md={12} style={{ zIndex: '1'}} className="btns">
                 {/* <p className="m-0 reveal-from-bottom primary-color" data-reveal-delay="400"><b>OONFTs</b></p> */}
@@ -48,13 +48,11 @@ export default function (){
                         <Tab label="Developer" className="tab" value="1" />
                         <Tab label="Marketing" className="tab" value="2" />
                         <Tab label="Designer" className="tab" value="3" />
-                        <Tab label="Researcher" className="tab" value="4" />
                     </TabList>
                     </Box>
                     <TabPanel value="1"> <Developer/> </TabPanel>
                     <TabPanel value="2">Nothing for now</TabPanel>
                     <TabPanel value="3">Nothing for now</TabPanel>
-                    <TabPanel value="4">Nothing for now</TabPanel>
                 </TabContext>
             </Box>
         </div>
