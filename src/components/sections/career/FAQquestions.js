@@ -20,7 +20,7 @@ export default function FAQquestions (){
         <React.Fragment>
                 <Grid container spacing={4} sx={{marginTop: '8%'}}> 
                 {QuestionData.map((_, index) => (
-                    <Grid item xs={12} sm={12} md={12} key={index}>
+                    <Grid item xs={12} sm={12} md={12} key={index} data-aos="fade-up">
                     <AccordionQuestion 
                         key={_.id}
                         panelNo={_.panelNo}

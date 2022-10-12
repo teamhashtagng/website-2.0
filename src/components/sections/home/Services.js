@@ -66,9 +66,9 @@ const Services = () => {
 
       </Box>
       <div className='container' data-aos="fade-up">
-        <Image 
+        <img 
             src={SpaceGuyRocket}
-            className='space-guy'
+            className='space-guy illustration-element-01'
             style={{position: 'relative', zIndex: '999'}}
           />
       </div>

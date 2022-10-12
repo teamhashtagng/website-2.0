@@ -2786,7 +2786,7 @@ textarea.form-input {
 
 .illustration-element-01 {
   position: relative;
-  animation: glide 1s ease-in-out alternate infinite;
+  animation: glide 2s ease-in-out alternate infinite;
 }
 
 @keyframes glide {
@@ -4372,21 +4372,20 @@ img.has-shadow {
   position: absolute;
   width: 30%;
   right: 0%;
-  bottom: 0%;
-  top: 140%;
+  bottom: 10%;
 }
 
 @media (max-width: 1300px) {
   .bottom-dotted-contact {
     width: 45%;
     right: 0%;
-    top: 115%;
+    bottom: 12%;
   }
 }
 @media (max-width: 1200px) {
   .bottom-dotted-contact {
     width: 40%;
-    top: 75%;
+    bottom: 10%;
   }
 }
 
@@ -4394,7 +4393,7 @@ img.has-shadow {
   .bottom-dotted-contact {
     width: 40%;
     position: absolute;
-    top: 80%;
+    bottom: 15%;
   }
 }
 
@@ -4402,14 +4401,14 @@ img.has-shadow {
   .bottom-dotted-contact {
     width: 40%;
     position: absolute;
-    top: 120%;
+    bottom: 30%;
   }
 }
 @media (max-width: 768px) {
   .bottom-dotted-contact {
     width: 40%;
     position: absolute;
-    top: 140%;
+    bottom: 30%;
   }
 }
 

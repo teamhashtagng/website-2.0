@@ -19,7 +19,7 @@ import TeamData from './AdvisoryData';
         <Box sx={{ flexGrow: 1, mt: '80px'}}>
         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 12, sm: 12, md: 12 }}>
           {desc.map((_, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
+            <Grid item xs={12} sm={6} md={4} key={index} data-aos="fade-up">
               <AdvisoryCard 
                 key={_.id}
                 profile={_.imge}
