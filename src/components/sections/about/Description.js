@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Box } from '@mui/material'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Description = () => {
+
+  useEffect(() => {
+    AOS.init({ easing: 'ease-out-back', duration: 3000});
+  }, []);
+
   return (
     <div className='container' data-aos="fade-up">
       <Box className='about-quote'>

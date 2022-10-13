@@ -1,12 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from '../../elements/Image'
 import Curves from '../../../assets/images/section/AboutPage/about-curve.png'
 import SpaceMission from '../../../assets/images/section/AboutPage/spaceman-mission-1.png'
 import CurvedLinesDown from '../../../assets/images/section/AboutPage/Target-curved-middle.png'
 
 import { Box, Grid } from '@mui/material'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Statistics = () => {
+
+    useEffect(() => {
+        AOS.init({ easing: 'ease-out-back', duration: 3000});
+      }, []);
+
   return (
     <Box>
         

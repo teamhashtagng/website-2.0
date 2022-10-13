@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from '../../elements/Image'
 import Mission from '../../../assets/images/section/AboutPage/Target-Arrow.svg'
 import Vision from '../../../assets/images/section/AboutPage/Vision.svg'
 import CoreValues from '../../../assets/images/section/AboutPage/Core-values.svg'
 import { Box, Grid } from '@mui/material'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const MissionVisionValues = () => {
+  useEffect(() => {
+    AOS.init({ easing: 'ease-out-back', duration: 3000});
+  }, []);
+
   return (
     <Box style={{position: 'relative', zIndex: '999'}} className="value-items" data-aos="fade-up">
       <div className='container text-align-mobile'>

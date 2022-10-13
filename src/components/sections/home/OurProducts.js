@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from '../../elements/Image'
 import Partycoo from '../../../assets/images/section/HomePage/Partycoo-project.png'
 import { Box, Grid } from '@mui/material'
 import PrimaryButton from '../../elements/PrimaryButton';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const OurProducts = () => {
+  useEffect(() => {
+    setTimeout(function() {
+    AOS.init({ easing: 'ease-out-back', duration: 3000, startEvent: 'DOMContentLoaded', once: false});
+  }, []); }, 1000)
+  
   return (
     <Box id='product'>
-      <div className='container' data-aos="fade-up">
+      <div className='container' data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
         <Grid container>
           <Grid item sm={8} md={8}>
 
@@ -21,7 +28,7 @@ const OurProducts = () => {
           </Grid>
         </Grid>
       </div>
-      <div data-aos="fade-up">
+      <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1800">
         <Image 
           src={Partycoo}
           style={{marginTop: '-20px', marginBottom: '0'}}

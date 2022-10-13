@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Grid } from '@mui/material';
 import classNames from 'classnames';
 import { SectionProps } from '../../../utils/SectionProps';
 import Image from '../../elements/Image';
 
 import DottedImage from '../../../assets/images/section/TeamsPage/Hero-dotted-design.svg'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const propTypes = {
   ...SectionProps.types
@@ -39,6 +41,10 @@ const Hero = ({
     topDivider && 'has-top-divider',
     bottomDivider && 'has-bottom-divider'
   );
+
+  useEffect(() => {
+    AOS.init({ easing: 'ease-out-back', duration: 3000});
+  }, []);
 
   return (
     <section

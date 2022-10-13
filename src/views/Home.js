@@ -17,8 +17,9 @@ import "aos/dist/aos.css";
 
 const Home = () => {
   useEffect(() => {
-    AOS.init({ easing: 'ease-out-back', duration: 3000, once: true });
-  }, []);
+    setTimeout(function() {
+    AOS.init({ easing: 'ease-out-back', duration: 3000, startEvent: 'DOMContentLoaded', once: false});
+  }, []); }, 100)
 
   return (
     <LayoutDefault>

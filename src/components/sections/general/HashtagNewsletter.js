@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { TextField, Box, Alert, Collapse, IconButton } from '@mui/material'
 import PrimaryButton from '../../elements/PrimaryButton';
 import CloseIcon from '@mui/icons-material/Close';
 import axios from 'axios';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function HashtagNewsletter() {
   const url = 'https://newhashtagng2.herokuapp.com/contactus/create_subscription/'
@@ -52,8 +54,13 @@ function HashtagNewsletter() {
     console.log(email)
   }
 
+  useEffect(() => {
+    setTimeout(function() {
+    AOS.init({ easing: 'ease-out-back', duration: 3000, startEvent: 'DOMContentLoaded', once: false});
+  }, []); }, 1000)
+
   return (
-    <div style={{padding: '30px 10px 50px', textAlign: 'center', backgroundColor: '#2E2F6E'}} data-aos="fade-up">
+    <div style={{padding: '30px 10px 50px', textAlign: 'center', backgroundColor: '#2E2F6E'}} data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
         <Box sx={{pb: 5}}>
           {error === 'Email is invalid' && <center> 
             <Collapse in={open}><Alert severity="error" variant="filled"  action={

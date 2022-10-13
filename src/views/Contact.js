@@ -8,8 +8,9 @@ import "aos/dist/aos.css";
 
 const ContactUs = () => {
   useEffect(() => {
-    AOS.init({ duration: 3000 });
+    AOS.init({ easing: 'ease-out-back', duration: 3000, startEvent: 'DOMContentLoaded'});
   }, []);
+
   return (
     <LayoutDefault>
         <div style={{marginTop: "100px"}}>

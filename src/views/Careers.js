@@ -12,7 +12,7 @@ import "aos/dist/aos.css";
 
 const Careers = () => {
   useEffect(() => {
-    AOS.init({ duration: 3000 });
+    AOS.init({ easing: 'ease-out-back', duration: 3000, startEvent: 'DOMContentLoaded'});
   }, []);
   return (
     <LayoutDefault>
