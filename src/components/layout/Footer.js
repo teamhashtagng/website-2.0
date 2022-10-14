@@ -56,9 +56,9 @@ const Footer = ({
                 <Grid item xs={12} sm={8} md={8}>
                   <Grid container spacing={4}>
                     <Grid item md={4} sm={4} xs={12}>
-                      <h5 style={{color: "#2E2F6E"}}>About Us</h5>
-                      <Link to='/'>
-                        <p>Hashtag</p>
+                      <h5 style={{color: "#2E2F6E"}}>Company</h5>
+                      <Link to='/about-us'>
+                        <p>About Hashtag</p>
                       </Link>
                       <a href='/#product'>
                         <p>Portfolio</p>

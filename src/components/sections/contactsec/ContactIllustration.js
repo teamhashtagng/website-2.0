@@ -18,8 +18,8 @@ export default function ContactIllustration(){
                     <Grid container>
                         <Grid item xs={12} sm={12} md={12}>
 
-                            <Image
-                            className='contact-space-guy'
+                            <img
+                            className='contact-space-guy illustration-element-01'
                             src={spaceguy}
                             alt="Space guy" 
                             />

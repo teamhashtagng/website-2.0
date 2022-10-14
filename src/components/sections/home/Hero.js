@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Grid } from '@mui/material';
 import classNames from 'classnames';
 import { SectionProps } from '../../../utils/SectionProps';
@@ -8,6 +8,8 @@ import PrimaryButton from '../../elements/PrimaryButton';
 import SpaceGuy1 from '../../../assets/images/space-guy-1.png'
 import HeroLines from '../../../assets/images/section/HomePage/hero-line.png'
 import { Link } from 'react-router-dom';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const propTypes = {
   ...SectionProps.types
@@ -43,10 +45,13 @@ const Hero = ({
     bottomDivider && 'has-bottom-divider'
   );
 
-  return (
-    <div>
+  useEffect(() => {
+    AOS.init({ easing: 'ease-out-back', duration: 3000});
+  }, []);
 
-    
+  return (
+
+    <div>
     <section
       {...props}
       className={outerClasses}

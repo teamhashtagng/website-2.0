@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import LayoutDefault from '../layouts/LayoutDefault'
 import Hero from '../components/sections/teamsec/HeroSection'
 import TeamMember from '../components/sections/teamsec/TeamMemberSection'
@@ -9,8 +9,8 @@ import "aos/dist/aos.css";
 
 const Team = () => {
 
-  React.useEffect(() => {
-    AOS.init({ duration: 3000 });
+  useEffect(() => {
+    AOS.init({ easing: 'ease-out-back', duration: 3000, startEvent: 'DOMContentLoaded'});
   }, []);
 
   return (

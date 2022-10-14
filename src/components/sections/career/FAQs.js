@@ -16,8 +16,8 @@ export default function FAQs(){
                     </h1>
                 </Grid>
                 <Grid item xs={12} sm={6} md={6}>
-                    <Image
-                        className='offer-card-icon' id='space-question'
+                    <img
+                        className='illustration-element-01' id='space-question'
                         src={Question}
                         alt="Hero" 
                     />

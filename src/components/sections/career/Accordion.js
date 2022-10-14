@@ -8,7 +8,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 export default function AccordionQuestion({title, description, panelNo, expanded, handleChange}) {
   return (
     <div>
-      <Accordion expanded={expanded === panelNo} onChange={handleChange} data-aos="fade-up">
+      <Accordion expanded={expanded === panelNo} onChange={handleChange}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls= {`${panelNo}a-content`}
