@@ -14,19 +14,16 @@ export default function ContactIllustration(){
                 alt="Space guy" 
             />
             <div className='container' data-aos="fade-up">
-                <div className='site-header-inner'>
-                    <Grid container>
-                        <Grid item xs={12} sm={12} md={12}>
+                <Grid container>
+                    <Grid item xs={12} sm={12} md={12}>
 
-                            <img
-                            className='contact-space-guy illustration-element-01'
-                            src={spaceguy}
-                            alt="Space guy" 
-                            />
-                        </Grid>
+                        <img
+                        className='contact-space-guy illustration-element-01'
+                        src={spaceguy}
+                        alt="Space guy" 
+                        />
                     </Grid>
-
-                </div>
+                </Grid>
             </div>
         </Container>
     )

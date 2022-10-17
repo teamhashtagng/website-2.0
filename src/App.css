@@ -4225,7 +4225,7 @@ img.has-shadow {
 
 .overlay-section {
   margin-top: -12rem;
-  z-index: 999;
+  z-index: 9999999;
 }
 
 @media (max-width: 1300px) {
@@ -4256,6 +4256,7 @@ img.has-shadow {
   color: #000 !important;
   background-color: #fff;
   height: auto;
+  z-index: 9999999 !important;
   padding: 20px 30px;
 }
 
@@ -4328,6 +4329,7 @@ img.has-shadow {
   background-position: 20% 35%;
   background-repeat: no-repeat;
   margin-top: 8%;
+  z-index: 0 !important;
 }
 
 .h1 {
@@ -4425,7 +4427,7 @@ img.has-shadow {
 
 .contact-space-guy {
   margin: 0% auto;
-  margin-top: 30%;
+  margin-top: -12%;
 }
 
 .error-space-guy {
