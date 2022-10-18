@@ -20,13 +20,13 @@ const FooterSocial = ({
         <li>
           <a href="https://linkedin.com/company/hashtagng" target='_blank'>
             <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
+              width="16" 
+              height="16" 
+              viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg">
-              <title>Facebook</title>
+              <title>Linkedin</title>
               <path
-                d="M6.023 16L6 9H3V6h3V4c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V6H13l-1 3H9.28v7H6.023z" fill="#2E2F6E" />
+                 d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" fill="#2E2F6E" />
             </svg>
           </a>
         </li>
