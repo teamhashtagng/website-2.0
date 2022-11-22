@@ -8,7 +8,7 @@ import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-export default function AdvisoryCard({profile, name, social, description, state, handleClick}) {
+export default function AdvisoryCard({profile, name, role, social, description, state, handleClick}) {
 
   return (
     <React.Fragment>
@@ -28,6 +28,9 @@ export default function AdvisoryCard({profile, name, social, description, state,
             <CardContent>
               <Typography gutterBottom variant="h6" id='Team-card-name' component="div" color='#2E2F6E'>
                 {name}
+              </Typography>
+              <Typography variant="body2" color="text.secondary" id='Team-card-role-hover'>
+                {role}
               </Typography>
             </CardContent>
           </CardActionArea>
@@ -58,6 +61,9 @@ export default function AdvisoryCard({profile, name, social, description, state,
           <CardContent sx={{maxHeight: '350px', overflowY: 'auto'}}>
             <Typography gutterBottom variant="h6" id='Team-card-name-hover' component="div" color='#2E2F6E'>
               {name}
+            </Typography>
+            <Typography variant="body2" color="text.secondary" id='Team-card-role-hover'>
+              {role}
             </Typography>
             <hr className='click-line'/>
             <Typography variant="body2" color="text.secondary" id='Team-card-desc-hover'>
