@@ -7,6 +7,7 @@ export default [
         id: 1,
         imge: Emmanuel,
         name: 'Emmanuel Obu',
+        role: 'Corporate Strategist',
         description: `
             An erudite, write-brained brand and corporate strategist, public speaker and 
             motivator, Emmanuel is a graduate of Geography & Regional Planning from the 
@@ -24,6 +25,7 @@ export default [
         id: 2,
         imge: Femi,
         name: 'Femi Ibiwoye',
+        role: 'Business Advisor',
         description: `
             I am a programmer and an entrepreneur, I have been working as a software developer 
             since 2011 and decided to be an entrepreneur and a freelancer in 2014. I majorly 
@@ -40,6 +42,7 @@ export default [
         id: 3,
         imge: Adeola,
         name: 'Adeola Kolawole',
+        role: 'Legal Advisor',
         description: `
             It's delightful and rewarding to see clients satisfied after the delivery of 
             legal services, while we endeavor to pursue legal solutions even where not readily 
@@ -56,6 +59,7 @@ export default [
         id: 4,
         imge: samuel,
         name: 'Samuel Sonowo',
+        role: 'Financial Advisor',
         description: `
         Samuel Sonowo is an experienced business consultant with over 9 years of experience in the 
         financial industry. He is a graduate of Babcock university and a certified member of the 

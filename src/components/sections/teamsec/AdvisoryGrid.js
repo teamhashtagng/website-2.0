@@ -25,6 +25,7 @@ import TeamData from './AdvisoryData';
                 profile={_.imge}
                 name={_.name}
                 social={_.social}
+                role={_.role}
                 description={_.description}
                 state={_.on}
                 handleClick={() => addDesc(_.id)}
