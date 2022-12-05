@@ -76,9 +76,9 @@ const Hero = ({
                 {/* We are a software & media solutions company based in Lagos,
                 Nigeria.  */}
                 Hashtag is a pan-African tech startup focused on software
-                development and digital media services, we we refine into
-                digital products for our endusers and by extension provide
-                similar services to other corporate clients.
+                development and digital media services, we refine into digital
+                products for our endusers and by extension provide similar
+                services to other corporate clients.
               </p>
             </Grid>
             <Grid item xs={12} sm={6} md={6}></Grid>
