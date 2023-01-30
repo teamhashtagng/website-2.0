@@ -3965,6 +3965,14 @@ img.has-shadow {
 
 .Hero-Banner-Career {
   background-image: url("./assets/images/section/CareersFAQsPage/Hero-imahe=gradiants.png");
+}
+
+.Hero-Banner-Services {
+  background-image: url("./assets/images/section/ServicesPage/service-hero.png");
+}
+
+.Hero-Banner-Career,
+.Hero-Banner-Services {
   background-repeat: no-repeat;
   background-size: cover;
   height: 870px;
@@ -3972,13 +3980,15 @@ img.has-shadow {
 }
 
 @media (max-width: 1080px) {
-  .Hero-Banner-Career {
+  .Hero-Banner-Career,
+  .Hero-Banner-Services {
     height: 600px;
   }
 }
 
 @media (max-width: 450px) {
-  .Hero-Banner-Career {
+  .Hero-Banner-Career,
+  .Hero-Banner-Services {
     height: 500px;
     margin-top: 90px;
   }
