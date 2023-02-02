@@ -3965,6 +3965,14 @@ img.has-shadow {
 
 .Hero-Banner-Career {
   background-image: url("./assets/images/section/CareersFAQsPage/Hero-imahe=gradiants.png");
+}
+
+.Hero-Banner-Services {
+  background-image: url("./assets/images/section/ServicesPage/service-hero.png");
+}
+
+.Hero-Banner-Career,
+.Hero-Banner-Services {
   background-repeat: no-repeat;
   background-size: cover;
   height: 870px;
@@ -3972,13 +3980,15 @@ img.has-shadow {
 }
 
 @media (max-width: 1080px) {
-  .Hero-Banner-Career {
+  .Hero-Banner-Career,
+  .Hero-Banner-Services {
     height: 600px;
   }
 }
 
 @media (max-width: 450px) {
-  .Hero-Banner-Career {
+  .Hero-Banner-Career,
+  .Hero-Banner-Services {
     height: 500px;
     margin-top: 90px;
   }
@@ -4011,6 +4021,25 @@ img.has-shadow {
 
 @media (max-width: 600px) {
   .hero-dotted {
+    display: none;
+    position: relative;
+    left: 5%;
+    bottom: 20%;
+  }
+}
+
+.service-dotted {
+  width: 30%;
+}
+
+@media (max-width: 1300px) {
+  .service-dotted {
+    width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .service-dotted {
     display: none;
     position: relative;
     left: 5%;
@@ -4490,6 +4519,43 @@ img.has-shadow {
   }
 }
 
+.middle-dotted-Service {
+  position: absolute;
+  width: 25%;
+  left: 0%;
+  bottom: 28%;
+}
+
+@media (max-width: 1300px) {
+  .middle-dotted-Service {
+    position: absolute;
+    width: 30%;
+    left: 0%;
+    bottom: 30%;
+  }
+}
+
+@media (max-width: 1030px) {
+  .middle-dotted-Service {
+    position: absolute;
+    left: 0%;
+    bottom: 31%;
+  }
+}
+
+@media (max-width: 768px) {
+  .middle-dotted-Service {
+    position: absolute;
+    left: 0%;
+  }
+}
+
+@media (max-width: 600px) {
+  .middle-dotted-Service {
+    display: none;
+  }
+}
+
 .offer-card-icon {
   width: 100%;
   max-width: 80%;
@@ -4883,6 +4949,10 @@ img.has-shadow {
     margin-bottom: 1rem;
     margin-top: 3rem;
     text-align: center;
+  }
+
+  .service-reverse {
+    flex-direction: column-reverse !important;
   }
 }
 
