@@ -81,10 +81,12 @@ const services = [
   {
     id: 8,
     image: CloudComputing,
-    title: "Digital Marketing",
-    text: `Our digital marketers have a strategic approach to ensure 
-    that all of our products and services are targeted appropriately 
-    and results in profitable business.`,
+    title: "Cloud hosting/Support",
+    text: `We can help your development/technical team host and scale 
+    application workloads in the Cloud (including Azure, AWS and 
+    Google clouds). With quality architectural knowledge and years 
+    of practical experience, our team is dedicated to help your business 
+    succeed by delivering reliable services and saving costs at the same time.`,
   },
 ];
 
