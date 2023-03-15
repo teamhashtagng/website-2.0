@@ -97,10 +97,11 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
                       <p>
                         <a
                           style={{ color: "#727272" }}
-                          href="https://goo.gl/maps/qZ7YDAjC2UTa5SZa7"
+                          href="https://goo.gl/maps/gu2qVUkq8jL249T58"
                           target="_blank"
                         >
-                          Office address: Anibaba street, Owode-onirin, Lagos.
+                          Office address: 196 Herbert Macaulay Way, Yaba 100001,
+                          Lagos
                         </a>
                       </p>
                     </Grid>
