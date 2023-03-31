@@ -67,7 +67,7 @@ const services = [
     image: Marketing,
     title: "Digital Marketing",
     text: `Our digital marketers have a strategic approach to ensure 
-    that all of our products and services are targeted appropriately 
+    that all of your products and services are targeted appropriately 
     and results in profitable business.`,
   },
   {
@@ -76,7 +76,7 @@ const services = [
     title: "Data analysis and visualization",
     text: `Data makes the world go round, with our skilled data analyst, 
     we use surveys to create better problem-solving strategies for your 
-    business and ensure that your products are visible to your customers.`,
+    business and ensure that your products look simple enough to your customers.`,
   },
   {
     id: 8,
