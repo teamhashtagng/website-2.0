@@ -20,7 +20,7 @@
     "fs.promises": "^0.1.2",
     "lodash": "^4.17.15",
     "react": "^17.0.2",
-    "react-dom": "^16.13.1",
+    "react-dom": "^16.14.0",
     "react-ga": "^2.7.0",
     "react-promise-tracker": "^2.1.0",
     "react-router-dom": "^6.2.2",
